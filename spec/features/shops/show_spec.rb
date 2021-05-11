@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe 'the shop show page', type: :feature do
-  it 'shows the shop name' do
+  it 'shows the shop name, attributes' do
     @shop_1 = Shop.create!(name: 'Stickys Sweets', sells_drinks: true, varieties: 110)
 
     # merchant_1 = Merchant.create!(name: "AA")

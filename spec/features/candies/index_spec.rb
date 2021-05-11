@@ -1,47 +1,48 @@
 require 'rails_helper'
 
-RSpec.describe 'the shops index', type: :feature do
+RSpec.describe 'the candies index', type: :feature do
   before(:each) do
-    @shop_1 = Shop.create!(name: 'Stickys Sweets', sells_drinks: true, varieties: 110)
-    @shop_2 = Shop.create!(name: 'Candy Corral', sells_drinks: false, varieties: 45)
-
-    # @jerde = Merchant.create!(name: 'Schroeder-Jerde')
-    # @qui = @jerde.items.create!(name: 'Qui Esse', description: 'Nihil autem', unit_price: 75107, able: "Disabled")
+    @candy_1 = Candy.create!(name: 'Honey Stick', all_natural: true, calories: 65)
+    @candy_2 = Candy.create!(name: 'Jelly Belly', all_natural: false, calories: 120)
   end
 
   it 'has a link to main welcome page' do
-    visit "/shops"
-      expect(page).to have_link("Welcome")
-      click_link("Welcome")
-      expect(current_path).to eq("/")
-  end
-
-  it 'has a link to shops index' do
-    visit "/shops"
-      expect(page).to have_link("Candy Shops Index")
-      click_link("Candy Shops Index")
-      expect(current_path).to eq("/shops")
+      visit "/candies"
+    expect(page).to have_link("Welcome")
+    click_link("Welcome")
+    expect(current_path).to eq("/")
   end
 
   it 'has a link to candies index' do
-    visit "/shops"
-      expect(page).to have_link("Candies Index")
-      click_link("Candies Index")
-      expect(current_path).to eq("/candies")
+      visit "/candies"
+    expect(page).to have_link("Candy Shops Index")
+    click_link("Candy Shops Index")
+    expect(current_path).to eq("/shops")
   end
 
-  it 'lists of all shops' do
-    visit "/shops"
+  it 'has a link to candies index' do
+      visit "/candies"
+    expect(page).to have_link("Candies Index")
+    click_link("Candies Index")
+    expect(current_path).to eq("/candies")
+  end
 
-    within("#shop-index") do
+  it 'lists of all candies & attributes' do
+    visit "/candies"
 
-      within("#shop-#{@shop_1.id}") do
-        expect(page).to have_content(@shop_1.name)
-        # expect(page).to have_link(@shop_1.percent)
+    within("#candy-index") do
+
+      within("#candy-#{@candy_1.id}") do
+        expect(page).to have_content(@candy_1.type)
+        expect(page).to have_content(@candy_1.calories)
+        expect(page).to have_content(@candy_1.all_natural)
+        # expect(page).to have_link(@candy_1.percent)
       end
 
-      within("#shop-#{@shop_2.id}") do
-        expect(page).to have_content(@shop_2.name)
+      within("#candy-#{@candy_2.id}") do
+        expect(page).to have_content(@candy_2.type)
+        expect(page).to have_content(@candy_2.calories)
+        expect(page).to have_content(@candy_2.all_natural)
       end
 
       # click_link(@tv_1.percent)
