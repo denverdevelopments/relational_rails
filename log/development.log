@@ -1,0 +1,32 @@
+  [1m[35m (171.3ms)[0m  [1m[35mCREATE DATABASE "relational_rails_development" ENCODING = 'unicode'[0m
+  ↳ bin/rails:4
+  [1m[35m (63.9ms)[0m  [1m[35mCREATE DATABASE "relational_rails_test" ENCODING = 'unicode'[0m
+  ↳ bin/rails:4
+Started GET "/" for ::1 at 2021-05-11 11:11:59 -0700
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 242ms (Views: 240.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-05-11 11:12:35 -0700
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 12ms (Views: 11.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-05-11 11:28:53 -0700
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 225ms (Views: 224.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/bakeries" for ::1 at 2021-05-11 11:28:55 -0700
+Processing by BakeriesController#index as HTML
+  Rendering bakeries/index.html.erb within layouts/application
+  Rendered bakeries/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 36ms (Views: 34.8ms | ActiveRecord: 0.0ms)
+
+
