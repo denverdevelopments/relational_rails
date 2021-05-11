@@ -3,7 +3,7 @@ Rails.application.routes.draw do
 
   ## Leigh's Space
   get '/', to: 'welcome#index'
-
+  get '/bakeries', to: 'bakeries#index'
 
   ## Kevin's Space
 
