@@ -5,6 +5,10 @@ Rails.application.routes.draw do
   get '/', to: 'welcome#index'
   get '/bakeries', to: 'bakeries#index'
 
-  ## Kevin's Space
+  ## Kevin's space
+  get '/shops', to: 'shops#index'
+  get '/shops/:id', to: 'shops#show'
 
+  get '/candies', to: 'candies#index'
+  get '/candies/:id', to: 'candies#show'
 end
