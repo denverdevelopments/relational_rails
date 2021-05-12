@@ -4,9 +4,6 @@ RSpec.describe 'the shops index', type: :feature do
   before(:each) do
     @shop_1 = Shop.create!(name: 'Stickys Sweets', sells_drinks: true, varieties: 110)
     @shop_2 = Shop.create!(name: 'Candy Corral', sells_drinks: false, varieties: 45)
-
-    # @jerde = Merchant.create!(name: 'Schroeder-Jerde')
-    # @qui = @jerde.items.create!(name: 'Qui Esse', description: 'Nihil autem', unit_price: 75107, able: "Disabled")
   end
 
   it 'has a link to main welcome page' do

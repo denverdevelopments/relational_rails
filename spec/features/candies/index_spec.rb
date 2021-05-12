@@ -2,8 +2,9 @@ require 'rails_helper'
 
 RSpec.describe 'the candies index', type: :feature do
   before(:each) do
-    @candy_1 = Candy.create!(name: 'Honey Stick', all_natural: true, calories: 65)
-    @candy_2 = Candy.create!(name: 'Jelly Belly', all_natural: false, calories: 120)
+    @shop_1 = Shop.create!(name: 'Stickys Sweets', sells_drinks: true, varieties: 110)
+    @candy_1 = @shop_1.candies.create!(name: 'Honey Stick', all_natural: true, calories: 65)
+    @candy_2 = @shop_1.candies.create!(name: 'Jelly Belly', all_natural: false, calories: 120)
   end
 
   it 'has a link to main welcome page' do
@@ -63,11 +64,6 @@ RSpec.describe 'the candies index', type: :feature do
 
   # it 'shows two sections, "Enabled Items" & "Disabled Items"' do
   #   visit "/shops"
-  #
-  #   expect(page).to have_content("Enabled Items")
-  #   expect(page).to have_content(@autem.name)
-  #   expect(page).to have_button("Disable")
-  #   expect(page).to have_content(@ea.name)
   #
   #   expect(page).to have_content("Disabled Items")
   #   expect(page).to have_content(@qui.name)
