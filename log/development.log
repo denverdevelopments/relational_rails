@@ -411,3 +411,28 @@ Processing by PastriesController#index as HTML
 Completed 200 OK in 12ms (Views: 11.3ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for ::1 at 2021-05-12 10:10:08 -0700
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 175ms (Views: 174.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/bakeries" for ::1 at 2021-05-12 10:10:11 -0700
+Processing by BakeriesController#index as HTML
+  Rendering bakeries/index.html.erb within layouts/application
+  Rendered bakeries/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 10ms (Views: 9.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pastries" for ::1 at 2021-05-12 10:15:48 -0700
+Processing by PastriesController#index as HTML
+  Rendering pastries/index.html.erb within layouts/application
+  Rendered pastries/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 11ms (Views: 10.0ms | ActiveRecord: 0.0ms)
+
+
+  [1m[35m (2.7ms)[0m  [1m[35mCREATE DATABASE "relational_rails_development" ENCODING = 'unicode'[0m
+  ↳ bin/rails:4
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE DATABASE "relational_rails_test" ENCODING = 'unicode'[0m
+  ↳ bin/rails:4
