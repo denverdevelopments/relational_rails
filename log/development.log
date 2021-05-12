@@ -436,3 +436,1213 @@ Completed 200 OK in 11ms (Views: 10.0ms | ActiveRecord: 0.0ms)
   ↳ bin/rails:4
   [1m[35m (0.4ms)[0m  [1m[35mCREATE DATABASE "relational_rails_test" ENCODING = 'unicode'[0m
   ↳ bin/rails:4
+  [1m[35m (2.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (5.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:4
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:4
+  [1m[35m (55.3ms)[0m  [1m[35mDROP DATABASE IF EXISTS "relational_rails_development"[0m
+  ↳ bin/rails:4
+  [1m[35m (56.0ms)[0m  [1m[35mDROP DATABASE IF EXISTS "relational_rails_test"[0m
+  ↳ bin/rails:4
+  [1m[35m (178.1ms)[0m  [1m[35mCREATE DATABASE "relational_rails_development" ENCODING = 'unicode'[0m
+  ↳ bin/rails:4
+  [1m[35m (88.0ms)[0m  [1m[35mCREATE DATABASE "relational_rails_test" ENCODING = 'unicode'[0m
+  ↳ bin/rails:4
+  [1m[35m (8.1ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ bin/rails:4
+  [1m[35m (2.9ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6619517006900186970)[0m
+  ↳ bin/rails:4
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+Migrating to CreateBakeries (20210512174544)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[35m (5.4ms)[0m  [1m[35mCREATE TABLE "bakeries" ("id" bigserial primary key, "name" character varying, "open_on_weekends" boolean, "hours_open" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20210512174544_create_bakeries.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20210512174544"]]
+  ↳ bin/rails:4
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+Migrating to CreatePastries (20210512174638)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[35m (4.8ms)[0m  [1m[35mCREATE TABLE "pastries" ("id" bigserial primary key, "name" character varying, "savory_pastry" boolean, "calories" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20210512174638_create_pastries.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20210512174638"]]
+  ↳ bin/rails:4
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+Migrating to CreateShops (20210512175927)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[35m (6.8ms)[0m  [1m[35mCREATE TABLE "shops" ("id" bigserial primary key, "name" character varying, "sells_drinks" boolean, "varieties" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20210512175927_create_shops.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20210512175927"]]
+  ↳ bin/rails:4
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+Migrating to CreateCandies (20210512180009)
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[35m (6.6ms)[0m  [1m[35mCREATE TABLE "candies" ("id" bigserial primary key, "type" character varying, "all_natural" boolean, "calories" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20210512180009_create_candies.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20210512180009"]]
+  ↳ bin/rails:4
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+Migrating to AddBakeriesToPastries (20210512180416)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "pastries" ADD "bakery_id" bigint[0m
+  ↳ db/migrate/20210512180416_add_bakeries_to_pastries.rb:3
+  [1m[35m (2.1ms)[0m  [1m[35mCREATE  INDEX  "index_pastries_on_bakery_id" ON "pastries"  ("bakery_id")[0m
+  ↳ db/migrate/20210512180416_add_bakeries_to_pastries.rb:3
+  [1m[35m (2.1ms)[0m  [1m[35mALTER TABLE "pastries" ADD CONSTRAINT "fk_rails_c6f41c9f01"
+FOREIGN KEY ("bakery_id")
+  REFERENCES "bakeries" ("id")
+[0m
+  ↳ db/migrate/20210512180416_add_bakeries_to_pastries.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20210512180416"]]
+  ↳ bin/rails:4
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+Migrating to AddShopsToCandies (20210512181053)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "candies" ADD "shop_id" bigint[0m
+  ↳ db/migrate/20210512181053_add_shops_to_candies.rb:3
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE  INDEX  "index_candies_on_shop_id" ON "candies"  ("shop_id")[0m
+  ↳ db/migrate/20210512181053_add_shops_to_candies.rb:3
+  [1m[35m (1.1ms)[0m  [1m[35mALTER TABLE "candies" ADD CONSTRAINT "fk_rails_cc2384c2c1"
+FOREIGN KEY ("shop_id")
+  REFERENCES "shops" ("id")
+[0m
+  ↳ db/migrate/20210512181053_add_shops_to_candies.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20210512181053"]]
+  ↳ bin/rails:4
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::InternalMetadata Create (0.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2021-05-12 22:04:07.289801"], ["updated_at", "2021-05-12 22:04:07.289801"]]
+  ↳ bin/rails:4
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(6619517006900186970)[0m
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:25
+  [1m[36mShop Create (0.8ms)[0m  [1m[32mINSERT INTO "shops" ("name", "sells_drinks", "varieties", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Stickys Sweets"], ["sells_drinks", true], ["varieties", 110], ["created_at", "2021-05-12 22:04:14.856196"], ["updated_at", "2021-05-12 22:04:14.856196"]]
+  ↳ db/seeds.rb:25
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:25
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:25
+  [1m[36mShop Create (0.7ms)[0m  [1m[32mINSERT INTO "shops" ("name", "sells_drinks", "varieties", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Stickys Sweets"], ["sells_drinks", true], ["varieties", 110], ["created_at", "2021-05-12 22:05:33.596814"], ["updated_at", "2021-05-12 22:05:33.596814"]]
+  ↳ db/seeds.rb:25
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:25
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:4
+  [1m[35m (28.0ms)[0m  [1m[35mDROP DATABASE IF EXISTS "relational_rails_development"[0m
+  ↳ bin/rails:4
+  [1m[35m (24.4ms)[0m  [1m[35mDROP DATABASE IF EXISTS "relational_rails_test"[0m
+  ↳ bin/rails:4
+  [1m[35m (58.3ms)[0m  [1m[35mCREATE DATABASE "relational_rails_development" ENCODING = 'unicode'[0m
+  ↳ bin/rails:4
+  [1m[35m (68.7ms)[0m  [1m[35mCREATE DATABASE "relational_rails_test" ENCODING = 'unicode'[0m
+  ↳ bin/rails:4
+  [1m[35m (6.4ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ bin/rails:4
+  [1m[35m (4.2ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6619517006900186970)[0m
+  ↳ bin/rails:4
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+Migrating to CreateBakeries (20210512174544)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[35m (4.3ms)[0m  [1m[35mCREATE TABLE "bakeries" ("id" bigserial primary key, "name" character varying, "open_on_weekends" boolean, "hours_open" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20210512174544_create_bakeries.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20210512174544"]]
+  ↳ bin/rails:4
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+Migrating to CreatePastries (20210512174638)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[35m (4.4ms)[0m  [1m[35mCREATE TABLE "pastries" ("id" bigserial primary key, "name" character varying, "savory_pastry" boolean, "calories" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20210512174638_create_pastries.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20210512174638"]]
+  ↳ bin/rails:4
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+Migrating to CreateShops (20210512175927)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[35m (3.7ms)[0m  [1m[35mCREATE TABLE "shops" ("id" bigserial primary key, "name" character varying, "sells_drinks" boolean, "varieties" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20210512175927_create_shops.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20210512175927"]]
+  ↳ bin/rails:4
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+Migrating to CreateCandies (20210512180009)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[35m (4.6ms)[0m  [1m[35mCREATE TABLE "candies" ("id" bigserial primary key, "type" character varying, "all_natural" boolean, "calories" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20210512180009_create_candies.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20210512180009"]]
+  ↳ bin/rails:4
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+Migrating to AddBakeriesToPastries (20210512180416)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "pastries" ADD "bakery_id" bigint[0m
+  ↳ db/migrate/20210512180416_add_bakeries_to_pastries.rb:3
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE  INDEX  "index_pastries_on_bakery_id" ON "pastries"  ("bakery_id")[0m
+  ↳ db/migrate/20210512180416_add_bakeries_to_pastries.rb:3
+  [1m[35m (1.8ms)[0m  [1m[35mALTER TABLE "pastries" ADD CONSTRAINT "fk_rails_c6f41c9f01"
+FOREIGN KEY ("bakery_id")
+  REFERENCES "bakeries" ("id")
+[0m
+  ↳ db/migrate/20210512180416_add_bakeries_to_pastries.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20210512180416"]]
+  ↳ bin/rails:4
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+Migrating to AddShopsToCandies (20210512181053)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "candies" ADD "shop_id" bigint[0m
+  ↳ db/migrate/20210512181053_add_shops_to_candies.rb:3
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE  INDEX  "index_candies_on_shop_id" ON "candies"  ("shop_id")[0m
+  ↳ db/migrate/20210512181053_add_shops_to_candies.rb:3
+  [1m[35m (1.9ms)[0m  [1m[35mALTER TABLE "candies" ADD CONSTRAINT "fk_rails_cc2384c2c1"
+FOREIGN KEY ("shop_id")
+  REFERENCES "shops" ("id")
+[0m
+  ↳ db/migrate/20210512181053_add_shops_to_candies.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20210512181053"]]
+  ↳ bin/rails:4
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::InternalMetadata Create (0.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2021-05-12 22:07:06.016418"], ["updated_at", "2021-05-12 22:07:06.016418"]]
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(6619517006900186970)[0m
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:25
+  [1m[36mShop Create (0.6ms)[0m  [1m[32mINSERT INTO "shops" ("name", "sells_drinks", "varieties", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Stickys Sweets"], ["sells_drinks", true], ["varieties", 110], ["created_at", "2021-05-12 22:07:10.824092"], ["updated_at", "2021-05-12 22:07:10.824092"]]
+  ↳ db/seeds.rb:25
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:25
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:4
+  [1m[35m (41.5ms)[0m  [1m[35mDROP DATABASE IF EXISTS "relational_rails_development"[0m
+  ↳ bin/rails:4
+  [1m[35m (34.3ms)[0m  [1m[35mDROP DATABASE IF EXISTS "relational_rails_test"[0m
+  ↳ bin/rails:4
+  [1m[35m (70.7ms)[0m  [1m[35mCREATE DATABASE "relational_rails_development" ENCODING = 'unicode'[0m
+  ↳ bin/rails:4
+  [1m[35m (112.2ms)[0m  [1m[35mCREATE DATABASE "relational_rails_test" ENCODING = 'unicode'[0m
+  ↳ bin/rails:4
+  [1m[35m (6.6ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ bin/rails:4
+  [1m[35m (4.8ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ bin/rails:4
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6619517006900186970)[0m
+  ↳ bin/rails:4
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+Migrating to CreateBakeries (20210512174544)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[35m (7.0ms)[0m  [1m[35mCREATE TABLE "bakeries" ("id" bigserial primary key, "name" character varying, "open_on_weekends" boolean, "hours_open" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20210512174544_create_bakeries.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20210512174544"]]
+  ↳ bin/rails:4
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+Migrating to CreatePastries (20210512174638)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[35m (5.1ms)[0m  [1m[35mCREATE TABLE "pastries" ("id" bigserial primary key, "name" character varying, "savory_pastry" boolean, "calories" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20210512174638_create_pastries.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20210512174638"]]
+  ↳ bin/rails:4
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+Migrating to CreateShops (20210512175927)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[35m (6.1ms)[0m  [1m[35mCREATE TABLE "shops" ("id" bigserial primary key, "name" character varying, "sells_drinks" boolean, "varieties" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20210512175927_create_shops.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20210512175927"]]
+  ↳ bin/rails:4
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+Migrating to CreateCandies (20210512180009)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[35m (4.5ms)[0m  [1m[35mCREATE TABLE "candies" ("id" bigserial primary key, "brand" character varying, "all_natural" boolean, "calories" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20210512180009_create_candies.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20210512180009"]]
+  ↳ bin/rails:4
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+Migrating to AddBakeriesToPastries (20210512180416)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "pastries" ADD "bakery_id" bigint[0m
+  ↳ db/migrate/20210512180416_add_bakeries_to_pastries.rb:3
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE  INDEX  "index_pastries_on_bakery_id" ON "pastries"  ("bakery_id")[0m
+  ↳ db/migrate/20210512180416_add_bakeries_to_pastries.rb:3
+  [1m[35m (3.2ms)[0m  [1m[35mALTER TABLE "pastries" ADD CONSTRAINT "fk_rails_c6f41c9f01"
+FOREIGN KEY ("bakery_id")
+  REFERENCES "bakeries" ("id")
+[0m
+  ↳ db/migrate/20210512180416_add_bakeries_to_pastries.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20210512180416"]]
+  ↳ bin/rails:4
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+Migrating to AddShopsToCandies (20210512181053)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "candies" ADD "shop_id" bigint[0m
+  ↳ db/migrate/20210512181053_add_shops_to_candies.rb:3
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE  INDEX  "index_candies_on_shop_id" ON "candies"  ("shop_id")[0m
+  ↳ db/migrate/20210512181053_add_shops_to_candies.rb:3
+  [1m[35m (1.3ms)[0m  [1m[35mALTER TABLE "candies" ADD CONSTRAINT "fk_rails_cc2384c2c1"
+FOREIGN KEY ("shop_id")
+  REFERENCES "shops" ("id")
+[0m
+  ↳ db/migrate/20210512181053_add_shops_to_candies.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20210512181053"]]
+  ↳ bin/rails:4
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2021-05-12 22:08:02.948518"], ["updated_at", "2021-05-12 22:08:02.948518"]]
+  ↳ bin/rails:4
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(6619517006900186970)[0m
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:25
+  [1m[36mShop Create (1.0ms)[0m  [1m[32mINSERT INTO "shops" ("name", "sells_drinks", "varieties", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Stickys Sweets"], ["sells_drinks", true], ["varieties", 110], ["created_at", "2021-05-12 22:08:08.933750"], ["updated_at", "2021-05-12 22:08:08.933750"]]
+  ↳ db/seeds.rb:25
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:25
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:26
+  [1m[36mCandy Create (0.9ms)[0m  [1m[32mINSERT INTO "candies" ("brand", "all_natural", "calories", "created_at", "updated_at", "shop_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["brand", "Honey Stick"], ["all_natural", true], ["calories", 65], ["created_at", "2021-05-12 22:08:08.957751"], ["updated_at", "2021-05-12 22:08:08.957751"], ["shop_id", 1]]
+  ↳ db/seeds.rb:26
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:26
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:27
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ db/seeds.rb:27
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:25
+  [1m[36mShop Create (0.5ms)[0m  [1m[32mINSERT INTO "shops" ("name", "sells_drinks", "varieties", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Stickys Sweets"], ["sells_drinks", true], ["varieties", 110], ["created_at", "2021-05-12 22:09:23.735195"], ["updated_at", "2021-05-12 22:09:23.735195"]]
+  ↳ db/seeds.rb:25
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:25
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:26
+  [1m[36mCandy Create (0.9ms)[0m  [1m[32mINSERT INTO "candies" ("brand", "all_natural", "calories", "created_at", "updated_at", "shop_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["brand", "Honey Stick"], ["all_natural", true], ["calories", 65], ["created_at", "2021-05-12 22:09:23.750507"], ["updated_at", "2021-05-12 22:09:23.750507"], ["shop_id", 2]]
+  ↳ db/seeds.rb:26
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:26
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:27
+  [1m[36mCandy Create (0.3ms)[0m  [1m[32mINSERT INTO "candies" ("brand", "all_natural", "calories", "created_at", "updated_at", "shop_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["brand", "Jelly Belly"], ["all_natural", true], ["calories", 120], ["created_at", "2021-05-12 22:09:23.752839"], ["updated_at", "2021-05-12 22:09:23.752839"], ["shop_id", 2]]
+  ↳ db/seeds.rb:27
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:27
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:29
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ db/seeds.rb:29
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:25
+  [1m[36mShop Create (0.6ms)[0m  [1m[32mINSERT INTO "shops" ("name", "sells_drinks", "varieties", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Stickys Sweets"], ["sells_drinks", true], ["varieties", 110], ["created_at", "2021-05-12 22:09:49.031916"], ["updated_at", "2021-05-12 22:09:49.031916"]]
+  ↳ db/seeds.rb:25
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:25
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:26
+  [1m[36mCandy Create (0.7ms)[0m  [1m[32mINSERT INTO "candies" ("brand", "all_natural", "calories", "created_at", "updated_at", "shop_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["brand", "Honey Stick"], ["all_natural", true], ["calories", 65], ["created_at", "2021-05-12 22:09:49.046675"], ["updated_at", "2021-05-12 22:09:49.046675"], ["shop_id", 3]]
+  ↳ db/seeds.rb:26
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:26
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:27
+  [1m[36mCandy Create (0.3ms)[0m  [1m[32mINSERT INTO "candies" ("brand", "all_natural", "calories", "created_at", "updated_at", "shop_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["brand", "Jelly Belly"], ["all_natural", true], ["calories", 120], ["created_at", "2021-05-12 22:09:49.048904"], ["updated_at", "2021-05-12 22:09:49.048904"], ["shop_id", 3]]
+  ↳ db/seeds.rb:27
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:27
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:29
+  [1m[36mShop Create (0.2ms)[0m  [1m[32mINSERT INTO "shops" ("name", "sells_drinks", "varieties", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Candy Corral"], ["sells_drinks", true], ["varieties", 45], ["created_at", "2021-05-12 22:09:49.050314"], ["updated_at", "2021-05-12 22:09:49.050314"]]
+  ↳ db/seeds.rb:29
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:29
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:30
+  [1m[36mCandy Create (0.3ms)[0m  [1m[32mINSERT INTO "candies" ("brand", "all_natural", "calories", "created_at", "updated_at", "shop_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["brand", "Lollipops"], ["all_natural", true], ["calories", 48], ["created_at", "2021-05-12 22:09:49.051793"], ["updated_at", "2021-05-12 22:09:49.051793"], ["shop_id", 4]]
+  ↳ db/seeds.rb:30
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:30
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:31
+  [1m[36mCandy Create (0.3ms)[0m  [1m[32mINSERT INTO "candies" ("brand", "all_natural", "calories", "created_at", "updated_at", "shop_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["brand", "Hershey Bar"], ["all_natural", true], ["calories", 230], ["created_at", "2021-05-12 22:09:49.053339"], ["updated_at", "2021-05-12 22:09:49.053339"], ["shop_id", 4]]
+  ↳ db/seeds.rb:31
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:31
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:32
+  [1m[36mCandy Create (0.3ms)[0m  [1m[32mINSERT INTO "candies" ("brand", "all_natural", "calories", "created_at", "updated_at", "shop_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["brand", "Jolly Rancher"], ["all_natural", true], ["calories", 40], ["created_at", "2021-05-12 22:09:49.054896"], ["updated_at", "2021-05-12 22:09:49.054896"], ["shop_id", 4]]
+  ↳ db/seeds.rb:32
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:32
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:34
+  [1m[36mShop Create (0.2ms)[0m  [1m[32mINSERT INTO "shops" ("name", "sells_drinks", "varieties", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Suga Suga"], ["sells_drinks", true], ["varieties", 205], ["created_at", "2021-05-12 22:09:49.056314"], ["updated_at", "2021-05-12 22:09:49.056314"]]
+  ↳ db/seeds.rb:34
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:34
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:35
+  [1m[36mCandy Create (0.3ms)[0m  [1m[32mINSERT INTO "candies" ("brand", "all_natural", "calories", "created_at", "updated_at", "shop_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["brand", "Pop Rocks"], ["all_natural", true], ["calories", 85], ["created_at", "2021-05-12 22:09:49.057755"], ["updated_at", "2021-05-12 22:09:49.057755"], ["shop_id", 5]]
+  ↳ db/seeds.rb:35
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:35
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:36
+  [1m[36mCandy Create (0.2ms)[0m  [1m[32mINSERT INTO "candies" ("brand", "all_natural", "calories", "created_at", "updated_at", "shop_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["brand", "Milk Duds"], ["all_natural", true], ["calories", 310], ["created_at", "2021-05-12 22:09:49.059294"], ["updated_at", "2021-05-12 22:09:49.059294"], ["shop_id", 5]]
+  ↳ db/seeds.rb:36
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:36
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[36mShop Load (0.8ms)[0m  [1m[34mSELECT "shops".* FROM "shops"[0m
+  ↳ db/seeds.rb:25
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:25
+  [1m[36mShop Destroy (4.7ms)[0m  [1m[31mDELETE FROM "shops" WHERE "shops"."id" = $1[0m  [["id", 1]]
+  ↳ db/seeds.rb:25
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ db/seeds.rb:25
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:4
+  [1m[35m (8050.0ms)[0m  [1m[35mDROP DATABASE IF EXISTS "relational_rails_development"[0m
+  ↳ bin/rails:4
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:4
+  [1m[35m (7753.1ms)[0m  [1m[35mDROP DATABASE IF EXISTS "relational_rails_development"[0m
+  ↳ bin/rails:4
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:4
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:4
+  [1m[35m (38.9ms)[0m  [1m[35mDROP DATABASE IF EXISTS "relational_rails_development"[0m
+  ↳ bin/rails:4
+  [1m[35m (29.5ms)[0m  [1m[35mDROP DATABASE IF EXISTS "relational_rails_test"[0m
+  ↳ bin/rails:4
+  [1m[35m (100.7ms)[0m  [1m[35mCREATE DATABASE "relational_rails_development" ENCODING = 'unicode'[0m
+  ↳ bin/rails:4
+  [1m[35m (60.4ms)[0m  [1m[35mCREATE DATABASE "relational_rails_test" ENCODING = 'unicode'[0m
+  ↳ bin/rails:4
+  [1m[35m (6.6ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ bin/rails:4
+  [1m[35m (4.7ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6619517006900186970)[0m
+  ↳ bin/rails:4
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+Migrating to CreateBakeries (20210512174544)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[35m (5.9ms)[0m  [1m[35mCREATE TABLE "bakeries" ("id" bigserial primary key, "name" character varying, "open_on_weekends" boolean, "hours_open" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20210512174544_create_bakeries.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20210512174544"]]
+  ↳ bin/rails:4
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+Migrating to CreatePastries (20210512174638)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[35m (5.8ms)[0m  [1m[35mCREATE TABLE "pastries" ("id" bigserial primary key, "name" character varying, "savory_pastry" boolean, "calories" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20210512174638_create_pastries.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20210512174638"]]
+  ↳ bin/rails:4
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+Migrating to CreateShops (20210512175927)
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[35m (5.6ms)[0m  [1m[35mCREATE TABLE "shops" ("id" bigserial primary key, "name" character varying, "sells_drinks" boolean, "varieties" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20210512175927_create_shops.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20210512175927"]]
+  ↳ bin/rails:4
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+Migrating to CreateCandies (20210512180009)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[35m (4.5ms)[0m  [1m[35mCREATE TABLE "candies" ("id" bigserial primary key, "brand" character varying, "all_natural" boolean, "calories" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20210512180009_create_candies.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20210512180009"]]
+  ↳ bin/rails:4
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+Migrating to AddBakeriesToPastries (20210512180416)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "pastries" ADD "bakery_id" bigint[0m
+  ↳ db/migrate/20210512180416_add_bakeries_to_pastries.rb:3
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE  INDEX  "index_pastries_on_bakery_id" ON "pastries"  ("bakery_id")[0m
+  ↳ db/migrate/20210512180416_add_bakeries_to_pastries.rb:3
+  [1m[35m (2.2ms)[0m  [1m[35mALTER TABLE "pastries" ADD CONSTRAINT "fk_rails_c6f41c9f01"
+FOREIGN KEY ("bakery_id")
+  REFERENCES "bakeries" ("id")
+[0m
+  ↳ db/migrate/20210512180416_add_bakeries_to_pastries.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20210512180416"]]
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+Migrating to AddShopsToCandies (20210512181053)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "candies" ADD "shop_id" bigint[0m
+  ↳ db/migrate/20210512181053_add_shops_to_candies.rb:3
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE  INDEX  "index_candies_on_shop_id" ON "candies"  ("shop_id")[0m
+  ↳ db/migrate/20210512181053_add_shops_to_candies.rb:3
+  [1m[35m (1.1ms)[0m  [1m[35mALTER TABLE "candies" ADD CONSTRAINT "fk_rails_cc2384c2c1"
+FOREIGN KEY ("shop_id")
+  REFERENCES "shops" ("id")
+[0m
+  ↳ db/migrate/20210512181053_add_shops_to_candies.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20210512181053"]]
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2021-05-12 22:11:57.232437"], ["updated_at", "2021-05-12 22:11:57.232437"]]
+  ↳ bin/rails:4
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_advisory_unlock(6619517006900186970)[0m
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[36mShop Load (0.7ms)[0m  [1m[34mSELECT "shops".* FROM "shops"[0m
+  ↳ db/seeds.rb:25
+  [1m[36mCandy Load (0.6ms)[0m  [1m[34mSELECT "candies".* FROM "candies"[0m
+  ↳ db/seeds.rb:26
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:28
+  [1m[36mShop Create (0.5ms)[0m  [1m[32mINSERT INTO "shops" ("name", "sells_drinks", "varieties", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Stickys Sweets"], ["sells_drinks", true], ["varieties", 110], ["created_at", "2021-05-12 22:12:02.867050"], ["updated_at", "2021-05-12 22:12:02.867050"]]
+  ↳ db/seeds.rb:28
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:28
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:29
+  [1m[36mCandy Create (0.6ms)[0m  [1m[32mINSERT INTO "candies" ("brand", "all_natural", "calories", "created_at", "updated_at", "shop_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["brand", "Honey Stick"], ["all_natural", true], ["calories", 65], ["created_at", "2021-05-12 22:12:02.877489"], ["updated_at", "2021-05-12 22:12:02.877489"], ["shop_id", 1]]
+  ↳ db/seeds.rb:29
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:29
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:30
+  [1m[36mCandy Create (0.2ms)[0m  [1m[32mINSERT INTO "candies" ("brand", "all_natural", "calories", "created_at", "updated_at", "shop_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["brand", "Jelly Belly"], ["all_natural", true], ["calories", 120], ["created_at", "2021-05-12 22:12:02.879281"], ["updated_at", "2021-05-12 22:12:02.879281"], ["shop_id", 1]]
+  ↳ db/seeds.rb:30
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:30
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:32
+  [1m[36mShop Create (0.2ms)[0m  [1m[32mINSERT INTO "shops" ("name", "sells_drinks", "varieties", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Candy Corral"], ["sells_drinks", true], ["varieties", 45], ["created_at", "2021-05-12 22:12:02.880725"], ["updated_at", "2021-05-12 22:12:02.880725"]]
+  ↳ db/seeds.rb:32
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:32
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:33
+  [1m[36mCandy Create (0.3ms)[0m  [1m[32mINSERT INTO "candies" ("brand", "all_natural", "calories", "created_at", "updated_at", "shop_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["brand", "Lollipops"], ["all_natural", true], ["calories", 48], ["created_at", "2021-05-12 22:12:02.882226"], ["updated_at", "2021-05-12 22:12:02.882226"], ["shop_id", 2]]
+  ↳ db/seeds.rb:33
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:33
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:34
+  [1m[36mCandy Create (0.3ms)[0m  [1m[32mINSERT INTO "candies" ("brand", "all_natural", "calories", "created_at", "updated_at", "shop_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["brand", "Hershey Bar"], ["all_natural", true], ["calories", 230], ["created_at", "2021-05-12 22:12:02.883579"], ["updated_at", "2021-05-12 22:12:02.883579"], ["shop_id", 2]]
+  ↳ db/seeds.rb:34
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:34
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:35
+  [1m[36mCandy Create (0.3ms)[0m  [1m[32mINSERT INTO "candies" ("brand", "all_natural", "calories", "created_at", "updated_at", "shop_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["brand", "Jolly Rancher"], ["all_natural", true], ["calories", 40], ["created_at", "2021-05-12 22:12:02.884983"], ["updated_at", "2021-05-12 22:12:02.884983"], ["shop_id", 2]]
+  ↳ db/seeds.rb:35
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:35
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:37
+  [1m[36mShop Create (0.2ms)[0m  [1m[32mINSERT INTO "shops" ("name", "sells_drinks", "varieties", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Suga Suga"], ["sells_drinks", true], ["varieties", 205], ["created_at", "2021-05-12 22:12:02.886360"], ["updated_at", "2021-05-12 22:12:02.886360"]]
+  ↳ db/seeds.rb:37
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:37
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:38
+  [1m[36mCandy Create (0.3ms)[0m  [1m[32mINSERT INTO "candies" ("brand", "all_natural", "calories", "created_at", "updated_at", "shop_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["brand", "Pop Rocks"], ["all_natural", true], ["calories", 85], ["created_at", "2021-05-12 22:12:02.887720"], ["updated_at", "2021-05-12 22:12:02.887720"], ["shop_id", 3]]
+  ↳ db/seeds.rb:38
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:38
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:39
+  [1m[36mCandy Create (0.2ms)[0m  [1m[32mINSERT INTO "candies" ("brand", "all_natural", "calories", "created_at", "updated_at", "shop_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["brand", "Milk Duds"], ["all_natural", true], ["calories", 310], ["created_at", "2021-05-12 22:12:02.889173"], ["updated_at", "2021-05-12 22:12:02.889173"], ["shop_id", 3]]
+  ↳ db/seeds.rb:39
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:39
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:4
+  [1m[35m (44.2ms)[0m  [1m[35mDROP DATABASE IF EXISTS "relational_rails_development"[0m
+  ↳ bin/rails:4
+  [1m[35m (35.2ms)[0m  [1m[35mDROP DATABASE IF EXISTS "relational_rails_test"[0m
+  ↳ bin/rails:4
+  [1m[35m (77.1ms)[0m  [1m[35mCREATE DATABASE "relational_rails_development" ENCODING = 'unicode'[0m
+  ↳ bin/rails:4
+  [1m[35m (72.3ms)[0m  [1m[35mCREATE DATABASE "relational_rails_test" ENCODING = 'unicode'[0m
+  ↳ bin/rails:4
+  [1m[35m (7.6ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ bin/rails:4
+  [1m[35m (3.7ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6619517006900186970)[0m
+  ↳ bin/rails:4
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+Migrating to CreateBakeries (20210512174544)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[35m (5.6ms)[0m  [1m[35mCREATE TABLE "bakeries" ("id" bigserial primary key, "name" character varying, "open_on_weekends" boolean, "hours_open" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20210512174544_create_bakeries.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20210512174544"]]
+  ↳ bin/rails:4
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+Migrating to CreatePastries (20210512174638)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[35m (4.0ms)[0m  [1m[35mCREATE TABLE "pastries" ("id" bigserial primary key, "name" character varying, "savory_pastry" boolean, "calories" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20210512174638_create_pastries.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20210512174638"]]
+  ↳ bin/rails:4
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+Migrating to CreateShops (20210512175927)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[35m (3.8ms)[0m  [1m[35mCREATE TABLE "shops" ("id" bigserial primary key, "name" character varying, "sells_drinks" boolean, "varieties" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20210512175927_create_shops.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20210512175927"]]
+  ↳ bin/rails:4
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+Migrating to CreateCandies (20210512180009)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[35m (4.8ms)[0m  [1m[35mCREATE TABLE "candies" ("id" bigserial primary key, "brand" character varying, "all_natural" boolean, "calories" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20210512180009_create_candies.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20210512180009"]]
+  ↳ bin/rails:4
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+Migrating to AddBakeriesToPastries (20210512180416)
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[35m (0.5ms)[0m  [1m[35mALTER TABLE "pastries" ADD "bakery_id" bigint[0m
+  ↳ db/migrate/20210512180416_add_bakeries_to_pastries.rb:3
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE  INDEX  "index_pastries_on_bakery_id" ON "pastries"  ("bakery_id")[0m
+  ↳ db/migrate/20210512180416_add_bakeries_to_pastries.rb:3
+  [1m[35m (2.0ms)[0m  [1m[35mALTER TABLE "pastries" ADD CONSTRAINT "fk_rails_c6f41c9f01"
+FOREIGN KEY ("bakery_id")
+  REFERENCES "bakeries" ("id")
+[0m
+  ↳ db/migrate/20210512180416_add_bakeries_to_pastries.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20210512180416"]]
+  ↳ bin/rails:4
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+Migrating to AddShopsToCandies (20210512181053)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "candies" ADD "shop_id" bigint[0m
+  ↳ db/migrate/20210512181053_add_shops_to_candies.rb:3
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE  INDEX  "index_candies_on_shop_id" ON "candies"  ("shop_id")[0m
+  ↳ db/migrate/20210512181053_add_shops_to_candies.rb:3
+  [1m[35m (1.1ms)[0m  [1m[35mALTER TABLE "candies" ADD CONSTRAINT "fk_rails_cc2384c2c1"
+FOREIGN KEY ("shop_id")
+  REFERENCES "shops" ("id")
+[0m
+  ↳ db/migrate/20210512181053_add_shops_to_candies.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20210512181053"]]
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2021-05-12 22:15:19.276186"], ["updated_at", "2021-05-12 22:15:19.276186"]]
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(6619517006900186970)[0m
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[36mShop Load (0.8ms)[0m  [1m[34mSELECT "shops".* FROM "shops"[0m
+  ↳ db/seeds.rb:25
+  [1m[36mCandy Load (0.6ms)[0m  [1m[34mSELECT "candies".* FROM "candies"[0m
+  ↳ db/seeds.rb:26
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:28
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ db/seeds.rb:28
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[36mShop Load (0.4ms)[0m  [1m[34mSELECT "shops".* FROM "shops"[0m
+  ↳ db/seeds.rb:25
+  [1m[36mCandy Load (0.4ms)[0m  [1m[34mSELECT "candies".* FROM "candies"[0m
+  ↳ db/seeds.rb:26
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:28
+  [1m[36mShop Create (0.6ms)[0m  [1m[32mINSERT INTO "shops" ("name", "sells_drinks", "varieties", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Stickys Sweets"], ["sells_drinks", true], ["varieties", 110], ["created_at", "2021-05-12 22:17:17.536962"], ["updated_at", "2021-05-12 22:17:17.536962"]]
+  ↳ db/seeds.rb:28
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:28
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:29
+  [1m[36mCandy Create (1.0ms)[0m  [1m[32mINSERT INTO "candies" ("brand", "all_natural", "calories", "created_at", "updated_at", "shop_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["brand", "Honey Stick"], ["all_natural", true], ["calories", 65], ["created_at", "2021-05-12 22:17:17.547397"], ["updated_at", "2021-05-12 22:17:17.547397"], ["shop_id", 1]]
+  ↳ db/seeds.rb:29
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:29
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:30
+  [1m[36mCandy Create (0.2ms)[0m  [1m[32mINSERT INTO "candies" ("brand", "all_natural", "calories", "created_at", "updated_at", "shop_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["brand", "Jelly Belly"], ["all_natural", true], ["calories", 120], ["created_at", "2021-05-12 22:17:17.549645"], ["updated_at", "2021-05-12 22:17:17.549645"], ["shop_id", 1]]
+  ↳ db/seeds.rb:30
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:30
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:32
+  [1m[36mShop Create (0.2ms)[0m  [1m[32mINSERT INTO "shops" ("name", "sells_drinks", "varieties", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Candy Corral"], ["sells_drinks", true], ["varieties", 45], ["created_at", "2021-05-12 22:17:17.550855"], ["updated_at", "2021-05-12 22:17:17.550855"]]
+  ↳ db/seeds.rb:32
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:32
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:33
+  [1m[36mCandy Create (0.3ms)[0m  [1m[32mINSERT INTO "candies" ("brand", "all_natural", "calories", "created_at", "updated_at", "shop_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["brand", "Lollipops"], ["all_natural", true], ["calories", 48], ["created_at", "2021-05-12 22:17:17.552227"], ["updated_at", "2021-05-12 22:17:17.552227"], ["shop_id", 2]]
+  ↳ db/seeds.rb:33
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:33
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:34
+  [1m[36mCandy Create (0.3ms)[0m  [1m[32mINSERT INTO "candies" ("brand", "all_natural", "calories", "created_at", "updated_at", "shop_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["brand", "Hershey Bar"], ["all_natural", true], ["calories", 230], ["created_at", "2021-05-12 22:17:17.553903"], ["updated_at", "2021-05-12 22:17:17.553903"], ["shop_id", 2]]
+  ↳ db/seeds.rb:34
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:34
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:35
+  [1m[36mCandy Create (0.2ms)[0m  [1m[32mINSERT INTO "candies" ("brand", "all_natural", "calories", "created_at", "updated_at", "shop_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["brand", "Jolly Rancher"], ["all_natural", true], ["calories", 40], ["created_at", "2021-05-12 22:17:17.555512"], ["updated_at", "2021-05-12 22:17:17.555512"], ["shop_id", 2]]
+  ↳ db/seeds.rb:35
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:35
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:37
+  [1m[36mShop Create (0.2ms)[0m  [1m[32mINSERT INTO "shops" ("name", "sells_drinks", "varieties", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Suga Suga"], ["sells_drinks", true], ["varieties", 205], ["created_at", "2021-05-12 22:17:17.556760"], ["updated_at", "2021-05-12 22:17:17.556760"]]
+  ↳ db/seeds.rb:37
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:37
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:38
+  [1m[36mCandy Create (0.3ms)[0m  [1m[32mINSERT INTO "candies" ("brand", "all_natural", "calories", "created_at", "updated_at", "shop_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["brand", "Pop Rocks"], ["all_natural", true], ["calories", 85], ["created_at", "2021-05-12 22:17:17.558104"], ["updated_at", "2021-05-12 22:17:17.558104"], ["shop_id", 3]]
+  ↳ db/seeds.rb:38
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:38
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:39
+  [1m[36mCandy Create (0.4ms)[0m  [1m[32mINSERT INTO "candies" ("brand", "all_natural", "calories", "created_at", "updated_at", "shop_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["brand", "Milk Duds"], ["all_natural", true], ["calories", 310], ["created_at", "2021-05-12 22:17:17.559668"], ["updated_at", "2021-05-12 22:17:17.559668"], ["shop_id", 3]]
+  ↳ db/seeds.rb:39
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:39
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:4
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:4
+  [1m[35m (53.9ms)[0m  [1m[35mDROP DATABASE IF EXISTS "relational_rails_development"[0m
+  ↳ bin/rails:4
+  [1m[35m (42.7ms)[0m  [1m[35mDROP DATABASE IF EXISTS "relational_rails_test"[0m
+  ↳ bin/rails:4
+  [1m[35m (70.8ms)[0m  [1m[35mCREATE DATABASE "relational_rails_development" ENCODING = 'unicode'[0m
+  ↳ bin/rails:4
+  [1m[35m (67.9ms)[0m  [1m[35mCREATE DATABASE "relational_rails_test" ENCODING = 'unicode'[0m
+  ↳ bin/rails:4
+  [1m[35m (5.3ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ bin/rails:4
+  [1m[35m (2.7ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6619517006900186970)[0m
+  ↳ bin/rails:4
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+Migrating to CreateBakeries (20210512174544)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[35m (4.3ms)[0m  [1m[35mCREATE TABLE "bakeries" ("id" bigserial primary key, "name" character varying, "open_on_weekends" boolean, "hours_open" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20210512174544_create_bakeries.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20210512174544"]]
+  ↳ bin/rails:4
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+Migrating to CreatePastries (20210512174638)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[35m (4.2ms)[0m  [1m[35mCREATE TABLE "pastries" ("id" bigserial primary key, "name" character varying, "savory_pastry" boolean, "calories" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20210512174638_create_pastries.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20210512174638"]]
+  ↳ bin/rails:4
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+Migrating to CreateShops (20210512175927)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[35m (4.6ms)[0m  [1m[35mCREATE TABLE "shops" ("id" bigserial primary key, "name" character varying, "sells_drinks" boolean, "varieties" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20210512175927_create_shops.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20210512175927"]]
+  ↳ bin/rails:4
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+Migrating to CreateCandies (20210512180009)
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[35m (5.4ms)[0m  [1m[35mCREATE TABLE "candies" ("id" bigserial primary key, "brand" character varying, "all_natural" boolean, "calories" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20210512180009_create_candies.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20210512180009"]]
+  ↳ bin/rails:4
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+Migrating to AddBakeriesToPastries (20210512180416)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "pastries" ADD "bakery_id" bigint[0m
+  ↳ db/migrate/20210512180416_add_bakeries_to_pastries.rb:3
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE  INDEX  "index_pastries_on_bakery_id" ON "pastries"  ("bakery_id")[0m
+  ↳ db/migrate/20210512180416_add_bakeries_to_pastries.rb:3
+  [1m[35m (2.1ms)[0m  [1m[35mALTER TABLE "pastries" ADD CONSTRAINT "fk_rails_c6f41c9f01"
+FOREIGN KEY ("bakery_id")
+  REFERENCES "bakeries" ("id")
+[0m
+  ↳ db/migrate/20210512180416_add_bakeries_to_pastries.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20210512180416"]]
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+Migrating to AddShopsToCandies (20210512181053)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "candies" ADD "shop_id" bigint[0m
+  ↳ db/migrate/20210512181053_add_shops_to_candies.rb:3
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE  INDEX  "index_candies_on_shop_id" ON "candies"  ("shop_id")[0m
+  ↳ db/migrate/20210512181053_add_shops_to_candies.rb:3
+  [1m[35m (1.0ms)[0m  [1m[35mALTER TABLE "candies" ADD CONSTRAINT "fk_rails_cc2384c2c1"
+FOREIGN KEY ("shop_id")
+  REFERENCES "shops" ("id")
+[0m
+  ↳ db/migrate/20210512181053_add_shops_to_candies.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20210512181053"]]
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2021-05-12 22:28:03.435933"], ["updated_at", "2021-05-12 22:28:03.435933"]]
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_advisory_unlock(6619517006900186970)[0m
+  ↳ bin/rails:4
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[36mShop Load (0.6ms)[0m  [1m[34mSELECT "shops".* FROM "shops"[0m
+  ↳ db/seeds.rb:25
+  [1m[36mCandy Load (0.6ms)[0m  [1m[34mSELECT "candies".* FROM "candies"[0m
+  ↳ db/seeds.rb:26
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:28
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ db/seeds.rb:28
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[36mShop Load (0.7ms)[0m  [1m[34mSELECT "shops".* FROM "shops"[0m
+  ↳ db/seeds.rb:25
+  [1m[36mCandy Load (0.4ms)[0m  [1m[34mSELECT "candies".* FROM "candies"[0m
+  ↳ db/seeds.rb:26
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:28
+  [1m[36mShop Create (0.7ms)[0m  [1m[32mINSERT INTO "shops" ("name", "sells_drinks", "varieties", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Stickys Sweets"], ["sells_drinks", false], ["varieties", 110], ["created_at", "2021-05-12 22:32:39.070365"], ["updated_at", "2021-05-12 22:32:39.070365"]]
+  ↳ db/seeds.rb:28
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:28
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:29
+  [1m[36mCandy Create (0.8ms)[0m  [1m[32mINSERT INTO "candies" ("brand", "all_natural", "calories", "created_at", "updated_at", "shop_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["brand", "Honey Stick"], ["all_natural", true], ["calories", 65], ["created_at", "2021-05-12 22:32:39.083652"], ["updated_at", "2021-05-12 22:32:39.083652"], ["shop_id", 1]]
+  ↳ db/seeds.rb:29
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:29
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:30
+  [1m[36mCandy Create (0.5ms)[0m  [1m[32mINSERT INTO "candies" ("brand", "all_natural", "calories", "created_at", "updated_at", "shop_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["brand", "Jelly Belly"], ["all_natural", true], ["calories", 120], ["created_at", "2021-05-12 22:32:39.085938"], ["updated_at", "2021-05-12 22:32:39.085938"], ["shop_id", 1]]
+  ↳ db/seeds.rb:30
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:30
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:32
+  [1m[36mShop Create (0.2ms)[0m  [1m[32mINSERT INTO "shops" ("name", "sells_drinks", "varieties", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Candy Corral"], ["sells_drinks", true], ["varieties", 45], ["created_at", "2021-05-12 22:32:39.087651"], ["updated_at", "2021-05-12 22:32:39.087651"]]
+  ↳ db/seeds.rb:32
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:32
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:33
+  [1m[36mCandy Create (0.3ms)[0m  [1m[32mINSERT INTO "candies" ("brand", "all_natural", "calories", "created_at", "updated_at", "shop_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["brand", "Lollipops"], ["all_natural", true], ["calories", 48], ["created_at", "2021-05-12 22:32:39.089082"], ["updated_at", "2021-05-12 22:32:39.089082"], ["shop_id", 2]]
+  ↳ db/seeds.rb:33
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:33
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:34
+  [1m[36mCandy Create (0.3ms)[0m  [1m[32mINSERT INTO "candies" ("brand", "all_natural", "calories", "created_at", "updated_at", "shop_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["brand", "Hershey Bar"], ["all_natural", true], ["calories", 230], ["created_at", "2021-05-12 22:32:39.090646"], ["updated_at", "2021-05-12 22:32:39.090646"], ["shop_id", 2]]
+  ↳ db/seeds.rb:34
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:34
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:35
+  [1m[36mCandy Create (0.3ms)[0m  [1m[32mINSERT INTO "candies" ("brand", "all_natural", "calories", "created_at", "updated_at", "shop_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["brand", "Jolly Rancher"], ["all_natural", true], ["calories", 40], ["created_at", "2021-05-12 22:32:39.092203"], ["updated_at", "2021-05-12 22:32:39.092203"], ["shop_id", 2]]
+  ↳ db/seeds.rb:35
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:35
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:37
+  [1m[36mShop Create (0.2ms)[0m  [1m[32mINSERT INTO "shops" ("name", "sells_drinks", "varieties", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Suga Suga"], ["sells_drinks", true], ["varieties", 205], ["created_at", "2021-05-12 22:32:39.093591"], ["updated_at", "2021-05-12 22:32:39.093591"]]
+  ↳ db/seeds.rb:37
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:37
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:38
+  [1m[36mCandy Create (0.3ms)[0m  [1m[32mINSERT INTO "candies" ("brand", "all_natural", "calories", "created_at", "updated_at", "shop_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["brand", "Pop Rocks"], ["all_natural", true], ["calories", 85], ["created_at", "2021-05-12 22:32:39.095178"], ["updated_at", "2021-05-12 22:32:39.095178"], ["shop_id", 3]]
+  ↳ db/seeds.rb:38
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:38
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:39
+  [1m[36mCandy Create (0.3ms)[0m  [1m[32mINSERT INTO "candies" ("brand", "all_natural", "calories", "created_at", "updated_at", "shop_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["brand", "Milk Duds"], ["all_natural", true], ["calories", 310], ["created_at", "2021-05-12 22:32:39.096665"], ["updated_at", "2021-05-12 22:32:39.096665"], ["shop_id", 3]]
+  ↳ db/seeds.rb:39
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:39
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:4
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:4
+  [1m[35m (50.8ms)[0m  [1m[35mDROP DATABASE IF EXISTS "relational_rails_development"[0m
+  ↳ bin/rails:4
+  [1m[35m (43.5ms)[0m  [1m[35mDROP DATABASE IF EXISTS "relational_rails_test"[0m
+  ↳ bin/rails:4
+  [1m[35m (76.7ms)[0m  [1m[35mCREATE DATABASE "relational_rails_development" ENCODING = 'unicode'[0m
+  ↳ bin/rails:4
+  [1m[35m (61.1ms)[0m  [1m[35mCREATE DATABASE "relational_rails_test" ENCODING = 'unicode'[0m
+  ↳ bin/rails:4
+  [1m[35m (6.4ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ bin/rails:4
+  [1m[35m (5.1ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ bin/rails:4
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6619517006900186970)[0m
+  ↳ bin/rails:4
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+Migrating to CreateBakeries (20210512174544)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[35m (6.2ms)[0m  [1m[35mCREATE TABLE "bakeries" ("id" bigserial primary key, "name" character varying, "open_on_weekends" boolean, "hours_open" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20210512174544_create_bakeries.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20210512174544"]]
+  ↳ bin/rails:4
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+Migrating to CreatePastries (20210512174638)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[35m (5.0ms)[0m  [1m[35mCREATE TABLE "pastries" ("id" bigserial primary key, "name" character varying, "savory_pastry" boolean, "calories" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20210512174638_create_pastries.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20210512174638"]]
+  ↳ bin/rails:4
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+Migrating to CreateShops (20210512175927)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[35m (5.3ms)[0m  [1m[35mCREATE TABLE "shops" ("id" bigserial primary key, "name" character varying, "sells_drinks" boolean, "varieties" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20210512175927_create_shops.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20210512175927"]]
+  ↳ bin/rails:4
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+Migrating to CreateCandies (20210512180009)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[35m (4.0ms)[0m  [1m[35mCREATE TABLE "candies" ("id" bigserial primary key, "brand" character varying, "all_natural" boolean, "calories" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20210512180009_create_candies.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20210512180009"]]
+  ↳ bin/rails:4
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+Migrating to AddBakeriesToPastries (20210512180416)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "pastries" ADD "bakery_id" bigint[0m
+  ↳ db/migrate/20210512180416_add_bakeries_to_pastries.rb:3
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE  INDEX  "index_pastries_on_bakery_id" ON "pastries"  ("bakery_id")[0m
+  ↳ db/migrate/20210512180416_add_bakeries_to_pastries.rb:3
+  [1m[35m (2.1ms)[0m  [1m[35mALTER TABLE "pastries" ADD CONSTRAINT "fk_rails_c6f41c9f01"
+FOREIGN KEY ("bakery_id")
+  REFERENCES "bakeries" ("id")
+[0m
+  ↳ db/migrate/20210512180416_add_bakeries_to_pastries.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20210512180416"]]
+  ↳ bin/rails:4
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+Migrating to AddShopsToCandies (20210512181053)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[35m (1.0ms)[0m  [1m[35mALTER TABLE "candies" ADD "shop_id" bigint[0m
+  ↳ db/migrate/20210512181053_add_shops_to_candies.rb:3
+  [1m[35m (1.9ms)[0m  [1m[35mCREATE  INDEX  "index_candies_on_shop_id" ON "candies"  ("shop_id")[0m
+  ↳ db/migrate/20210512181053_add_shops_to_candies.rb:3
+  [1m[35m (2.4ms)[0m  [1m[35mALTER TABLE "candies" ADD CONSTRAINT "fk_rails_cc2384c2c1"
+FOREIGN KEY ("shop_id")
+  REFERENCES "shops" ("id")
+[0m
+  ↳ db/migrate/20210512181053_add_shops_to_candies.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20210512181053"]]
+  ↳ bin/rails:4
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2021-05-12 22:43:44.430076"], ["updated_at", "2021-05-12 22:43:44.430076"]]
+  ↳ bin/rails:4
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(6619517006900186970)[0m
+  ↳ bin/rails:4
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[36mShop Load (0.9ms)[0m  [1m[34mSELECT "shops".* FROM "shops"[0m
+  ↳ db/seeds.rb:25
+  [1m[36mCandy Load (0.9ms)[0m  [1m[34mSELECT "candies".* FROM "candies"[0m
+  ↳ db/seeds.rb:26
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:28
+  [1m[36mShop Create (0.7ms)[0m  [1m[32mINSERT INTO "shops" ("name", "sells_drinks", "varieties", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Stickys Sweets"], ["sells_drinks", true], ["varieties", 110], ["created_at", "2021-05-12 22:47:07.741331"], ["updated_at", "2021-05-12 22:47:07.741331"]]
+  ↳ db/seeds.rb:28
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:28
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:29
+  [1m[36mCandy Create (0.8ms)[0m  [1m[32mINSERT INTO "candies" ("brand", "all_natural", "calories", "created_at", "updated_at", "shop_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["brand", "Honey Stick"], ["all_natural", true], ["calories", 65], ["created_at", "2021-05-12 22:47:07.753403"], ["updated_at", "2021-05-12 22:47:07.753403"], ["shop_id", 1]]
+  ↳ db/seeds.rb:29
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:29
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:30
+  [1m[36mCandy Create (0.3ms)[0m  [1m[32mINSERT INTO "candies" ("brand", "all_natural", "calories", "created_at", "updated_at", "shop_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["brand", "Jelly Belly"], ["all_natural", false], ["calories", 120], ["created_at", "2021-05-12 22:47:07.755643"], ["updated_at", "2021-05-12 22:47:07.755643"], ["shop_id", 1]]
+  ↳ db/seeds.rb:30
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:30
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:32
+  [1m[36mShop Create (0.4ms)[0m  [1m[32mINSERT INTO "shops" ("name", "sells_drinks", "varieties", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Candy Corral"], ["sells_drinks", true], ["varieties", 45], ["created_at", "2021-05-12 22:47:07.757060"], ["updated_at", "2021-05-12 22:47:07.757060"]]
+  ↳ db/seeds.rb:32
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:32
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:33
+  [1m[36mCandy Create (0.3ms)[0m  [1m[32mINSERT INTO "candies" ("brand", "all_natural", "calories", "created_at", "updated_at", "shop_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["brand", "Lollipops"], ["all_natural", true], ["calories", 48], ["created_at", "2021-05-12 22:47:07.758808"], ["updated_at", "2021-05-12 22:47:07.758808"], ["shop_id", 2]]
+  ↳ db/seeds.rb:33
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:33
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:34
+  [1m[36mCandy Create (0.3ms)[0m  [1m[32mINSERT INTO "candies" ("brand", "all_natural", "calories", "created_at", "updated_at", "shop_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["brand", "Hershey Bar"], ["all_natural", false], ["calories", 230], ["created_at", "2021-05-12 22:47:07.760416"], ["updated_at", "2021-05-12 22:47:07.760416"], ["shop_id", 2]]
+  ↳ db/seeds.rb:34
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:34
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:35
+  [1m[36mCandy Create (0.3ms)[0m  [1m[32mINSERT INTO "candies" ("brand", "all_natural", "calories", "created_at", "updated_at", "shop_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["brand", "Jolly Rancher"], ["all_natural", false], ["calories", 40], ["created_at", "2021-05-12 22:47:07.761874"], ["updated_at", "2021-05-12 22:47:07.761874"], ["shop_id", 2]]
+  ↳ db/seeds.rb:35
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:35
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:37
+  [1m[36mShop Create (0.2ms)[0m  [1m[32mINSERT INTO "shops" ("name", "sells_drinks", "varieties", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Gimme Some Suga"], ["sells_drinks", false], ["varieties", 205], ["created_at", "2021-05-12 22:47:07.763309"], ["updated_at", "2021-05-12 22:47:07.763309"]]
+  ↳ db/seeds.rb:37
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:37
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:38
+  [1m[36mCandy Create (0.3ms)[0m  [1m[32mINSERT INTO "candies" ("brand", "all_natural", "calories", "created_at", "updated_at", "shop_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["brand", "Pop Rocks"], ["all_natural", false], ["calories", 85], ["created_at", "2021-05-12 22:47:07.764912"], ["updated_at", "2021-05-12 22:47:07.764912"], ["shop_id", 3]]
+  ↳ db/seeds.rb:38
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:38
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:39
+  [1m[36mCandy Create (0.3ms)[0m  [1m[32mINSERT INTO "candies" ("brand", "all_natural", "calories", "created_at", "updated_at", "shop_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["brand", "Milk Duds"], ["all_natural", true], ["calories", 310], ["created_at", "2021-05-12 22:47:07.766452"], ["updated_at", "2021-05-12 22:47:07.766452"], ["shop_id", 3]]
+  ↳ db/seeds.rb:39
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:39
