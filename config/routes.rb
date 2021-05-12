@@ -1,9 +1,11 @@
 Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
-  ## Leigh's Space
   get '/', to: 'welcome#index'
+  
+  ## Leigh's Space
   get '/bakeries', to: 'bakeries#index'
+  get '/bakeries/:id', to: 'bakeries#show'
 
   ## Kevin's space
   get '/shops', to: 'shops#index'
