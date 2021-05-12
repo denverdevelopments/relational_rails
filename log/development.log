@@ -363,3 +363,51 @@ Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
 NoMethodError (undefined method `find' for nil:NilClass):
   
 app/controllers/bakeries_controller.rb:7:in `show'
+Started GET "/bakeries" for ::1 at 2021-05-11 20:13:55 -0700
+Processing by BakeriesController#index as HTML
+  Rendering bakeries/index.html.erb within layouts/application
+  Rendered bakeries/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 160ms (Views: 159.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pastries" for ::1 at 2021-05-11 20:13:58 -0700
+Processing by PastriesController#index as HTML
+  Rendering pastries/index.html.erb within layouts/application
+  Rendered pastries/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 11ms (Views: 9.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/candies" for ::1 at 2021-05-11 20:16:58 -0700
+Processing by CandiesController#index as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (uninitialized constant CandiesController::Candy):
+  
+app/controllers/candies_controller.rb:3:in `index'
+Started GET "/pastries" for ::1 at 2021-05-11 20:17:05 -0700
+Processing by PastriesController#index as HTML
+  Rendering pastries/index.html.erb within layouts/application
+  Rendered pastries/index.html.erb within layouts/application (3.5ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `savory_pastry' for "Pastry 1":String):
+    2: 
+    3: <% @pastries.each do |pastry| %>
+    4:   <h3><%= pastry %></h3>
+    5:   <p><%= pastry.savory_pastry %></p>
+    6: <% end %>
+  
+app/views/pastries/index.html.erb:5:in `block in _app_views_pastries_index_html_erb___2561709413993736862_12240'
+app/views/pastries/index.html.erb:3:in `each'
+app/views/pastries/index.html.erb:3:in `_app_views_pastries_index_html_erb___2561709413993736862_12240'
+Started GET "/pastries" for ::1 at 2021-05-11 20:17:53 -0700
+Processing by PastriesController#index as HTML
+  Rendering pastries/index.html.erb within layouts/application
+  Rendered pastries/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 12ms (Views: 11.3ms | ActiveRecord: 0.0ms)
+
+
