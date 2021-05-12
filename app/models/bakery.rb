@@ -1,0 +1,3 @@
+class Bakery < ApplicationRecord
+
+end

@@ -30,3 +30,409 @@ Processing by BakeriesController#index as HTML
 Completed 200 OK in 36ms (Views: 34.8ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for ::1 at 2021-05-11 18:50:26 -0700
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 158ms (Views: 155.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/bakeries" for ::1 at 2021-05-11 18:50:28 -0700
+Processing by BakeriesController#index as HTML
+  Rendering bakeries/index.html.erb within layouts/application
+  Rendered bakeries/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 19ms (Views: 17.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pastries" for ::1 at 2021-05-11 18:50:33 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/pastries"):
+  
+actionpack (5.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.6) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/bakeries" for ::1 at 2021-05-11 18:50:35 -0700
+Processing by BakeriesController#index as HTML
+  Rendering bakeries/index.html.erb within layouts/application
+  Rendered bakeries/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 12ms (Views: 10.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/bakeries/1" for ::1 at 2021-05-11 18:50:57 -0700
+Processing by BakeriesController#show as HTML
+  Parameters: {"id"=>"1"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (uninitialized constant BakeriesController::Bakery):
+  
+app/controllers/bakeries_controller.rb:7:in `show'
+Started GET "/bakeries/1" for ::1 at 2021-05-11 18:51:30 -0700
+Processing by BakeriesController#show as HTML
+  Parameters: {"id"=>"1"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (uninitialized constant BakeriesController::Bakery):
+  
+app/controllers/bakeries_controller.rb:7:in `show'
+Started GET "/bakeries/1" for ::1 at 2021-05-11 19:36:20 -0700
+Processing by BakeriesController#show as HTML
+  Parameters: {"id"=>"1"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `find' for nil:NilClass):
+  
+app/controllers/bakeries_controller.rb:7:in `show'
+Started GET "/bakeries" for ::1 at 2021-05-11 19:36:24 -0700
+Processing by BakeriesController#index as HTML
+  Rendering bakeries/index.html.erb within layouts/application
+  Rendered bakeries/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 17ms (Views: 16.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-05-11 19:43:25 -0700
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 156ms (Views: 154.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/bakeries" for ::1 at 2021-05-11 19:43:28 -0700
+Processing by BakeriesController#index as HTML
+  Rendering bakeries/index.html.erb within layouts/application
+  Rendered bakeries/index.html.erb within layouts/application (3.5ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `name' for "Bakery 1":String):
+    1: <h1>All the most Radical Bakeries</h1>
+    2: 
+    3: <% @bakeries.each do |bakery| %>
+    4:   <h3><a href="/bakeries/><%= bakery %>"><%= bakery.name %></a></h3>
+    5: <% end %>
+  
+app/views/bakeries/index.html.erb:4:in `block in _app_views_bakeries_index_html_erb___2989588755725202939_11520'
+app/views/bakeries/index.html.erb:3:in `each'
+app/views/bakeries/index.html.erb:3:in `_app_views_bakeries_index_html_erb___2989588755725202939_11520'
+Started GET "/bakeries" for ::1 at 2021-05-11 19:44:12 -0700
+Processing by BakeriesController#index as HTML
+  Rendering bakeries/index.html.erb within layouts/application
+  Rendered bakeries/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 11ms (Views: 10.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/bakeries" for ::1 at 2021-05-11 19:44:33 -0700
+Processing by BakeriesController#index as HTML
+  Rendering bakeries/index.html.erb within layouts/application
+  Rendered bakeries/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 11ms (Views: 10.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-05-11 19:44:37 -0700
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 10ms (Views: 9.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/bakeries" for ::1 at 2021-05-11 19:44:40 -0700
+Processing by BakeriesController#index as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `all' for nil:NilClass):
+  
+app/controllers/bakeries_controller.rb:3:in `index'
+Started GET "/bakeries" for ::1 at 2021-05-11 19:44:47 -0700
+Processing by BakeriesController#index as HTML
+  Rendering bakeries/index.html.erb within layouts/application
+  Rendered bakeries/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 12ms (Views: 11.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-05-11 19:51:24 -0700
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 140ms (Views: 139.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/bakeries" for ::1 at 2021-05-11 19:51:26 -0700
+Processing by BakeriesController#index as HTML
+  Rendering bakeries/index.html.erb within layouts/application
+  Rendered bakeries/index.html.erb within layouts/application (3.2ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `name' for "Bakery 1":String):
+    1: <h1>All the most Radical Bakeries</h1>
+    2: 
+    3: <% @bakeries.each do |bakery| %>
+    4:   <h3><a href="/bakery><%= bakery %>"><%= bakery.name %></a></h3>
+    5: <% end %>
+  
+app/views/bakeries/index.html.erb:4:in `block in _app_views_bakeries_index_html_erb__3149883987766864493_11520'
+app/views/bakeries/index.html.erb:3:in `each'
+app/views/bakeries/index.html.erb:3:in `_app_views_bakeries_index_html_erb__3149883987766864493_11520'
+Started GET "/bakeries" for ::1 at 2021-05-11 19:51:58 -0700
+Processing by BakeriesController#index as HTML
+  Rendering bakeries/index.html.erb within layouts/application
+  Rendered bakeries/index.html.erb within layouts/application (2.9ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (wrong number of arguments (given 0, expected 1..2)):
+    1: <h1>All the most Radical Bakeries</h1>
+    2: 
+    3: <% @bakeries.each do |bakery| %>
+    4:   <h3><a href="/bakery><%= bakery %>"><%= bakery.index %></a></h3>
+    5: <% end %>
+  
+app/views/bakeries/index.html.erb:4:in `index'
+app/views/bakeries/index.html.erb:4:in `block in _app_views_bakeries_index_html_erb__3149883987766864493_12080'
+app/views/bakeries/index.html.erb:3:in `each'
+app/views/bakeries/index.html.erb:3:in `_app_views_bakeries_index_html_erb__3149883987766864493_12080'
+Started GET "/bakeries" for ::1 at 2021-05-11 19:52:11 -0700
+Processing by BakeriesController#index as HTML
+  Rendering bakeries/index.html.erb within layouts/application
+  Rendered bakeries/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 12ms (Views: 11.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/bakeries" for ::1 at 2021-05-11 19:52:19 -0700
+Processing by BakeriesController#index as HTML
+  Rendering bakeries/index.html.erb within layouts/application
+  Rendered bakeries/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 14ms (Views: 12.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/bakery%3EBakery%201" for ::1 at 2021-05-11 19:52:33 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/bakery%3EBakery%201"):
+  
+actionpack (5.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.6) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/bakeries" for ::1 at 2021-05-11 19:53:23 -0700
+Processing by BakeriesController#index as HTML
+  Rendering bakeries/index.html.erb within layouts/application
+  Rendered bakeries/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 11ms (Views: 10.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/bakery%3EBakery%201" for ::1 at 2021-05-11 19:53:35 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/bakery%3EBakery%201"):
+  
+actionpack (5.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.6) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/bakeries" for ::1 at 2021-05-11 19:55:34 -0700
+Processing by BakeriesController#index as HTML
+  Rendering bakeries/index.html.erb within layouts/application
+  Rendered bakeries/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 13ms (Views: 11.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/baker%3EBakery%201" for ::1 at 2021-05-11 19:56:22 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/baker%3EBakery%201"):
+  
+actionpack (5.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.6) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/bakeries" for ::1 at 2021-05-11 19:57:05 -0700
+Processing by BakeriesController#index as HTML
+  Rendering bakeries/index.html.erb within layouts/application
+  Rendered bakeries/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 11ms (Views: 10.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/bakeries/1" for ::1 at 2021-05-11 19:57:46 -0700
+Processing by BakeriesController#show as HTML
+  Parameters: {"id"=>"1"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `find' for nil:NilClass):
+  
+app/controllers/bakeries_controller.rb:7:in `show'
+Started GET "/bakeries" for ::1 at 2021-05-11 20:13:55 -0700
+Processing by BakeriesController#index as HTML
+  Rendering bakeries/index.html.erb within layouts/application
+  Rendered bakeries/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 160ms (Views: 159.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pastries" for ::1 at 2021-05-11 20:13:58 -0700
+Processing by PastriesController#index as HTML
+  Rendering pastries/index.html.erb within layouts/application
+  Rendered pastries/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 11ms (Views: 9.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/candies" for ::1 at 2021-05-11 20:16:58 -0700
+Processing by CandiesController#index as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (uninitialized constant CandiesController::Candy):
+  
+app/controllers/candies_controller.rb:3:in `index'
+Started GET "/pastries" for ::1 at 2021-05-11 20:17:05 -0700
+Processing by PastriesController#index as HTML
+  Rendering pastries/index.html.erb within layouts/application
+  Rendered pastries/index.html.erb within layouts/application (3.5ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `savory_pastry' for "Pastry 1":String):
+    2: 
+    3: <% @pastries.each do |pastry| %>
+    4:   <h3><%= pastry %></h3>
+    5:   <p><%= pastry.savory_pastry %></p>
+    6: <% end %>
+  
+app/views/pastries/index.html.erb:5:in `block in _app_views_pastries_index_html_erb___2561709413993736862_12240'
+app/views/pastries/index.html.erb:3:in `each'
+app/views/pastries/index.html.erb:3:in `_app_views_pastries_index_html_erb___2561709413993736862_12240'
+Started GET "/pastries" for ::1 at 2021-05-11 20:17:53 -0700
+Processing by PastriesController#index as HTML
+  Rendering pastries/index.html.erb within layouts/application
+  Rendered pastries/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 12ms (Views: 11.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-05-12 10:10:08 -0700
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 175ms (Views: 174.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/bakeries" for ::1 at 2021-05-12 10:10:11 -0700
+Processing by BakeriesController#index as HTML
+  Rendering bakeries/index.html.erb within layouts/application
+  Rendered bakeries/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 10ms (Views: 9.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pastries" for ::1 at 2021-05-12 10:15:48 -0700
+Processing by PastriesController#index as HTML
+  Rendering pastries/index.html.erb within layouts/application
+  Rendered pastries/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 11ms (Views: 10.0ms | ActiveRecord: 0.0ms)
+
+
+  [1m[35m (2.7ms)[0m  [1m[35mCREATE DATABASE "relational_rails_development" ENCODING = 'unicode'[0m
+  ↳ bin/rails:4
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE DATABASE "relational_rails_test" ENCODING = 'unicode'[0m
+  ↳ bin/rails:4

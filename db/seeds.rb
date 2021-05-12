@@ -7,6 +7,17 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
+# Leigh's Seeds
+Bakery.destroy_all
+Pastry.destroy_all
+
+@dalia_flour = Bakery.create!(name: "Dalia Flour Bakery", open_on_weekends: false, hours_open: 8)
+@hawk_spot = Bakery.create!(name: "The Hawk Spot Bakery", open_on_weekends: true, hours_open: 6)
+
+
+
+
+
 
 
 
@@ -23,3 +34,4 @@
 @shop_3 = Shop.create!(name: 'Suga Suga', sells_drinks: true, varieties: 205)
 @candy_6 = @shop_3.candies.create!(name: 'Pop Rocks', all_natural: true, calories: 85)
 @candy_7 = @shop_3.candies.create!(name: 'Milk Duds', all_natural: false, calories: 310)
+

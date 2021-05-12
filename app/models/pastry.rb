@@ -1,0 +1,3 @@
+class Pastry < ApplicationRecord
+
+end
