@@ -7,3 +7,37 @@ class ShopsController < ApplicationController
     @shop = Shop.find(params[:id])
   end
 end
+
+# class TasksController < ApplicationController
+#   def index #     @tasks = Task.all
+#
+#   def show  #     @task = Task.find(params[:id])
+#
+#   def new
+#
+#   def create
+#     task = Task.new({
+#       title: params[:task][:title],
+#       description: params[:task][:description]
+#       })
+#     task.save
+#     redirect_to '/tasks'
+#   end
+#
+#   def edit  #     @task = Task.find(params[:id])
+#
+#   def update
+#     task = Task.find(params[:id])
+#     task.update({
+#       title: params[:task][:title],
+#       description: params[:task][:description]
+#       })
+#     task.save
+#     redirect_to "/tasks/#{task.id}"
+#   end
+#
+#   def destroy
+#     Task.destroy(params[:id])
+#     redirect_to '/tasks'
+#   end
+# end
