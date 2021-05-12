@@ -65,11 +65,6 @@ RSpec.describe 'the candies index', type: :feature do
   # it 'shows two sections, "Enabled Items" & "Disabled Items"' do
   #   visit "/shops"
   #
-  #   expect(page).to have_content("Enabled Items")
-  #   expect(page).to have_content(@autem.name)
-  #   expect(page).to have_button("Disable")
-  #   expect(page).to have_content(@ea.name)
-  #
   #   expect(page).to have_content("Disabled Items")
   #   expect(page).to have_content(@qui.name)
   #   expect(page).to have_button("Enable")
