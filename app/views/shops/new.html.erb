@@ -1,0 +1,12 @@
+<h3 align="right"><%= render partial: 'partials/merch_header' %>&emsp;</h3>
+
+<h3>New Discount</h3><br/>
+<%= form_with url:"/merchants/#{@merchant.id}/discounts", method: :post, local: true do |form| %>
+  <%= form.label :percent %>
+  <%= form.number_field :percent %><br/><br/>
+
+  <%= form.label :quantity %>
+  <%= form.number_field :quantity %><br/><br/>
+
+  <%= form.submit 'Create New Discount' %>
+<% end %>

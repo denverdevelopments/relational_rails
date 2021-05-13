@@ -6,11 +6,18 @@ RSpec.describe 'the shops index', type: :feature do
     @shop_2 = Shop.create!(name: 'Candy Corral', sells_drinks: false, varieties: 45)
   end
 
-  it 'has a link to main welcome page' do
+  it 'has a link to bakeries index' do
     visit "/shops"
-      expect(page).to have_link("Welcome")
-      click_link("Welcome")
-      expect(current_path).to eq("/")
+      expect(page).to have_link("Bakeries Index")
+      click_link("Bakeries Index")
+      expect(current_path).to eq("/bakeries")
+  end
+
+  it 'has a link to pastries index' do
+    visit "/shops"
+      expect(page).to have_link("Pastries Index")
+      click_link("Pastries Index")
+      expect(current_path).to eq("/pastries")
   end
 
   it 'has a link to shops index' do
@@ -27,7 +34,7 @@ RSpec.describe 'the shops index', type: :feature do
       expect(current_path).to eq("/candies")
   end
 
-  it 'lists of all shops' do
+  it 'lists of all shop names' do
     visit "/shops"
 
     within("#shop-index") do
