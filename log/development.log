@@ -1,1 +1,70 @@
- 
+ Started GET "/shops" for ::1 at 2021-05-12 22:23:09 -0600
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/kevinn/.rbenv/versions/2.7.2/lib/ruby/gems/2.7.0/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by ShopsController#index as HTML
+  Rendering shops/index.html.erb within layouts/application
+  Rendered partials/_header_links.html.erb (0.4ms)
+  [1m[36mShop Load (0.9ms)[0m  [1m[34mSELECT "shops".* FROM "shops"[0m
+  ↳ app/views/shops/index.html.erb:7
+  Rendered shops/index.html.erb within layouts/application (14.6ms)
+Completed 200 OK in 141ms (Views: 129.6ms | ActiveRecord: 7.0ms)
+
+
+Started GET "/shops" for ::1 at 2021-05-12 22:23:46 -0600
+Processing by ShopsController#index as HTML
+  Rendering shops/index.html.erb within layouts/application
+  Rendered partials/_header_links.html.erb (0.3ms)
+  [1m[36mShop Load (0.3ms)[0m  [1m[34mSELECT "shops".* FROM "shops"[0m
+  ↳ app/views/shops/index.html.erb:7
+  Rendered shops/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 13ms (Views: 12.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/shops" for ::1 at 2021-05-12 22:24:40 -0600
+Processing by ShopsController#index as HTML
+  Rendering shops/index.html.erb within layouts/application
+  Rendered partials/_header_links.html.erb (0.5ms)
+  [1m[36mShop Load (0.3ms)[0m  [1m[34mSELECT "shops".* FROM "shops"[0m
+  ↳ app/views/shops/index.html.erb:7
+  Rendered shops/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 14ms (Views: 13.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/shops/1" for ::1 at 2021-05-12 22:34:42 -0600
+Processing by ShopsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mShop Load (0.5ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/shops_controller.rb:7
+  Rendering shops/show.html.erb within layouts/application
+  Rendered shops/show.html.erb within layouts/application (5.1ms)
+Completed 500 Internal Server Error in 39ms (ActiveRecord: 22.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `percent' for #<Shop:0x00007f7f9cd5afc0>):
+    1: <h2 align="left"><%= @shop.name %></h2>
+    2: 
+    3: <p>&emsp;Sells Drinks?: <%= @shop.percent %></p>
+    4: <p>&emsp;How Many Candy Varieties?:  <%= @shop.varieties %></p>
+  
+app/views/shops/show.html.erb:3:in `_app_views_shops_show_html_erb___961975366011886309_16360'
+Started GET "/shops/1" for ::1 at 2021-05-12 22:35:01 -0600
+Processing by ShopsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mShop Load (0.5ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/shops_controller.rb:7
+  Rendering shops/show.html.erb within layouts/application
+  Rendered shops/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 12ms (Views: 10.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/shops/1" for ::1 at 2021-05-12 22:35:35 -0600
+Processing by ShopsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mShop Load (0.3ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/shops_controller.rb:7
+  Rendering shops/show.html.erb within layouts/application
+  Rendered shops/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 14ms (Views: 12.7ms | ActiveRecord: 0.3ms)
+
+
