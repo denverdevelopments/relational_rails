@@ -6,7 +6,7 @@
   <h2>Candy Shops Index</h2>
   <% @shops.each do |shop| %>
     <section id="shop-<%= shop.id %>">
-      &emsp;<h4><%= link_to "#{shop.name}", "/shops/#{shop.id}" %>&emsp;&emsp;<%= link_to "( Delete )", "/shops/#{shop.id}", method: :delete %></h4>
+      <h4>&emsp;<%= link_to "#{shop.name}", "/shops/#{shop.id}" %>&emsp;&emsp;<%= link_to "( Delete )", "/shops/#{shop.id}", method: :delete %></h4>
       <br/><br/>
     </section>
   <% end %><br/>

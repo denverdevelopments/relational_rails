@@ -1,5 +1,5 @@
-<h2 align="left">Bulk Discount Show</h2>
+<h2 align="left"><%= @shop.name %></h2>
 
-<p>&emsp;Percent Off  % <%= @discount.percent %></p>
-<p>&emsp;Minimum Quantity:  <%= @discount.quantity %> (item threshold)</p>
-<p>&emsp;<%= link_to "Edit Discount", "/merchants/#{@merchant.id}/discounts/#{@discount.id}/edit" %></p>
+<p>&emsp;Shop ID#: <%= @shop.id %></p>
+<p>&emsp;Sells drinks?: <%= @shop.sells_drinks %></p>
+<p>&emsp;How many candy varieties?: <%= @shop.varieties %></p>

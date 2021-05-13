@@ -41,13 +41,13 @@ RSpec.describe 'the shops index', type: :feature do
 
       within("#shop-#{@shop_1.id}") do
         expect(page).to have_content(@shop_1.name)
-        # expect(page).to have_link(@shop_1.percent)
       end
 
       within("#shop-#{@shop_2.id}") do
         expect(page).to have_content(@shop_2.name)
       end
 
+      # expect(page).to have_link(@shop_1.percent)
       # click_link(@tv_1.percent)
       # expect(current_path).to eq("/merchants/#{@merchant_1.id}/discounts/#{@tv_1.id}")
     end
