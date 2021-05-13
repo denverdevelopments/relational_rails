@@ -3,35 +3,35 @@ require 'rails_helper'
 RSpec.describe 'the shops index', type: :feature do
   before(:each) do
     @shop_1 = Shop.create!(name: 'Stickys Sweets', sells_drinks: true, varieties: 110)
-    @shop_2 = Shop.create!(name: 'Candy Corral', sells_drinks: false, varieties: 45)
+    @shop_2 = Shop.create!(name: 'Gimme Some Suga', sells_drinks: false, varieties: 205)
   end
 
   it 'has a link to bakeries index' do
-    visit "/shops"
-      expect(page).to have_link("Bakeries Index")
-      click_link("Bakeries Index")
-      expect(current_path).to eq("/bakeries")
+      visit "/shops"
+    expect(page).to have_link("Bakeries Index")
+    click_link("Bakeries Index")
+    expect(current_path).to eq("/bakeries")
   end
 
   it 'has a link to pastries index' do
-    visit "/shops"
-      expect(page).to have_link("Pastries Index")
-      click_link("Pastries Index")
-      expect(current_path).to eq("/pastries")
+      visit "/shops"
+    expect(page).to have_link("Pastries Index")
+    click_link("Pastries Index")
+    expect(current_path).to eq("/pastries")
   end
 
   it 'has a link to shops index' do
-    visit "/shops"
-      expect(page).to have_link("Candy Shops Index")
-      click_link("Candy Shops Index")
-      expect(current_path).to eq("/shops")
+      visit "/shops"
+    expect(page).to have_link("Candy Shops Index")
+    click_link("Candy Shops Index")
+    expect(current_path).to eq("/shops")
   end
 
   it 'has a link to candies index' do
-    visit "/shops"
-      expect(page).to have_link("Candies Index")
-      click_link("Candies Index")
-      expect(current_path).to eq("/candies")
+      visit "/shops"
+    expect(page).to have_link("Candies Index")
+    click_link("Candies Index")
+    expect(current_path).to eq("/candies")
   end
 
   it 'lists of all shop names' do

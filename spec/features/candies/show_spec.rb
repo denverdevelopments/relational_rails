@@ -1,11 +1,41 @@
 require 'rails_helper'
 
 RSpec.describe 'the candy show page', type: :feature do
-  it 'shows the candy attributes' do
+  before(:each) do
     @shop_1 = Shop.create!(name: 'Stickys Sweets', sells_drinks: true, varieties: 110)
     @candy_1 = @shop_1.candies.create!(name: 'Honey Stick', all_natural: true, calories: 65)
     @candy_2 = @shop_1.candies.create!(name: 'Jelly Belly', all_natural: false, calories: 120)
+  end
 
+  it 'has a link to bakeries index' do
+      visit "/candies/#{@candy_1.id}"
+    expect(page).to have_link("Bakeries Index")
+    click_link("Bakeries Index")
+    expect(current_path).to eq("/bakeries")
+  end
+
+  it 'has a link to pastries index' do
+      visit "/candies/#{@candy_1.id}"
+    expect(page).to have_link("Pastries Index")
+    click_link("Pastries Index")
+    expect(current_path).to eq("/pastries")
+  end
+
+  it 'has a link to shops index' do
+      visit "/candies/#{@candy_1.id}"
+    expect(page).to have_link("Candy Shops Index")
+    click_link("Candy Shops Index")
+    expect(current_path).to eq("/shops")
+  end
+
+  it 'has a link to candies index' do
+      visit "/candies/#{@candy_1.id}"
+    expect(page).to have_link("Candies Index")
+    click_link("Candies Index")
+    expect(current_path).to eq("/candies")
+  end
+
+  it 'shows the candy attributes' do
       visit "/candies/#{@candy_1.id}"
 
     expect(page).to have_content("CANDY ##{@candy_1.id}")

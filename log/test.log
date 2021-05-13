@@ -101,3 +101,394 @@ FOREIGN KEY ("bakery_id")
   [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
   [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
   [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mShop Create (0.8ms)[0m  [1m[32mINSERT INTO "shops" ("name", "sells_drinks", "varieties", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Stickys Sweets"], ["sells_drinks", true], ["varieties", 110], ["created_at", "2021-05-13 06:50:16.486965"], ["updated_at", "2021-05-13 06:50:16.486965"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mShop Create (0.2ms)[0m  [1m[32mINSERT INTO "shops" ("name", "sells_drinks", "varieties", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Candy Corral"], ["sells_drinks", false], ["varieties", 45], ["created_at", "2021-05-13 06:50:16.488999"], ["updated_at", "2021-05-13 06:50:16.488999"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/shops/73" for 127.0.0.1 at 2021-05-13 00:50:16 -0600
+Processing by ShopsController#show as HTML
+  Parameters: {"id"=>"73"}
+  [1m[36mShop Load (0.3ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 73], ["LIMIT", 1]]
+  Rendering shops/show.html.erb within layouts/application
+  Rendered shops/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 95ms (Views: 92.4ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mShop Create (0.5ms)[0m  [1m[32mINSERT INTO "shops" ("name", "sells_drinks", "varieties", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Stickys Sweets"], ["sells_drinks", true], ["varieties", 110], ["created_at", "2021-05-13 06:52:09.765267"], ["updated_at", "2021-05-13 06:52:09.765267"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mShop Create (0.2ms)[0m  [1m[32mINSERT INTO "shops" ("name", "sells_drinks", "varieties", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Candy Corral"], ["sells_drinks", false], ["varieties", 45], ["created_at", "2021-05-13 06:52:09.766958"], ["updated_at", "2021-05-13 06:52:09.766958"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/shops" for 127.0.0.1 at 2021-05-13 00:52:09 -0600
+Processing by ShopsController#index as HTML
+  Rendering shops/index.html.erb within layouts/application
+  Rendered partials/_header_links.html.erb (0.3ms)
+  [1m[36mShop Load (0.5ms)[0m  [1m[34mSELECT "shops".* FROM "shops"[0m
+  Rendered shops/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 89ms (Views: 87.7ms | ActiveRecord: 0.5ms)
+Started GET "/bakeries" for 127.0.0.1 at 2021-05-13 00:52:09 -0600
+Processing by BakeriesController#index as HTML
+  Rendering bakeries/index.html.erb within layouts/application
+  [1m[36mBakery Load (0.5ms)[0m  [1m[34mSELECT "bakeries".* FROM "bakeries"[0m
+  Rendered bakeries/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 6ms (Views: 2.1ms | ActiveRecord: 1.7ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mShop Create (0.3ms)[0m  [1m[32mINSERT INTO "shops" ("name", "sells_drinks", "varieties", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Stickys Sweets"], ["sells_drinks", true], ["varieties", 110], ["created_at", "2021-05-13 06:52:09.918888"], ["updated_at", "2021-05-13 06:52:09.918888"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mShop Create (0.3ms)[0m  [1m[32mINSERT INTO "shops" ("name", "sells_drinks", "varieties", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Candy Corral"], ["sells_drinks", false], ["varieties", 45], ["created_at", "2021-05-13 06:52:09.920630"], ["updated_at", "2021-05-13 06:52:09.920630"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/shops" for 127.0.0.1 at 2021-05-13 00:52:09 -0600
+Processing by ShopsController#index as HTML
+  Rendering shops/index.html.erb within layouts/application
+  Rendered partials/_header_links.html.erb (0.2ms)
+  [1m[36mShop Load (0.2ms)[0m  [1m[34mSELECT "shops".* FROM "shops"[0m
+  Rendered shops/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.2ms)
+Started GET "/pastries" for 127.0.0.1 at 2021-05-13 00:52:09 -0600
+Processing by PastriesController#index as HTML
+  Rendering pastries/index.html.erb within layouts/application
+  [1m[36mPastry Load (0.7ms)[0m  [1m[34mSELECT "pastries".* FROM "pastries"[0m
+  Rendered pastries/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 28ms (Views: 2.7ms | ActiveRecord: 1.9ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mShop Create (0.3ms)[0m  [1m[32mINSERT INTO "shops" ("name", "sells_drinks", "varieties", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Stickys Sweets"], ["sells_drinks", true], ["varieties", 110], ["created_at", "2021-05-13 06:52:09.959220"], ["updated_at", "2021-05-13 06:52:09.959220"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mShop Create (0.2ms)[0m  [1m[32mINSERT INTO "shops" ("name", "sells_drinks", "varieties", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Candy Corral"], ["sells_drinks", false], ["varieties", 45], ["created_at", "2021-05-13 06:52:09.960618"], ["updated_at", "2021-05-13 06:52:09.960618"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/shops" for 127.0.0.1 at 2021-05-13 00:52:09 -0600
+Processing by ShopsController#index as HTML
+  Rendering shops/index.html.erb within layouts/application
+  Rendered partials/_header_links.html.erb (0.1ms)
+  [1m[36mShop Load (0.3ms)[0m  [1m[34mSELECT "shops".* FROM "shops"[0m
+  Rendered shops/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.3ms)
+Started GET "/shops" for 127.0.0.1 at 2021-05-13 00:52:09 -0600
+Processing by ShopsController#index as HTML
+  Rendering shops/index.html.erb within layouts/application
+  Rendered partials/_header_links.html.erb (0.1ms)
+  [1m[36mShop Load (0.3ms)[0m  [1m[34mSELECT "shops".* FROM "shops"[0m
+  Rendered shops/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mShop Create (0.3ms)[0m  [1m[32mINSERT INTO "shops" ("name", "sells_drinks", "varieties", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Stickys Sweets"], ["sells_drinks", true], ["varieties", 110], ["created_at", "2021-05-13 06:52:09.970698"], ["updated_at", "2021-05-13 06:52:09.970698"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mShop Create (0.2ms)[0m  [1m[32mINSERT INTO "shops" ("name", "sells_drinks", "varieties", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Candy Corral"], ["sells_drinks", false], ["varieties", 45], ["created_at", "2021-05-13 06:52:09.972012"], ["updated_at", "2021-05-13 06:52:09.972012"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/shops" for 127.0.0.1 at 2021-05-13 00:52:09 -0600
+Processing by ShopsController#index as HTML
+  Rendering shops/index.html.erb within layouts/application
+  Rendered partials/_header_links.html.erb (0.1ms)
+  [1m[36mShop Load (0.2ms)[0m  [1m[34mSELECT "shops".* FROM "shops"[0m
+  Rendered shops/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.2ms)
+Started GET "/candies" for 127.0.0.1 at 2021-05-13 00:52:09 -0600
+Processing by CandiesController#index as HTML
+Completed 406 Not Acceptable in 4ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mShop Create (0.3ms)[0m  [1m[32mINSERT INTO "shops" ("name", "sells_drinks", "varieties", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Stickys Sweets"], ["sells_drinks", true], ["varieties", 110], ["created_at", "2021-05-13 06:52:09.985233"], ["updated_at", "2021-05-13 06:52:09.985233"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mShop Create (0.4ms)[0m  [1m[32mINSERT INTO "shops" ("name", "sells_drinks", "varieties", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Candy Corral"], ["sells_drinks", false], ["varieties", 45], ["created_at", "2021-05-13 06:52:09.986609"], ["updated_at", "2021-05-13 06:52:09.986609"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/shops" for 127.0.0.1 at 2021-05-13 00:52:09 -0600
+Processing by ShopsController#index as HTML
+  Rendering shops/index.html.erb within layouts/application
+  Rendered partials/_header_links.html.erb (0.1ms)
+  [1m[36mShop Load (0.2ms)[0m  [1m[34mSELECT "shops".* FROM "shops"[0m
+  Rendered shops/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mShop Create (0.5ms)[0m  [1m[32mINSERT INTO "shops" ("name", "sells_drinks", "varieties", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Stickys Sweets"], ["sells_drinks", true], ["varieties", 110], ["created_at", "2021-05-13 07:03:47.165555"], ["updated_at", "2021-05-13 07:03:47.165555"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mShop Create (0.2ms)[0m  [1m[32mINSERT INTO "shops" ("name", "sells_drinks", "varieties", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Gimme Some Suga"], ["sells_drinks", false], ["varieties", 205], ["created_at", "2021-05-13 07:03:47.167345"], ["updated_at", "2021-05-13 07:03:47.167345"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/shops" for 127.0.0.1 at 2021-05-13 01:03:47 -0600
+Processing by ShopsController#index as HTML
+  Rendering shops/index.html.erb within layouts/application
+  Rendered partials/_header_links.html.erb (0.4ms)
+  [1m[36mShop Load (0.6ms)[0m  [1m[34mSELECT "shops".* FROM "shops"[0m
+  Rendered shops/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 94ms (Views: 92.9ms | ActiveRecord: 0.6ms)
+Started GET "/bakeries" for 127.0.0.1 at 2021-05-13 01:03:47 -0600
+Processing by BakeriesController#index as HTML
+  Rendering bakeries/index.html.erb within layouts/application
+  [1m[36mBakery Load (0.5ms)[0m  [1m[34mSELECT "bakeries".* FROM "bakeries"[0m
+  Rendered bakeries/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 6ms (Views: 2.2ms | ActiveRecord: 1.8ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mShop Create (0.3ms)[0m  [1m[32mINSERT INTO "shops" ("name", "sells_drinks", "varieties", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Stickys Sweets"], ["sells_drinks", true], ["varieties", 110], ["created_at", "2021-05-13 07:03:47.349202"], ["updated_at", "2021-05-13 07:03:47.349202"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mShop Create (0.4ms)[0m  [1m[32mINSERT INTO "shops" ("name", "sells_drinks", "varieties", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Gimme Some Suga"], ["sells_drinks", false], ["varieties", 205], ["created_at", "2021-05-13 07:03:47.350563"], ["updated_at", "2021-05-13 07:03:47.350563"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/shops" for 127.0.0.1 at 2021-05-13 01:03:47 -0600
+Processing by ShopsController#index as HTML
+  Rendering shops/index.html.erb within layouts/application
+  Rendered partials/_header_links.html.erb (0.1ms)
+  [1m[36mShop Load (0.2ms)[0m  [1m[34mSELECT "shops".* FROM "shops"[0m
+  Rendered shops/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.2ms)
+Started GET "/pastries" for 127.0.0.1 at 2021-05-13 01:03:47 -0600
+Processing by PastriesController#index as HTML
+  Rendering pastries/index.html.erb within layouts/application
+  [1m[36mPastry Load (0.8ms)[0m  [1m[34mSELECT "pastries".* FROM "pastries"[0m
+  Rendered pastries/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 7ms (Views: 2.1ms | ActiveRecord: 2.1ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mShop Create (0.2ms)[0m  [1m[32mINSERT INTO "shops" ("name", "sells_drinks", "varieties", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Stickys Sweets"], ["sells_drinks", true], ["varieties", 110], ["created_at", "2021-05-13 07:03:47.366609"], ["updated_at", "2021-05-13 07:03:47.366609"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mShop Create (0.2ms)[0m  [1m[32mINSERT INTO "shops" ("name", "sells_drinks", "varieties", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Gimme Some Suga"], ["sells_drinks", false], ["varieties", 205], ["created_at", "2021-05-13 07:03:47.367863"], ["updated_at", "2021-05-13 07:03:47.367863"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/shops" for 127.0.0.1 at 2021-05-13 01:03:47 -0600
+Processing by ShopsController#index as HTML
+  Rendering shops/index.html.erb within layouts/application
+  Rendered partials/_header_links.html.erb (0.1ms)
+  [1m[36mShop Load (0.3ms)[0m  [1m[34mSELECT "shops".* FROM "shops"[0m
+  Rendered shops/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.3ms)
+Started GET "/shops" for 127.0.0.1 at 2021-05-13 01:03:47 -0600
+Processing by ShopsController#index as HTML
+  Rendering shops/index.html.erb within layouts/application
+  Rendered partials/_header_links.html.erb (0.1ms)
+  [1m[36mShop Load (0.3ms)[0m  [1m[34mSELECT "shops".* FROM "shops"[0m
+  Rendered shops/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mShop Create (0.4ms)[0m  [1m[32mINSERT INTO "shops" ("name", "sells_drinks", "varieties", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Stickys Sweets"], ["sells_drinks", true], ["varieties", 110], ["created_at", "2021-05-13 07:03:47.377564"], ["updated_at", "2021-05-13 07:03:47.377564"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mShop Create (0.2ms)[0m  [1m[32mINSERT INTO "shops" ("name", "sells_drinks", "varieties", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Gimme Some Suga"], ["sells_drinks", false], ["varieties", 205], ["created_at", "2021-05-13 07:03:47.378952"], ["updated_at", "2021-05-13 07:03:47.378952"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/shops" for 127.0.0.1 at 2021-05-13 01:03:47 -0600
+Processing by ShopsController#index as HTML
+  Rendering shops/index.html.erb within layouts/application
+  Rendered partials/_header_links.html.erb (0.1ms)
+  [1m[36mShop Load (0.3ms)[0m  [1m[34mSELECT "shops".* FROM "shops"[0m
+  Rendered shops/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.3ms)
+Started GET "/candies" for 127.0.0.1 at 2021-05-13 01:03:47 -0600
+Processing by CandiesController#index as HTML
+Completed 406 Not Acceptable in 6ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mShop Create (0.2ms)[0m  [1m[32mINSERT INTO "shops" ("name", "sells_drinks", "varieties", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Stickys Sweets"], ["sells_drinks", true], ["varieties", 110], ["created_at", "2021-05-13 07:03:47.395067"], ["updated_at", "2021-05-13 07:03:47.395067"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mShop Create (0.2ms)[0m  [1m[32mINSERT INTO "shops" ("name", "sells_drinks", "varieties", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Gimme Some Suga"], ["sells_drinks", false], ["varieties", 205], ["created_at", "2021-05-13 07:03:47.397056"], ["updated_at", "2021-05-13 07:03:47.397056"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/shops" for 127.0.0.1 at 2021-05-13 01:03:47 -0600
+Processing by ShopsController#index as HTML
+  Rendering shops/index.html.erb within layouts/application
+  Rendered partials/_header_links.html.erb (0.1ms)
+  [1m[36mShop Load (0.3ms)[0m  [1m[34mSELECT "shops".* FROM "shops"[0m
+  Rendered shops/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 4ms (Views: 3.9ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mShop Create (0.4ms)[0m  [1m[32mINSERT INTO "shops" ("name", "sells_drinks", "varieties", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Stickys Sweets"], ["sells_drinks", true], ["varieties", 110], ["created_at", "2021-05-13 07:04:00.445886"], ["updated_at", "2021-05-13 07:04:00.445886"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mShop Create (0.2ms)[0m  [1m[32mINSERT INTO "shops" ("name", "sells_drinks", "varieties", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Gimme Some Suga"], ["sells_drinks", false], ["varieties", 205], ["created_at", "2021-05-13 07:04:00.447390"], ["updated_at", "2021-05-13 07:04:00.447390"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/shops/95" for 127.0.0.1 at 2021-05-13 01:04:00 -0600
+Processing by ShopsController#show as HTML
+  Parameters: {"id"=>"95"}
+  [1m[36mShop Load (0.2ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 95], ["LIMIT", 1]]
+  Rendering shops/show.html.erb within layouts/application
+  Rendered shops/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 86ms (Views: 83.5ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mShop Create (0.3ms)[0m  [1m[32mINSERT INTO "shops" ("name", "sells_drinks", "varieties", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Stickys Sweets"], ["sells_drinks", true], ["varieties", 110], ["created_at", "2021-05-13 07:04:00.616977"], ["updated_at", "2021-05-13 07:04:00.616977"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mShop Create (0.2ms)[0m  [1m[32mINSERT INTO "shops" ("name", "sells_drinks", "varieties", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Gimme Some Suga"], ["sells_drinks", false], ["varieties", 205], ["created_at", "2021-05-13 07:04:00.618277"], ["updated_at", "2021-05-13 07:04:00.618277"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/shops/97" for 127.0.0.1 at 2021-05-13 01:04:00 -0600
+Processing by ShopsController#show as HTML
+  Parameters: {"id"=>"97"}
+  [1m[36mShop Load (0.2ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 97], ["LIMIT", 1]]
+  Rendering shops/show.html.erb within layouts/application
+  Rendered shops/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 2ms (Views: 0.9ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mShop Create (0.2ms)[0m  [1m[32mINSERT INTO "shops" ("name", "sells_drinks", "varieties", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Stickys Sweets"], ["sells_drinks", true], ["varieties", 110], ["created_at", "2021-05-13 07:04:00.623854"], ["updated_at", "2021-05-13 07:04:00.623854"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mShop Create (0.4ms)[0m  [1m[32mINSERT INTO "shops" ("name", "sells_drinks", "varieties", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Gimme Some Suga"], ["sells_drinks", false], ["varieties", 205], ["created_at", "2021-05-13 07:04:00.625088"], ["updated_at", "2021-05-13 07:04:00.625088"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/shops/99" for 127.0.0.1 at 2021-05-13 01:04:00 -0600
+Processing by ShopsController#show as HTML
+  Parameters: {"id"=>"99"}
+  [1m[36mShop Load (0.2ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 99], ["LIMIT", 1]]
+  Rendering shops/show.html.erb within layouts/application
+  Rendered shops/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 1ms (Views: 0.8ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mShop Create (0.2ms)[0m  [1m[32mINSERT INTO "shops" ("name", "sells_drinks", "varieties", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Stickys Sweets"], ["sells_drinks", true], ["varieties", 110], ["created_at", "2021-05-13 07:04:00.630206"], ["updated_at", "2021-05-13 07:04:00.630206"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mShop Create (0.2ms)[0m  [1m[32mINSERT INTO "shops" ("name", "sells_drinks", "varieties", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Gimme Some Suga"], ["sells_drinks", false], ["varieties", 205], ["created_at", "2021-05-13 07:04:00.631430"], ["updated_at", "2021-05-13 07:04:00.631430"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/shops/101" for 127.0.0.1 at 2021-05-13 01:04:00 -0600
+Processing by ShopsController#show as HTML
+  Parameters: {"id"=>"101"}
+  [1m[36mShop Load (0.2ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 101], ["LIMIT", 1]]
+  Rendering shops/show.html.erb within layouts/application
+  Rendered shops/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 1ms (Views: 0.8ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mShop Create (0.2ms)[0m  [1m[32mINSERT INTO "shops" ("name", "sells_drinks", "varieties", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Stickys Sweets"], ["sells_drinks", true], ["varieties", 110], ["created_at", "2021-05-13 07:04:00.636526"], ["updated_at", "2021-05-13 07:04:00.636526"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mShop Create (0.3ms)[0m  [1m[32mINSERT INTO "shops" ("name", "sells_drinks", "varieties", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Gimme Some Suga"], ["sells_drinks", false], ["varieties", 205], ["created_at", "2021-05-13 07:04:00.637753"], ["updated_at", "2021-05-13 07:04:00.637753"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/shops/103" for 127.0.0.1 at 2021-05-13 01:04:00 -0600
+Processing by ShopsController#show as HTML
+  Parameters: {"id"=>"103"}
+  [1m[36mShop Load (0.2ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 103], ["LIMIT", 1]]
+  Rendering shops/show.html.erb within layouts/application
+  Rendered shops/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 2ms (Views: 0.9ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mShop Create (0.5ms)[0m  [1m[32mINSERT INTO "shops" ("name", "sells_drinks", "varieties", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Stickys Sweets"], ["sells_drinks", true], ["varieties", 110], ["created_at", "2021-05-13 07:05:18.434973"], ["updated_at", "2021-05-13 07:05:18.434973"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mShop Create (0.2ms)[0m  [1m[32mINSERT INTO "shops" ("name", "sells_drinks", "varieties", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Gimme Some Suga"], ["sells_drinks", false], ["varieties", 205], ["created_at", "2021-05-13 07:05:18.436717"], ["updated_at", "2021-05-13 07:05:18.436717"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/shops/105" for 127.0.0.1 at 2021-05-13 01:05:18 -0600
+Processing by ShopsController#show as HTML
+  Parameters: {"id"=>"105"}
+  [1m[36mShop Load (0.3ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 105], ["LIMIT", 1]]
+  Rendering shops/show.html.erb within layouts/application
+  Rendered partials/_header_links.html.erb (0.3ms)
+  Rendered shops/show.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 89ms (Views: 86.0ms | ActiveRecord: 0.4ms)
+Started GET "/bakeries" for 127.0.0.1 at 2021-05-13 01:05:18 -0600
+Processing by BakeriesController#index as HTML
+  Rendering bakeries/index.html.erb within layouts/application
+  [1m[36mBakery Load (0.8ms)[0m  [1m[34mSELECT "bakeries".* FROM "bakeries"[0m
+  Rendered bakeries/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 7ms (Views: 2.3ms | ActiveRecord: 2.4ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mShop Create (0.5ms)[0m  [1m[32mINSERT INTO "shops" ("name", "sells_drinks", "varieties", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Stickys Sweets"], ["sells_drinks", true], ["varieties", 110], ["created_at", "2021-05-13 07:05:18.592226"], ["updated_at", "2021-05-13 07:05:18.592226"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mShop Create (0.4ms)[0m  [1m[32mINSERT INTO "shops" ("name", "sells_drinks", "varieties", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Gimme Some Suga"], ["sells_drinks", false], ["varieties", 205], ["created_at", "2021-05-13 07:05:18.594432"], ["updated_at", "2021-05-13 07:05:18.594432"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/shops/107" for 127.0.0.1 at 2021-05-13 01:05:18 -0600
+Processing by ShopsController#show as HTML
+  Parameters: {"id"=>"107"}
+  [1m[36mShop Load (0.2ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 107], ["LIMIT", 1]]
+  Rendering shops/show.html.erb within layouts/application
+  Rendered partials/_header_links.html.erb (0.1ms)
+  Rendered shops/show.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 2ms (Views: 1.1ms | ActiveRecord: 0.2ms)
+Started GET "/pastries" for 127.0.0.1 at 2021-05-13 01:05:18 -0600
+Processing by PastriesController#index as HTML
+  Rendering pastries/index.html.erb within layouts/application
+  [1m[36mPastry Load (0.9ms)[0m  [1m[34mSELECT "pastries".* FROM "pastries"[0m
+  Rendered pastries/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 32ms (Views: 3.0ms | ActiveRecord: 2.6ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mShop Create (0.3ms)[0m  [1m[32mINSERT INTO "shops" ("name", "sells_drinks", "varieties", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Stickys Sweets"], ["sells_drinks", true], ["varieties", 110], ["created_at", "2021-05-13 07:05:18.637353"], ["updated_at", "2021-05-13 07:05:18.637353"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mShop Create (0.3ms)[0m  [1m[32mINSERT INTO "shops" ("name", "sells_drinks", "varieties", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Gimme Some Suga"], ["sells_drinks", false], ["varieties", 205], ["created_at", "2021-05-13 07:05:18.638899"], ["updated_at", "2021-05-13 07:05:18.638899"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/shops/109" for 127.0.0.1 at 2021-05-13 01:05:18 -0600
+Processing by ShopsController#show as HTML
+  Parameters: {"id"=>"109"}
+  [1m[36mShop Load (0.2ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 109], ["LIMIT", 1]]
+  Rendering shops/show.html.erb within layouts/application
+  Rendered partials/_header_links.html.erb (0.1ms)
+  Rendered shops/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.2ms)
+Started GET "/shops" for 127.0.0.1 at 2021-05-13 01:05:18 -0600
+Processing by ShopsController#index as HTML
+  Rendering shops/index.html.erb within layouts/application
+  Rendered partials/_header_links.html.erb (0.1ms)
+  [1m[36mShop Load (0.2ms)[0m  [1m[34mSELECT "shops".* FROM "shops"[0m
+  Rendered shops/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mShop Create (0.3ms)[0m  [1m[32mINSERT INTO "shops" ("name", "sells_drinks", "varieties", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Stickys Sweets"], ["sells_drinks", true], ["varieties", 110], ["created_at", "2021-05-13 07:05:18.651511"], ["updated_at", "2021-05-13 07:05:18.651511"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mShop Create (0.2ms)[0m  [1m[32mINSERT INTO "shops" ("name", "sells_drinks", "varieties", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Gimme Some Suga"], ["sells_drinks", false], ["varieties", 205], ["created_at", "2021-05-13 07:05:18.652951"], ["updated_at", "2021-05-13 07:05:18.652951"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/shops/111" for 127.0.0.1 at 2021-05-13 01:05:18 -0600
+Processing by ShopsController#show as HTML
+  Parameters: {"id"=>"111"}
+  [1m[36mShop Load (0.2ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 111], ["LIMIT", 1]]
+  Rendering shops/show.html.erb within layouts/application
+  Rendered partials/_header_links.html.erb (0.1ms)
+  Rendered shops/show.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.2ms)
+Started GET "/candies" for 127.0.0.1 at 2021-05-13 01:05:18 -0600
+Processing by CandiesController#index as HTML
+Completed 406 Not Acceptable in 4ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mShop Create (0.3ms)[0m  [1m[32mINSERT INTO "shops" ("name", "sells_drinks", "varieties", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Stickys Sweets"], ["sells_drinks", true], ["varieties", 110], ["created_at", "2021-05-13 07:05:18.666979"], ["updated_at", "2021-05-13 07:05:18.666979"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mShop Create (0.2ms)[0m  [1m[32mINSERT INTO "shops" ("name", "sells_drinks", "varieties", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Gimme Some Suga"], ["sells_drinks", false], ["varieties", 205], ["created_at", "2021-05-13 07:05:18.668312"], ["updated_at", "2021-05-13 07:05:18.668312"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/shops/113" for 127.0.0.1 at 2021-05-13 01:05:18 -0600
+Processing by ShopsController#show as HTML
+  Parameters: {"id"=>"113"}
+  [1m[36mShop Load (0.3ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 113], ["LIMIT", 1]]
+  Rendering shops/show.html.erb within layouts/application
+  Rendered partials/_header_links.html.erb (0.1ms)
+  Rendered shops/show.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 2ms (Views: 1.1ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m

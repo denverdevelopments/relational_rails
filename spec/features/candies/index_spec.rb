@@ -7,14 +7,21 @@ RSpec.describe 'the candies index', type: :feature do
     @candy_2 = @shop_1.candies.create!(name: 'Jelly Belly', all_natural: false, calories: 120)
   end
 
-  it 'has a link to main welcome page' do
+  it 'has a link to bakeries index' do
       visit "/candies"
-    expect(page).to have_link("Welcome")
-    click_link("Welcome")
-    expect(current_path).to eq("/")
+    expect(page).to have_link("Bakeries Index")
+    click_link("Bakeries Index")
+    expect(current_path).to eq("/bakeries")
   end
 
-  it 'has a link to candies index' do
+  it 'has a link to pastries index' do
+      visit "/candies"
+    expect(page).to have_link("Pastries Index")
+    click_link("Pastries Index")
+    expect(current_path).to eq("/pastries")
+  end
+
+  it 'has a link to shops index' do
       visit "/candies"
     expect(page).to have_link("Candy Shops Index")
     click_link("Candy Shops Index")
