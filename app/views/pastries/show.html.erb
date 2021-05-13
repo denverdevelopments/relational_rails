@@ -1,5 +1,9 @@
-<h1><%= @pastry.name %></h1>
+<h1 style="color:mediumseagreen;"><%= @pastry.name %></h1>
+<h3><%= @pastry.bakery.name %></h3>
 
-<p>Is this a Savory Pastry? <%= @pastry.savory_pastry? %></p>
-<br/>
-<p>Calories: <%= @pastry.calories %></p>
+<d1>
+  <dt style="color:dodgerblue;">Is this a Savory Pastry?</dt>
+    <dd style="color:teal;">-<%= @pastry.savory_pastry %></dd>
+  <dt style="color:dodgerblue;">Calorie Amount:</dt>
+    <dd style="color:teal;">-<%= @pastry.calories %></dd>
+</d1>

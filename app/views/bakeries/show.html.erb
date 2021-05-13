@@ -1,5 +1,8 @@
-<h1><%= @bakery.name %></h1>
+<h1 style="color:tomato;"><%= @bakery.name %></h1>
 
-<p>Open Weekends? <%= @bakery.open_on_weekends %></p>
-<br/>
-<p>Amount of hours open per day: <%= @bakery.hours_open %></p>
+<d1>
+  <dt style="color:darkorange;">Open on the weekends:</dt>
+    <dd style="color:gold;">-<%= @bakery.open_on_weekends %></dd>
+  <dt style="color:darkorange;">Amount of hours open per day:</dt>
+    <dd style="color:gold;">-<%= @bakery.hours_open %></dd>
+</d1>

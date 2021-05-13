@@ -48,6 +48,10 @@ RSpec.describe 'the shops index', type: :feature do
         expect(page).to have_content(@shop_2.name)
         expect(page).to have_content(@shop_2.created_at.strftime("%A, %B %d, %Y"))
       end
+
+      # expect(page).to have_link(@shop_1.percent)
+      # click_link(@tv_1.percent)
+      # expect(current_path).to eq("/merchants/#{@merchant_1.id}/discounts/#{@tv_1.id}")
     end
   end     #shop index - us#1
 

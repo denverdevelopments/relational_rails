@@ -14,8 +14,7 @@ class ShopsController < ApplicationController
   end
 end
 
-
-# <p>&emsp;<%= link_to "Edit Discount", "/merchants/#{@merchant.id}/discounts/#{@discount.id}/edit" %></p>
+#link_to "Edit Discount", "/merchants/#{@merchant.id}/discounts/#{@discount.id}/edit"
 # class TasksController < ApplicationController
 #   def index #     @tasks = Task.all
 #

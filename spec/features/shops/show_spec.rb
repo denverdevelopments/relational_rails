@@ -35,7 +35,7 @@ RSpec.describe 'the shop show page', type: :feature do
   end
 
   it 'shows the shop name, attributes' do
-    visit "/shops/#{@shop_1.id}"
+      visit "/shops/#{@shop_1.id}"
 
     expect(page).to have_content(@shop_1.name)
     expect(page).to_not have_content(@shop_2.name)
