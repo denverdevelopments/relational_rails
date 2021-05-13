@@ -10,10 +10,15 @@ Rails.application.routes.draw do
   get '/pastries', to: 'pastries#index'
   get '/pastries/:id', to: 'pastries#show'
 
-  ## Kevin's space
+  ## Kevin's Sweet space
   get '/shops', to: 'shops#index'
   get '/shops/:id', to: 'shops#show'
   get '/shops/:shop_id/candies', to: 'shops#candies'
+  get '/shops/:id/new', to: 'shops#new'
+  post '/shops/:id', to: 'shops#create'
+  get '/shops/:id/edit', to: 'shops#edit'
+  patch '/shops/:id', to: 'shops#update'
+  delete '/shops/:id', to: 'shops#destroy'
 
   get '/candies', to: 'candies#index'
   get '/candies/:id', to: 'candies#show'
