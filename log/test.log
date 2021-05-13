@@ -102,3 +102,1225 @@ FOREIGN KEY ("bakery_id")
   [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
   [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
   [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBakery Create (1.5ms)[0m  [1m[32mINSERT INTO "bakeries" ("name", "open_on_weekends", "hours_open", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Black Dalia Flour Bakery"], ["open_on_weekends", false], ["hours_open", 8], ["created_at", "2021-05-13 04:23:15.364686"], ["updated_at", "2021-05-13 04:23:15.364686"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBakery Create (0.2ms)[0m  [1m[32mINSERT INTO "bakeries" ("name", "open_on_weekends", "hours_open", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "The Hawk Spot Bakery"], ["open_on_weekends", true], ["hours_open", 6], ["created_at", "2021-05-13 04:23:15.367882"], ["updated_at", "2021-05-13 04:23:15.367882"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/bakeries/1" for 127.0.0.1 at 2021-05-12 21:23:15 -0700
+Processing by BakeriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBakery Load (0.2ms)[0m  [1m[34mSELECT  "bakeries".* FROM "bakeries" WHERE "bakeries"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering bakeries/show.html.erb within layouts/application
+  Rendered bakeries/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 184ms (Views: 178.8ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBakery Create (0.5ms)[0m  [1m[32mINSERT INTO "bakeries" ("name", "open_on_weekends", "hours_open", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Black Dalia Flour Bakery"], ["open_on_weekends", false], ["hours_open", 8], ["created_at", "2021-05-13 04:23:32.072616"], ["updated_at", "2021-05-13 04:23:32.072616"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBakery Create (0.1ms)[0m  [1m[32mINSERT INTO "bakeries" ("name", "open_on_weekends", "hours_open", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "The Hawk Spot Bakery"], ["open_on_weekends", true], ["hours_open", 6], ["created_at", "2021-05-13 04:23:32.074650"], ["updated_at", "2021-05-13 04:23:32.074650"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/bakeries/3" for 127.0.0.1 at 2021-05-12 21:23:32 -0700
+Processing by BakeriesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mBakery Load (0.2ms)[0m  [1m[34mSELECT  "bakeries".* FROM "bakeries" WHERE "bakeries"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering bakeries/show.html.erb within layouts/application
+  Rendered bakeries/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 103ms (Views: 99.7ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBakery Create (0.4ms)[0m  [1m[32mINSERT INTO "bakeries" ("name", "open_on_weekends", "hours_open", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Black Dalia Flour Bakery"], ["open_on_weekends", false], ["hours_open", 8], ["created_at", "2021-05-13 04:23:45.205738"], ["updated_at", "2021-05-13 04:23:45.205738"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBakery Create (0.1ms)[0m  [1m[32mINSERT INTO "bakeries" ("name", "open_on_weekends", "hours_open", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "The Hawk Spot Bakery"], ["open_on_weekends", true], ["hours_open", 6], ["created_at", "2021-05-13 04:23:45.207684"], ["updated_at", "2021-05-13 04:23:45.207684"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/bakeries/5" for 127.0.0.1 at 2021-05-12 21:23:45 -0700
+Processing by BakeriesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mBakery Load (0.2ms)[0m  [1m[34mSELECT  "bakeries".* FROM "bakeries" WHERE "bakeries"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering bakeries/show.html.erb within layouts/application
+  Rendered bakeries/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 106ms (Views: 102.2ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBakery Create (0.5ms)[0m  [1m[32mINSERT INTO "bakeries" ("name", "open_on_weekends", "hours_open", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Black Dalia Flour Bakery"], ["open_on_weekends", false], ["hours_open", 8], ["created_at", "2021-05-13 04:25:19.493929"], ["updated_at", "2021-05-13 04:25:19.493929"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBakery Create (0.4ms)[0m  [1m[32mINSERT INTO "bakeries" ("name", "open_on_weekends", "hours_open", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "The Hawk Spot Bakery"], ["open_on_weekends", true], ["hours_open", 6], ["created_at", "2021-05-13 04:25:19.497154"], ["updated_at", "2021-05-13 04:25:19.497154"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/bakeries/7" for 127.0.0.1 at 2021-05-12 21:25:19 -0700
+Processing by BakeriesController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mBakery Load (0.2ms)[0m  [1m[34mSELECT  "bakeries".* FROM "bakeries" WHERE "bakeries"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering bakeries/show.html.erb within layouts/application
+  Rendered bakeries/show.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 141ms (Views: 135.3ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBakery Create (0.2ms)[0m  [1m[32mINSERT INTO "bakeries" ("name", "open_on_weekends", "hours_open", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Black Dalia Flour Bakery"], ["open_on_weekends", false], ["hours_open", 8], ["created_at", "2021-05-13 04:25:19.719522"], ["updated_at", "2021-05-13 04:25:19.719522"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBakery Create (0.2ms)[0m  [1m[32mINSERT INTO "bakeries" ("name", "open_on_weekends", "hours_open", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "The Hawk Spot Bakery"], ["open_on_weekends", true], ["hours_open", 6], ["created_at", "2021-05-13 04:25:19.721097"], ["updated_at", "2021-05-13 04:25:19.721097"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/bakeries/9" for 127.0.0.1 at 2021-05-12 21:25:19 -0700
+Processing by BakeriesController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mBakery Load (0.2ms)[0m  [1m[34mSELECT  "bakeries".* FROM "bakeries" WHERE "bakeries"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering bakeries/show.html.erb within layouts/application
+  Rendered bakeries/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBakery Create (0.5ms)[0m  [1m[32mINSERT INTO "bakeries" ("name", "open_on_weekends", "hours_open", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Black Dalia Flour Bakery"], ["open_on_weekends", false], ["hours_open", 8], ["created_at", "2021-05-13 04:25:27.660884"], ["updated_at", "2021-05-13 04:25:27.660884"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBakery Create (0.2ms)[0m  [1m[32mINSERT INTO "bakeries" ("name", "open_on_weekends", "hours_open", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "The Hawk Spot Bakery"], ["open_on_weekends", true], ["hours_open", 6], ["created_at", "2021-05-13 04:25:27.662991"], ["updated_at", "2021-05-13 04:25:27.662991"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/bakeries/11" for 127.0.0.1 at 2021-05-12 21:25:27 -0700
+Processing by BakeriesController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mBakery Load (0.2ms)[0m  [1m[34mSELECT  "bakeries".* FROM "bakeries" WHERE "bakeries"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  Rendering bakeries/show.html.erb within layouts/application
+  Rendered bakeries/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 104ms (Views: 100.3ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBakery Create (0.3ms)[0m  [1m[32mINSERT INTO "bakeries" ("name", "open_on_weekends", "hours_open", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Black Dalia Flour Bakery"], ["open_on_weekends", false], ["hours_open", 8], ["created_at", "2021-05-13 04:25:27.833613"], ["updated_at", "2021-05-13 04:25:27.833613"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBakery Create (0.2ms)[0m  [1m[32mINSERT INTO "bakeries" ("name", "open_on_weekends", "hours_open", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "The Hawk Spot Bakery"], ["open_on_weekends", true], ["hours_open", 6], ["created_at", "2021-05-13 04:25:27.835528"], ["updated_at", "2021-05-13 04:25:27.835528"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/bakeries/13" for 127.0.0.1 at 2021-05-12 21:25:27 -0700
+Processing by BakeriesController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mBakery Load (0.2ms)[0m  [1m[34mSELECT  "bakeries".* FROM "bakeries" WHERE "bakeries"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  Rendering bakeries/show.html.erb within layouts/application
+  Rendered bakeries/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 2ms (Views: 1.0ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBakery Create (0.5ms)[0m  [1m[32mINSERT INTO "bakeries" ("name", "open_on_weekends", "hours_open", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Black Dalia Flour Bakery"], ["open_on_weekends", false], ["hours_open", 8], ["created_at", "2021-05-13 04:26:02.861665"], ["updated_at", "2021-05-13 04:26:02.861665"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBakery Create (0.2ms)[0m  [1m[32mINSERT INTO "bakeries" ("name", "open_on_weekends", "hours_open", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "The Hawk Spot Bakery"], ["open_on_weekends", true], ["hours_open", 6], ["created_at", "2021-05-13 04:26:02.863683"], ["updated_at", "2021-05-13 04:26:02.863683"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/bakeries/15" for 127.0.0.1 at 2021-05-12 21:26:02 -0700
+Processing by BakeriesController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mBakery Load (0.2ms)[0m  [1m[34mSELECT  "bakeries".* FROM "bakeries" WHERE "bakeries"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  Rendering bakeries/show.html.erb within layouts/application
+  Rendered bakeries/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 102ms (Views: 98.2ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBakery Create (0.3ms)[0m  [1m[32mINSERT INTO "bakeries" ("name", "open_on_weekends", "hours_open", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Black Dalia Flour Bakery"], ["open_on_weekends", false], ["hours_open", 8], ["created_at", "2021-05-13 04:26:03.033751"], ["updated_at", "2021-05-13 04:26:03.033751"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBakery Create (0.3ms)[0m  [1m[32mINSERT INTO "bakeries" ("name", "open_on_weekends", "hours_open", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "The Hawk Spot Bakery"], ["open_on_weekends", true], ["hours_open", 6], ["created_at", "2021-05-13 04:26:03.035676"], ["updated_at", "2021-05-13 04:26:03.035676"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/bakeries/17" for 127.0.0.1 at 2021-05-12 21:26:03 -0700
+Processing by BakeriesController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mBakery Load (0.2ms)[0m  [1m[34mSELECT  "bakeries".* FROM "bakeries" WHERE "bakeries"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  Rendering bakeries/show.html.erb within layouts/application
+  Rendered bakeries/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 2ms (Views: 1.0ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBakery Create (0.9ms)[0m  [1m[32mINSERT INTO "bakeries" ("name", "open_on_weekends", "hours_open", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Black Dalia Flour Bakery"], ["open_on_weekends", false], ["hours_open", 8], ["created_at", "2021-05-13 04:27:22.128246"], ["updated_at", "2021-05-13 04:27:22.128246"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBakery Create (0.1ms)[0m  [1m[32mINSERT INTO "bakeries" ("name", "open_on_weekends", "hours_open", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "The Hawk Spot Bakery"], ["open_on_weekends", true], ["hours_open", 6], ["created_at", "2021-05-13 04:27:22.130725"], ["updated_at", "2021-05-13 04:27:22.130725"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/bakeries/19" for 127.0.0.1 at 2021-05-12 21:27:22 -0700
+Processing by BakeriesController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mBakery Load (0.2ms)[0m  [1m[34mSELECT  "bakeries".* FROM "bakeries" WHERE "bakeries"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  Rendering bakeries/show.html.erb within layouts/application
+  Rendered bakeries/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 103ms (Views: 99.8ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBakery Create (0.2ms)[0m  [1m[32mINSERT INTO "bakeries" ("name", "open_on_weekends", "hours_open", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Black Dalia Flour Bakery"], ["open_on_weekends", false], ["hours_open", 8], ["created_at", "2021-05-13 04:27:22.301502"], ["updated_at", "2021-05-13 04:27:22.301502"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBakery Create (0.2ms)[0m  [1m[32mINSERT INTO "bakeries" ("name", "open_on_weekends", "hours_open", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "The Hawk Spot Bakery"], ["open_on_weekends", true], ["hours_open", 6], ["created_at", "2021-05-13 04:27:22.302953"], ["updated_at", "2021-05-13 04:27:22.302953"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/bakeries/21" for 127.0.0.1 at 2021-05-12 21:27:22 -0700
+Processing by BakeriesController#show as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mBakery Load (0.3ms)[0m  [1m[34mSELECT  "bakeries".* FROM "bakeries" WHERE "bakeries"."id" = $1 LIMIT $2[0m  [["id", 21], ["LIMIT", 1]]
+  Rendering bakeries/show.html.erb within layouts/application
+  Rendered bakeries/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 2ms (Views: 1.1ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBakery Create (0.5ms)[0m  [1m[32mINSERT INTO "bakeries" ("name", "open_on_weekends", "hours_open", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Black Dalia Flour Bakery"], ["open_on_weekends", false], ["hours_open", 8], ["created_at", "2021-05-13 04:27:41.723264"], ["updated_at", "2021-05-13 04:27:41.723264"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBakery Create (0.2ms)[0m  [1m[32mINSERT INTO "bakeries" ("name", "open_on_weekends", "hours_open", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "The Hawk Spot Bakery"], ["open_on_weekends", true], ["hours_open", 6], ["created_at", "2021-05-13 04:27:41.725378"], ["updated_at", "2021-05-13 04:27:41.725378"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/bakeries/23" for 127.0.0.1 at 2021-05-12 21:27:41 -0700
+Processing by BakeriesController#show as HTML
+  Parameters: {"id"=>"23"}
+  [1m[36mBakery Load (0.2ms)[0m  [1m[34mSELECT  "bakeries".* FROM "bakeries" WHERE "bakeries"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  Rendering bakeries/show.html.erb within layouts/application
+  Rendered bakeries/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 104ms (Views: 100.1ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBakery Create (0.3ms)[0m  [1m[32mINSERT INTO "bakeries" ("name", "open_on_weekends", "hours_open", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Black Dalia Flour Bakery"], ["open_on_weekends", false], ["hours_open", 8], ["created_at", "2021-05-13 04:27:41.897162"], ["updated_at", "2021-05-13 04:27:41.897162"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBakery Create (0.2ms)[0m  [1m[32mINSERT INTO "bakeries" ("name", "open_on_weekends", "hours_open", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "The Hawk Spot Bakery"], ["open_on_weekends", true], ["hours_open", 6], ["created_at", "2021-05-13 04:27:41.898719"], ["updated_at", "2021-05-13 04:27:41.898719"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/bakeries/25" for 127.0.0.1 at 2021-05-12 21:27:41 -0700
+Processing by BakeriesController#show as HTML
+  Parameters: {"id"=>"25"}
+  [1m[36mBakery Load (0.3ms)[0m  [1m[34mSELECT  "bakeries".* FROM "bakeries" WHERE "bakeries"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  Rendering bakeries/show.html.erb within layouts/application
+  Rendered bakeries/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 2ms (Views: 1.0ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBakery Create (0.4ms)[0m  [1m[32mINSERT INTO "bakeries" ("name", "open_on_weekends", "hours_open", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Black Dalia Flour Bakery"], ["open_on_weekends", false], ["hours_open", 8], ["created_at", "2021-05-13 04:28:17.037274"], ["updated_at", "2021-05-13 04:28:17.037274"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBakery Create (0.1ms)[0m  [1m[32mINSERT INTO "bakeries" ("name", "open_on_weekends", "hours_open", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "The Hawk Spot Bakery"], ["open_on_weekends", true], ["hours_open", 6], ["created_at", "2021-05-13 04:28:17.039152"], ["updated_at", "2021-05-13 04:28:17.039152"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/bakeries/27" for 127.0.0.1 at 2021-05-12 21:28:17 -0700
+Processing by BakeriesController#show as HTML
+  Parameters: {"id"=>"27"}
+  [1m[36mBakery Load (0.2ms)[0m  [1m[34mSELECT  "bakeries".* FROM "bakeries" WHERE "bakeries"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+  Rendering bakeries/show.html.erb within layouts/application
+  Rendered bakeries/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 104ms (Views: 100.7ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBakery Create (0.3ms)[0m  [1m[32mINSERT INTO "bakeries" ("name", "open_on_weekends", "hours_open", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Black Dalia Flour Bakery"], ["open_on_weekends", false], ["hours_open", 8], ["created_at", "2021-05-13 04:28:17.212456"], ["updated_at", "2021-05-13 04:28:17.212456"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBakery Create (0.1ms)[0m  [1m[32mINSERT INTO "bakeries" ("name", "open_on_weekends", "hours_open", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "The Hawk Spot Bakery"], ["open_on_weekends", true], ["hours_open", 6], ["created_at", "2021-05-13 04:28:17.213884"], ["updated_at", "2021-05-13 04:28:17.213884"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/bakeries/29" for 127.0.0.1 at 2021-05-12 21:28:17 -0700
+Processing by BakeriesController#show as HTML
+  Parameters: {"id"=>"29"}
+  [1m[36mBakery Load (0.3ms)[0m  [1m[34mSELECT  "bakeries".* FROM "bakeries" WHERE "bakeries"."id" = $1 LIMIT $2[0m  [["id", 29], ["LIMIT", 1]]
+  Rendering bakeries/show.html.erb within layouts/application
+  Rendered bakeries/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 2ms (Views: 1.0ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBakery Create (0.5ms)[0m  [1m[32mINSERT INTO "bakeries" ("name", "open_on_weekends", "hours_open", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Black Dalia Flour Bakery"], ["open_on_weekends", false], ["hours_open", 8], ["created_at", "2021-05-13 04:28:48.578061"], ["updated_at", "2021-05-13 04:28:48.578061"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBakery Create (0.1ms)[0m  [1m[32mINSERT INTO "bakeries" ("name", "open_on_weekends", "hours_open", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "The Hawk Spot Bakery"], ["open_on_weekends", true], ["hours_open", 6], ["created_at", "2021-05-13 04:28:48.580127"], ["updated_at", "2021-05-13 04:28:48.580127"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/bakeries/31" for 127.0.0.1 at 2021-05-12 21:28:48 -0700
+Processing by BakeriesController#show as HTML
+  Parameters: {"id"=>"31"}
+  [1m[36mBakery Load (0.2ms)[0m  [1m[34mSELECT  "bakeries".* FROM "bakeries" WHERE "bakeries"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  Rendering bakeries/show.html.erb within layouts/application
+  Rendered bakeries/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 103ms (Views: 99.7ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBakery Create (0.3ms)[0m  [1m[32mINSERT INTO "bakeries" ("name", "open_on_weekends", "hours_open", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Black Dalia Flour Bakery"], ["open_on_weekends", false], ["hours_open", 8], ["created_at", "2021-05-13 04:28:48.750009"], ["updated_at", "2021-05-13 04:28:48.750009"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBakery Create (0.2ms)[0m  [1m[32mINSERT INTO "bakeries" ("name", "open_on_weekends", "hours_open", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "The Hawk Spot Bakery"], ["open_on_weekends", true], ["hours_open", 6], ["created_at", "2021-05-13 04:28:48.751543"], ["updated_at", "2021-05-13 04:28:48.751543"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/bakeries/33" for 127.0.0.1 at 2021-05-12 21:28:48 -0700
+Processing by BakeriesController#show as HTML
+  Parameters: {"id"=>"33"}
+  [1m[36mBakery Load (0.2ms)[0m  [1m[34mSELECT  "bakeries".* FROM "bakeries" WHERE "bakeries"."id" = $1 LIMIT $2[0m  [["id", 33], ["LIMIT", 1]]
+  Rendering bakeries/show.html.erb within layouts/application
+  Rendered bakeries/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 2ms (Views: 1.0ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBakery Create (0.5ms)[0m  [1m[32mINSERT INTO "bakeries" ("name", "open_on_weekends", "hours_open", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Black Dalia Flour Bakery"], ["open_on_weekends", false], ["hours_open", 8], ["created_at", "2021-05-13 04:28:59.680409"], ["updated_at", "2021-05-13 04:28:59.680409"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBakery Create (0.2ms)[0m  [1m[32mINSERT INTO "bakeries" ("name", "open_on_weekends", "hours_open", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "The Hawk Spot Bakery"], ["open_on_weekends", true], ["hours_open", 6], ["created_at", "2021-05-13 04:28:59.682416"], ["updated_at", "2021-05-13 04:28:59.682416"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/bakeries/35" for 127.0.0.1 at 2021-05-12 21:28:59 -0700
+Processing by BakeriesController#show as HTML
+  Parameters: {"id"=>"35"}
+  [1m[36mBakery Load (0.3ms)[0m  [1m[34mSELECT  "bakeries".* FROM "bakeries" WHERE "bakeries"."id" = $1 LIMIT $2[0m  [["id", 35], ["LIMIT", 1]]
+  Rendering bakeries/show.html.erb within layouts/application
+  Rendered bakeries/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 112ms (Views: 107.9ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBakery Create (0.2ms)[0m  [1m[32mINSERT INTO "bakeries" ("name", "open_on_weekends", "hours_open", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Black Dalia Flour Bakery"], ["open_on_weekends", false], ["hours_open", 8], ["created_at", "2021-05-13 04:28:59.879363"], ["updated_at", "2021-05-13 04:28:59.879363"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBakery Create (0.3ms)[0m  [1m[32mINSERT INTO "bakeries" ("name", "open_on_weekends", "hours_open", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "The Hawk Spot Bakery"], ["open_on_weekends", true], ["hours_open", 6], ["created_at", "2021-05-13 04:28:59.880730"], ["updated_at", "2021-05-13 04:28:59.880730"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/bakeries/37" for 127.0.0.1 at 2021-05-12 21:28:59 -0700
+Processing by BakeriesController#show as HTML
+  Parameters: {"id"=>"37"}
+  [1m[36mBakery Load (0.2ms)[0m  [1m[34mSELECT  "bakeries".* FROM "bakeries" WHERE "bakeries"."id" = $1 LIMIT $2[0m  [["id", 37], ["LIMIT", 1]]
+  Rendering bakeries/show.html.erb within layouts/application
+  Rendered bakeries/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 2ms (Views: 1.1ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBakery Create (0.4ms)[0m  [1m[32mINSERT INTO "bakeries" ("name", "open_on_weekends", "hours_open", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Black Dalia Flour Bakery"], ["open_on_weekends", false], ["hours_open", 8], ["created_at", "2021-05-13 04:29:15.522927"], ["updated_at", "2021-05-13 04:29:15.522927"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBakery Create (0.2ms)[0m  [1m[32mINSERT INTO "bakeries" ("name", "open_on_weekends", "hours_open", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "The Hawk Spot Bakery"], ["open_on_weekends", true], ["hours_open", 6], ["created_at", "2021-05-13 04:29:15.525008"], ["updated_at", "2021-05-13 04:29:15.525008"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/bakeries/39" for 127.0.0.1 at 2021-05-12 21:29:15 -0700
+Processing by BakeriesController#show as HTML
+  Parameters: {"id"=>"39"}
+  [1m[36mBakery Load (0.2ms)[0m  [1m[34mSELECT  "bakeries".* FROM "bakeries" WHERE "bakeries"."id" = $1 LIMIT $2[0m  [["id", 39], ["LIMIT", 1]]
+  Rendering bakeries/show.html.erb within layouts/application
+  Rendered bakeries/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 127ms (Views: 123.9ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBakery Create (0.3ms)[0m  [1m[32mINSERT INTO "bakeries" ("name", "open_on_weekends", "hours_open", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Black Dalia Flour Bakery"], ["open_on_weekends", false], ["hours_open", 8], ["created_at", "2021-05-13 04:29:15.720151"], ["updated_at", "2021-05-13 04:29:15.720151"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBakery Create (0.2ms)[0m  [1m[32mINSERT INTO "bakeries" ("name", "open_on_weekends", "hours_open", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "The Hawk Spot Bakery"], ["open_on_weekends", true], ["hours_open", 6], ["created_at", "2021-05-13 04:29:15.721599"], ["updated_at", "2021-05-13 04:29:15.721599"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/bakeries/41" for 127.0.0.1 at 2021-05-12 21:29:15 -0700
+Processing by BakeriesController#show as HTML
+  Parameters: {"id"=>"41"}
+  [1m[36mBakery Load (0.3ms)[0m  [1m[34mSELECT  "bakeries".* FROM "bakeries" WHERE "bakeries"."id" = $1 LIMIT $2[0m  [["id", 41], ["LIMIT", 1]]
+  Rendering bakeries/show.html.erb within layouts/application
+  Rendered bakeries/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 2ms (Views: 1.0ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBakery Create (0.5ms)[0m  [1m[32mINSERT INTO "bakeries" ("name", "open_on_weekends", "hours_open", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Black Dalia Flour Bakery"], ["open_on_weekends", false], ["hours_open", 8], ["created_at", "2021-05-13 04:33:40.375553"], ["updated_at", "2021-05-13 04:33:40.375553"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBakery Create (0.2ms)[0m  [1m[32mINSERT INTO "bakeries" ("name", "open_on_weekends", "hours_open", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "The Hawk Spot Bakery"], ["open_on_weekends", true], ["hours_open", 6], ["created_at", "2021-05-13 04:33:40.377633"], ["updated_at", "2021-05-13 04:33:40.377633"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/bakeries/43" for 127.0.0.1 at 2021-05-12 21:33:40 -0700
+Processing by BakeriesController#show as HTML
+  Parameters: {"id"=>"43"}
+  [1m[36mBakery Load (0.3ms)[0m  [1m[34mSELECT  "bakeries".* FROM "bakeries" WHERE "bakeries"."id" = $1 LIMIT $2[0m  [["id", 43], ["LIMIT", 1]]
+  Rendering bakeries/show.html.erb within layouts/application
+  Rendered bakeries/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 114ms (Views: 109.7ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBakery Create (0.3ms)[0m  [1m[32mINSERT INTO "bakeries" ("name", "open_on_weekends", "hours_open", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Black Dalia Flour Bakery"], ["open_on_weekends", false], ["hours_open", 8], ["created_at", "2021-05-13 04:33:40.581800"], ["updated_at", "2021-05-13 04:33:40.581800"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBakery Create (0.2ms)[0m  [1m[32mINSERT INTO "bakeries" ("name", "open_on_weekends", "hours_open", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "The Hawk Spot Bakery"], ["open_on_weekends", true], ["hours_open", 6], ["created_at", "2021-05-13 04:33:40.583957"], ["updated_at", "2021-05-13 04:33:40.583957"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/bakeries/45" for 127.0.0.1 at 2021-05-12 21:33:40 -0700
+Processing by BakeriesController#show as HTML
+  Parameters: {"id"=>"45"}
+  [1m[36mBakery Load (0.2ms)[0m  [1m[34mSELECT  "bakeries".* FROM "bakeries" WHERE "bakeries"."id" = $1 LIMIT $2[0m  [["id", 45], ["LIMIT", 1]]
+  Rendering bakeries/show.html.erb within layouts/application
+  Rendered bakeries/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 2ms (Views: 1.1ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBakery Create (0.2ms)[0m  [1m[32mINSERT INTO "bakeries" ("name", "open_on_weekends", "hours_open", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Black Dalia Flour Bakery"], ["open_on_weekends", false], ["hours_open", 8], ["created_at", "2021-05-13 04:33:40.593057"], ["updated_at", "2021-05-13 04:33:40.593057"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBakery Create (0.2ms)[0m  [1m[32mINSERT INTO "bakeries" ("name", "open_on_weekends", "hours_open", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "The Hawk Spot Bakery"], ["open_on_weekends", true], ["hours_open", 6], ["created_at", "2021-05-13 04:33:40.594296"], ["updated_at", "2021-05-13 04:33:40.594296"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/bakeries/47" for 127.0.0.1 at 2021-05-12 21:33:40 -0700
+Processing by BakeriesController#show as HTML
+  Parameters: {"id"=>"47"}
+  [1m[36mBakery Load (0.2ms)[0m  [1m[34mSELECT  "bakeries".* FROM "bakeries" WHERE "bakeries"."id" = $1 LIMIT $2[0m  [["id", 47], ["LIMIT", 1]]
+  Rendering bakeries/show.html.erb within layouts/application
+  Rendered bakeries/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBakery Create (0.5ms)[0m  [1m[32mINSERT INTO "bakeries" ("name", "open_on_weekends", "hours_open", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "The Hawk Spot Bakery"], ["open_on_weekends", true], ["hours_open", 6], ["created_at", "2021-05-13 04:39:56.275440"], ["updated_at", "2021-05-13 04:39:56.275440"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBakery Create (0.4ms)[0m  [1m[32mINSERT INTO "bakeries" ("name", "open_on_weekends", "hours_open", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "The Hawk Spot Bakery"], ["open_on_weekends", true], ["hours_open", 6], ["created_at", "2021-05-13 04:40:47.579665"], ["updated_at", "2021-05-13 04:40:47.579665"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPastry Create (3.0ms)[0m  [1m[32mINSERT INTO "pastries" ("name", "savory_pastry", "calories", "created_at", "updated_at", "bakery_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Paw Print Cookies"], ["savory_pastry", false], ["calories", 278], ["created_at", "2021-05-13 04:40:47.604219"], ["updated_at", "2021-05-13 04:40:47.604219"], ["bakery_id", 50]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPastry Create (0.3ms)[0m  [1m[32mINSERT INTO "pastries" ("name", "savory_pastry", "calories", "created_at", "updated_at", "bakery_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Resting Dogs hotdog buns"], ["savory_pastry", true], ["calories", 200], ["created_at", "2021-05-13 04:40:47.608987"], ["updated_at", "2021-05-13 04:40:47.608987"], ["bakery_id", 50]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/pastries/1" for 127.0.0.1 at 2021-05-12 21:40:47 -0700
+Processing by PastriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPastry Load (0.2ms)[0m  [1m[34mSELECT  "pastries".* FROM "pastries" WHERE "pastries"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering pastries/show.html.erb within layouts/application
+  [1m[36mBakery Load (0.2ms)[0m  [1m[34mSELECT  "bakeries".* FROM "bakeries" WHERE "bakeries"."id" = $1 LIMIT $2[0m  [["id", 50], ["LIMIT", 1]]
+  Rendered pastries/show.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 115ms (Views: 110.9ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBakery Create (0.5ms)[0m  [1m[32mINSERT INTO "bakeries" ("name", "open_on_weekends", "hours_open", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "The Hawk Spot Bakery"], ["open_on_weekends", true], ["hours_open", 6], ["created_at", "2021-05-13 04:43:39.216161"], ["updated_at", "2021-05-13 04:43:39.216161"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPastry Create (0.6ms)[0m  [1m[32mINSERT INTO "pastries" ("name", "savory_pastry", "calories", "created_at", "updated_at", "bakery_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Paw Print Cookies"], ["savory_pastry", false], ["calories", 278], ["created_at", "2021-05-13 04:43:39.237404"], ["updated_at", "2021-05-13 04:43:39.237404"], ["bakery_id", 51]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPastry Create (0.3ms)[0m  [1m[32mINSERT INTO "pastries" ("name", "savory_pastry", "calories", "created_at", "updated_at", "bakery_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Resting Dogs hotdog buns"], ["savory_pastry", true], ["calories", 200], ["created_at", "2021-05-13 04:43:39.239579"], ["updated_at", "2021-05-13 04:43:39.239579"], ["bakery_id", 51]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/pastries/3" for 127.0.0.1 at 2021-05-12 21:43:39 -0700
+Processing by PastriesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPastry Load (0.2ms)[0m  [1m[34mSELECT  "pastries".* FROM "pastries" WHERE "pastries"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering pastries/show.html.erb within layouts/application
+  [1m[36mBakery Load (0.2ms)[0m  [1m[34mSELECT  "bakeries".* FROM "bakeries" WHERE "bakeries"."id" = $1 LIMIT $2[0m  [["id", 51], ["LIMIT", 1]]
+  Rendered pastries/show.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 106ms (Views: 102.3ms | ActiveRecord: 0.6ms)
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBakery Create (0.5ms)[0m  [1m[32mINSERT INTO "bakeries" ("name", "open_on_weekends", "hours_open", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "The Hawk Spot Bakery"], ["open_on_weekends", true], ["hours_open", 6], ["created_at", "2021-05-13 04:44:29.153395"], ["updated_at", "2021-05-13 04:44:29.153395"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPastry Create (0.6ms)[0m  [1m[32mINSERT INTO "pastries" ("name", "savory_pastry", "calories", "created_at", "updated_at", "bakery_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Paw Print Cookies"], ["savory_pastry", false], ["calories", 278], ["created_at", "2021-05-13 04:44:29.173319"], ["updated_at", "2021-05-13 04:44:29.173319"], ["bakery_id", 52]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPastry Create (0.3ms)[0m  [1m[32mINSERT INTO "pastries" ("name", "savory_pastry", "calories", "created_at", "updated_at", "bakery_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Resting Dogs hotdog buns"], ["savory_pastry", true], ["calories", 200], ["created_at", "2021-05-13 04:44:29.175710"], ["updated_at", "2021-05-13 04:44:29.175710"], ["bakery_id", 52]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/pastries/5" for 127.0.0.1 at 2021-05-12 21:44:29 -0700
+Processing by PastriesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mPastry Load (0.2ms)[0m  [1m[34mSELECT  "pastries".* FROM "pastries" WHERE "pastries"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering pastries/show.html.erb within layouts/application
+  [1m[36mBakery Load (0.2ms)[0m  [1m[34mSELECT  "bakeries".* FROM "bakeries" WHERE "bakeries"."id" = $1 LIMIT $2[0m  [["id", 52], ["LIMIT", 1]]
+  Rendered pastries/show.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 104ms (Views: 100.2ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBakery Create (0.2ms)[0m  [1m[32mINSERT INTO "bakeries" ("name", "open_on_weekends", "hours_open", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "The Hawk Spot Bakery"], ["open_on_weekends", true], ["hours_open", 6], ["created_at", "2021-05-13 04:44:29.357861"], ["updated_at", "2021-05-13 04:44:29.357861"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPastry Create (0.3ms)[0m  [1m[32mINSERT INTO "pastries" ("name", "savory_pastry", "calories", "created_at", "updated_at", "bakery_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Paw Print Cookies"], ["savory_pastry", false], ["calories", 278], ["created_at", "2021-05-13 04:44:29.359903"], ["updated_at", "2021-05-13 04:44:29.359903"], ["bakery_id", 53]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPastry Create (0.3ms)[0m  [1m[32mINSERT INTO "pastries" ("name", "savory_pastry", "calories", "created_at", "updated_at", "bakery_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Resting Dogs hotdog buns"], ["savory_pastry", true], ["calories", 200], ["created_at", "2021-05-13 04:44:29.361402"], ["updated_at", "2021-05-13 04:44:29.361402"], ["bakery_id", 53]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/pastries/7" for 127.0.0.1 at 2021-05-12 21:44:29 -0700
+Processing by PastriesController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mPastry Load (0.3ms)[0m  [1m[34mSELECT  "pastries".* FROM "pastries" WHERE "pastries"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering pastries/show.html.erb within layouts/application
+  [1m[36mBakery Load (0.3ms)[0m  [1m[34mSELECT  "bakeries".* FROM "bakeries" WHERE "bakeries"."id" = $1 LIMIT $2[0m  [["id", 53], ["LIMIT", 1]]
+  Rendered pastries/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 3ms (Views: 1.7ms | ActiveRecord: 0.6ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBakery Create (0.4ms)[0m  [1m[32mINSERT INTO "bakeries" ("name", "open_on_weekends", "hours_open", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "The Hawk Spot Bakery"], ["open_on_weekends", true], ["hours_open", 6], ["created_at", "2021-05-13 04:45:06.935687"], ["updated_at", "2021-05-13 04:45:06.935687"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPastry Create (0.6ms)[0m  [1m[32mINSERT INTO "pastries" ("name", "savory_pastry", "calories", "created_at", "updated_at", "bakery_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Paw Print Cookies"], ["savory_pastry", false], ["calories", 278], ["created_at", "2021-05-13 04:45:06.955770"], ["updated_at", "2021-05-13 04:45:06.955770"], ["bakery_id", 54]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPastry Create (0.3ms)[0m  [1m[32mINSERT INTO "pastries" ("name", "savory_pastry", "calories", "created_at", "updated_at", "bakery_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Resting Dogs hotdog buns"], ["savory_pastry", true], ["calories", 200], ["created_at", "2021-05-13 04:45:06.958081"], ["updated_at", "2021-05-13 04:45:06.958081"], ["bakery_id", 54]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/pastries/9" for 127.0.0.1 at 2021-05-12 21:45:06 -0700
+Processing by PastriesController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mPastry Load (0.4ms)[0m  [1m[34mSELECT  "pastries".* FROM "pastries" WHERE "pastries"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering pastries/show.html.erb within layouts/application
+  [1m[36mBakery Load (0.2ms)[0m  [1m[34mSELECT  "bakeries".* FROM "bakeries" WHERE "bakeries"."id" = $1 LIMIT $2[0m  [["id", 54], ["LIMIT", 1]]
+  Rendered pastries/show.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 110ms (Views: 106.2ms | ActiveRecord: 0.7ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBakery Create (0.3ms)[0m  [1m[32mINSERT INTO "bakeries" ("name", "open_on_weekends", "hours_open", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "The Hawk Spot Bakery"], ["open_on_weekends", true], ["hours_open", 6], ["created_at", "2021-05-13 04:45:07.137142"], ["updated_at", "2021-05-13 04:45:07.137142"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPastry Create (0.4ms)[0m  [1m[32mINSERT INTO "pastries" ("name", "savory_pastry", "calories", "created_at", "updated_at", "bakery_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Paw Print Cookies"], ["savory_pastry", false], ["calories", 278], ["created_at", "2021-05-13 04:45:07.139014"], ["updated_at", "2021-05-13 04:45:07.139014"], ["bakery_id", 55]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPastry Create (0.3ms)[0m  [1m[32mINSERT INTO "pastries" ("name", "savory_pastry", "calories", "created_at", "updated_at", "bakery_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Resting Dogs hotdog buns"], ["savory_pastry", true], ["calories", 200], ["created_at", "2021-05-13 04:45:07.140812"], ["updated_at", "2021-05-13 04:45:07.140812"], ["bakery_id", 55]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/pastries/11" for 127.0.0.1 at 2021-05-12 21:45:07 -0700
+Processing by PastriesController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mPastry Load (0.2ms)[0m  [1m[34mSELECT  "pastries".* FROM "pastries" WHERE "pastries"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  Rendering pastries/show.html.erb within layouts/application
+  [1m[36mBakery Load (0.2ms)[0m  [1m[34mSELECT  "bakeries".* FROM "bakeries" WHERE "bakeries"."id" = $1 LIMIT $2[0m  [["id", 55], ["LIMIT", 1]]
+  Rendered pastries/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 3ms (Views: 1.6ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBakery Create (1.4ms)[0m  [1m[32mINSERT INTO "bakeries" ("name", "open_on_weekends", "hours_open", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "The Hawk Spot Bakery"], ["open_on_weekends", true], ["hours_open", 6], ["created_at", "2021-05-13 04:46:11.974022"], ["updated_at", "2021-05-13 04:46:11.974022"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPastry Create (0.6ms)[0m  [1m[32mINSERT INTO "pastries" ("name", "savory_pastry", "calories", "created_at", "updated_at", "bakery_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Paw Print Cookies"], ["savory_pastry", false], ["calories", 278], ["created_at", "2021-05-13 04:46:12.011312"], ["updated_at", "2021-05-13 04:46:12.011312"], ["bakery_id", 56]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPastry Create (0.2ms)[0m  [1m[32mINSERT INTO "pastries" ("name", "savory_pastry", "calories", "created_at", "updated_at", "bakery_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Resting Dogs hotdog buns"], ["savory_pastry", true], ["calories", 200], ["created_at", "2021-05-13 04:46:12.014537"], ["updated_at", "2021-05-13 04:46:12.014537"], ["bakery_id", 56]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/pastries/13" for 127.0.0.1 at 2021-05-12 21:46:12 -0700
+Processing by PastriesController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mPastry Load (0.2ms)[0m  [1m[34mSELECT  "pastries".* FROM "pastries" WHERE "pastries"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  Rendering pastries/show.html.erb within layouts/application
+  [1m[36mBakery Load (0.2ms)[0m  [1m[34mSELECT  "bakeries".* FROM "bakeries" WHERE "bakeries"."id" = $1 LIMIT $2[0m  [["id", 56], ["LIMIT", 1]]
+  Rendered pastries/show.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 126ms (Views: 120.6ms | ActiveRecord: 0.6ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBakery Create (0.2ms)[0m  [1m[32mINSERT INTO "bakeries" ("name", "open_on_weekends", "hours_open", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "The Hawk Spot Bakery"], ["open_on_weekends", true], ["hours_open", 6], ["created_at", "2021-05-13 04:46:12.214045"], ["updated_at", "2021-05-13 04:46:12.214045"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPastry Create (0.2ms)[0m  [1m[32mINSERT INTO "pastries" ("name", "savory_pastry", "calories", "created_at", "updated_at", "bakery_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Paw Print Cookies"], ["savory_pastry", false], ["calories", 278], ["created_at", "2021-05-13 04:46:12.215882"], ["updated_at", "2021-05-13 04:46:12.215882"], ["bakery_id", 57]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPastry Create (0.2ms)[0m  [1m[32mINSERT INTO "pastries" ("name", "savory_pastry", "calories", "created_at", "updated_at", "bakery_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Resting Dogs hotdog buns"], ["savory_pastry", true], ["calories", 200], ["created_at", "2021-05-13 04:46:12.217258"], ["updated_at", "2021-05-13 04:46:12.217258"], ["bakery_id", 57]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/pastries/15" for 127.0.0.1 at 2021-05-12 21:46:12 -0700
+Processing by PastriesController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mPastry Load (0.2ms)[0m  [1m[34mSELECT  "pastries".* FROM "pastries" WHERE "pastries"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  Rendering pastries/show.html.erb within layouts/application
+  [1m[36mBakery Load (0.1ms)[0m  [1m[34mSELECT  "bakeries".* FROM "bakeries" WHERE "bakeries"."id" = $1 LIMIT $2[0m  [["id", 57], ["LIMIT", 1]]
+  Rendered pastries/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBakery Create (0.5ms)[0m  [1m[32mINSERT INTO "bakeries" ("name", "open_on_weekends", "hours_open", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "The Hawk Spot Bakery"], ["open_on_weekends", true], ["hours_open", 6], ["created_at", "2021-05-13 04:46:40.840543"], ["updated_at", "2021-05-13 04:46:40.840543"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPastry Create (0.7ms)[0m  [1m[32mINSERT INTO "pastries" ("name", "savory_pastry", "calories", "created_at", "updated_at", "bakery_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Paw Print Cookies"], ["savory_pastry", false], ["calories", 278], ["created_at", "2021-05-13 04:46:40.878340"], ["updated_at", "2021-05-13 04:46:40.878340"], ["bakery_id", 58]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPastry Create (0.3ms)[0m  [1m[32mINSERT INTO "pastries" ("name", "savory_pastry", "calories", "created_at", "updated_at", "bakery_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Resting Dogs hotdog buns"], ["savory_pastry", true], ["calories", 200], ["created_at", "2021-05-13 04:46:40.881848"], ["updated_at", "2021-05-13 04:46:40.881848"], ["bakery_id", 58]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/pastries/17" for 127.0.0.1 at 2021-05-12 21:46:40 -0700
+Processing by PastriesController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mPastry Load (0.2ms)[0m  [1m[34mSELECT  "pastries".* FROM "pastries" WHERE "pastries"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  Rendering pastries/show.html.erb within layouts/application
+  [1m[36mBakery Load (0.2ms)[0m  [1m[34mSELECT  "bakeries".* FROM "bakeries" WHERE "bakeries"."id" = $1 LIMIT $2[0m  [["id", 58], ["LIMIT", 1]]
+  Rendered pastries/show.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 131ms (Views: 125.7ms | ActiveRecord: 0.6ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBakery Create (0.3ms)[0m  [1m[32mINSERT INTO "bakeries" ("name", "open_on_weekends", "hours_open", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "The Hawk Spot Bakery"], ["open_on_weekends", true], ["hours_open", 6], ["created_at", "2021-05-13 04:46:41.124803"], ["updated_at", "2021-05-13 04:46:41.124803"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPastry Create (0.2ms)[0m  [1m[32mINSERT INTO "pastries" ("name", "savory_pastry", "calories", "created_at", "updated_at", "bakery_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Paw Print Cookies"], ["savory_pastry", false], ["calories", 278], ["created_at", "2021-05-13 04:46:41.126924"], ["updated_at", "2021-05-13 04:46:41.126924"], ["bakery_id", 59]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPastry Create (0.3ms)[0m  [1m[32mINSERT INTO "pastries" ("name", "savory_pastry", "calories", "created_at", "updated_at", "bakery_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Resting Dogs hotdog buns"], ["savory_pastry", true], ["calories", 200], ["created_at", "2021-05-13 04:46:41.128397"], ["updated_at", "2021-05-13 04:46:41.128397"], ["bakery_id", 59]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/pastries/19" for 127.0.0.1 at 2021-05-12 21:46:41 -0700
+Processing by PastriesController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mPastry Load (0.1ms)[0m  [1m[34mSELECT  "pastries".* FROM "pastries" WHERE "pastries"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  Rendering pastries/show.html.erb within layouts/application
+  [1m[36mBakery Load (0.2ms)[0m  [1m[34mSELECT  "bakeries".* FROM "bakeries" WHERE "bakeries"."id" = $1 LIMIT $2[0m  [["id", 59], ["LIMIT", 1]]
+  Rendered pastries/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 3ms (Views: 1.8ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBakery Create (0.5ms)[0m  [1m[32mINSERT INTO "bakeries" ("name", "open_on_weekends", "hours_open", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "The Hawk Spot Bakery"], ["open_on_weekends", true], ["hours_open", 6], ["created_at", "2021-05-13 04:48:44.281512"], ["updated_at", "2021-05-13 04:48:44.281512"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPastry Create (1.1ms)[0m  [1m[32mINSERT INTO "pastries" ("name", "savory_pastry", "calories", "created_at", "updated_at", "bakery_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Paw Print Cookies"], ["savory_pastry", false], ["calories", 278], ["created_at", "2021-05-13 04:48:44.324102"], ["updated_at", "2021-05-13 04:48:44.324102"], ["bakery_id", 60]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPastry Create (0.3ms)[0m  [1m[32mINSERT INTO "pastries" ("name", "savory_pastry", "calories", "created_at", "updated_at", "bakery_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Resting Dogs hotdog buns"], ["savory_pastry", true], ["calories", 200], ["created_at", "2021-05-13 04:48:44.328437"], ["updated_at", "2021-05-13 04:48:44.328437"], ["bakery_id", 60]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/pastries/21" for 127.0.0.1 at 2021-05-12 21:48:44 -0700
+Processing by PastriesController#show as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mPastry Load (0.2ms)[0m  [1m[34mSELECT  "pastries".* FROM "pastries" WHERE "pastries"."id" = $1 LIMIT $2[0m  [["id", 21], ["LIMIT", 1]]
+  Rendering pastries/show.html.erb within layouts/application
+  [1m[36mBakery Load (0.2ms)[0m  [1m[34mSELECT  "bakeries".* FROM "bakeries" WHERE "bakeries"."id" = $1 LIMIT $2[0m  [["id", 60], ["LIMIT", 1]]
+  Rendered pastries/show.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 143ms (Views: 136.5ms | ActiveRecord: 0.7ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBakery Create (0.2ms)[0m  [1m[32mINSERT INTO "bakeries" ("name", "open_on_weekends", "hours_open", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "The Hawk Spot Bakery"], ["open_on_weekends", true], ["hours_open", 6], ["created_at", "2021-05-13 04:48:44.571967"], ["updated_at", "2021-05-13 04:48:44.571967"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPastry Create (0.3ms)[0m  [1m[32mINSERT INTO "pastries" ("name", "savory_pastry", "calories", "created_at", "updated_at", "bakery_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Paw Print Cookies"], ["savory_pastry", false], ["calories", 278], ["created_at", "2021-05-13 04:48:44.573930"], ["updated_at", "2021-05-13 04:48:44.573930"], ["bakery_id", 61]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPastry Create (0.3ms)[0m  [1m[32mINSERT INTO "pastries" ("name", "savory_pastry", "calories", "created_at", "updated_at", "bakery_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Resting Dogs hotdog buns"], ["savory_pastry", true], ["calories", 200], ["created_at", "2021-05-13 04:48:44.575622"], ["updated_at", "2021-05-13 04:48:44.575622"], ["bakery_id", 61]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/pastries/23" for 127.0.0.1 at 2021-05-12 21:48:44 -0700
+Processing by PastriesController#show as HTML
+  Parameters: {"id"=>"23"}
+  [1m[36mPastry Load (0.2ms)[0m  [1m[34mSELECT  "pastries".* FROM "pastries" WHERE "pastries"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  Rendering pastries/show.html.erb within layouts/application
+  [1m[36mBakery Load (0.2ms)[0m  [1m[34mSELECT  "bakeries".* FROM "bakeries" WHERE "bakeries"."id" = $1 LIMIT $2[0m  [["id", 61], ["LIMIT", 1]]
+  Rendered pastries/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 3ms (Views: 1.6ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBakery Create (0.7ms)[0m  [1m[32mINSERT INTO "bakeries" ("name", "open_on_weekends", "hours_open", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "The Hawk Spot Bakery"], ["open_on_weekends", true], ["hours_open", 6], ["created_at", "2021-05-13 04:49:23.625952"], ["updated_at", "2021-05-13 04:49:23.625952"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPastry Create (0.8ms)[0m  [1m[32mINSERT INTO "pastries" ("name", "savory_pastry", "calories", "created_at", "updated_at", "bakery_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Paw Print Cookies"], ["savory_pastry", false], ["calories", 278], ["created_at", "2021-05-13 04:49:23.648634"], ["updated_at", "2021-05-13 04:49:23.648634"], ["bakery_id", 62]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPastry Create (0.2ms)[0m  [1m[32mINSERT INTO "pastries" ("name", "savory_pastry", "calories", "created_at", "updated_at", "bakery_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Resting Dogs hotdog buns"], ["savory_pastry", true], ["calories", 200], ["created_at", "2021-05-13 04:49:23.651048"], ["updated_at", "2021-05-13 04:49:23.651048"], ["bakery_id", 62]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/pastries/25" for 127.0.0.1 at 2021-05-12 21:49:23 -0700
+Processing by PastriesController#show as HTML
+  Parameters: {"id"=>"25"}
+  [1m[36mPastry Load (0.2ms)[0m  [1m[34mSELECT  "pastries".* FROM "pastries" WHERE "pastries"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  Rendering pastries/show.html.erb within layouts/application
+  [1m[36mBakery Load (0.3ms)[0m  [1m[34mSELECT  "bakeries".* FROM "bakeries" WHERE "bakeries"."id" = $1 LIMIT $2[0m  [["id", 62], ["LIMIT", 1]]
+  Rendered pastries/show.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 112ms (Views: 107.9ms | ActiveRecord: 0.7ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBakery Create (0.3ms)[0m  [1m[32mINSERT INTO "bakeries" ("name", "open_on_weekends", "hours_open", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "The Hawk Spot Bakery"], ["open_on_weekends", true], ["hours_open", 6], ["created_at", "2021-05-13 04:49:23.833552"], ["updated_at", "2021-05-13 04:49:23.833552"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPastry Create (0.6ms)[0m  [1m[32mINSERT INTO "pastries" ("name", "savory_pastry", "calories", "created_at", "updated_at", "bakery_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Paw Print Cookies"], ["savory_pastry", false], ["calories", 278], ["created_at", "2021-05-13 04:49:23.835636"], ["updated_at", "2021-05-13 04:49:23.835636"], ["bakery_id", 63]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPastry Create (0.4ms)[0m  [1m[32mINSERT INTO "pastries" ("name", "savory_pastry", "calories", "created_at", "updated_at", "bakery_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Resting Dogs hotdog buns"], ["savory_pastry", true], ["calories", 200], ["created_at", "2021-05-13 04:49:23.837814"], ["updated_at", "2021-05-13 04:49:23.837814"], ["bakery_id", 63]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/pastries/27" for 127.0.0.1 at 2021-05-12 21:49:23 -0700
+Processing by PastriesController#show as HTML
+  Parameters: {"id"=>"27"}
+  [1m[36mPastry Load (0.3ms)[0m  [1m[34mSELECT  "pastries".* FROM "pastries" WHERE "pastries"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+  Rendering pastries/show.html.erb within layouts/application
+  [1m[36mBakery Load (0.3ms)[0m  [1m[34mSELECT  "bakeries".* FROM "bakeries" WHERE "bakeries"."id" = $1 LIMIT $2[0m  [["id", 63], ["LIMIT", 1]]
+  Rendered pastries/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBakery Create (0.9ms)[0m  [1m[32mINSERT INTO "bakeries" ("name", "open_on_weekends", "hours_open", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "The Hawk Spot Bakery"], ["open_on_weekends", true], ["hours_open", 6], ["created_at", "2021-05-13 04:49:40.006509"], ["updated_at", "2021-05-13 04:49:40.006509"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPastry Create (0.8ms)[0m  [1m[32mINSERT INTO "pastries" ("name", "savory_pastry", "calories", "created_at", "updated_at", "bakery_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Paw Print Cookies"], ["savory_pastry", false], ["calories", 278], ["created_at", "2021-05-13 04:49:40.030490"], ["updated_at", "2021-05-13 04:49:40.030490"], ["bakery_id", 64]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPastry Create (0.3ms)[0m  [1m[32mINSERT INTO "pastries" ("name", "savory_pastry", "calories", "created_at", "updated_at", "bakery_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Resting Dogs hotdog buns"], ["savory_pastry", true], ["calories", 200], ["created_at", "2021-05-13 04:49:40.033083"], ["updated_at", "2021-05-13 04:49:40.033083"], ["bakery_id", 64]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/pastries/29" for 127.0.0.1 at 2021-05-12 21:49:40 -0700
+Processing by PastriesController#show as HTML
+  Parameters: {"id"=>"29"}
+  [1m[36mPastry Load (0.3ms)[0m  [1m[34mSELECT  "pastries".* FROM "pastries" WHERE "pastries"."id" = $1 LIMIT $2[0m  [["id", 29], ["LIMIT", 1]]
+  Rendering pastries/show.html.erb within layouts/application
+  [1m[36mBakery Load (0.2ms)[0m  [1m[34mSELECT  "bakeries".* FROM "bakeries" WHERE "bakeries"."id" = $1 LIMIT $2[0m  [["id", 64], ["LIMIT", 1]]
+  Rendered pastries/show.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 114ms (Views: 110.5ms | ActiveRecord: 0.6ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBakery Create (0.2ms)[0m  [1m[32mINSERT INTO "bakeries" ("name", "open_on_weekends", "hours_open", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "The Hawk Spot Bakery"], ["open_on_weekends", true], ["hours_open", 6], ["created_at", "2021-05-13 04:49:40.231265"], ["updated_at", "2021-05-13 04:49:40.231265"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPastry Create (0.2ms)[0m  [1m[32mINSERT INTO "pastries" ("name", "savory_pastry", "calories", "created_at", "updated_at", "bakery_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Paw Print Cookies"], ["savory_pastry", false], ["calories", 278], ["created_at", "2021-05-13 04:49:40.233295"], ["updated_at", "2021-05-13 04:49:40.233295"], ["bakery_id", 65]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPastry Create (0.2ms)[0m  [1m[32mINSERT INTO "pastries" ("name", "savory_pastry", "calories", "created_at", "updated_at", "bakery_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Resting Dogs hotdog buns"], ["savory_pastry", true], ["calories", 200], ["created_at", "2021-05-13 04:49:40.234839"], ["updated_at", "2021-05-13 04:49:40.234839"], ["bakery_id", 65]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/pastries/31" for 127.0.0.1 at 2021-05-12 21:49:40 -0700
+Processing by PastriesController#show as HTML
+  Parameters: {"id"=>"31"}
+  [1m[36mPastry Load (0.2ms)[0m  [1m[34mSELECT  "pastries".* FROM "pastries" WHERE "pastries"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  Rendering pastries/show.html.erb within layouts/application
+  [1m[36mBakery Load (0.1ms)[0m  [1m[34mSELECT  "bakeries".* FROM "bakeries" WHERE "bakeries"."id" = $1 LIMIT $2[0m  [["id", 65], ["LIMIT", 1]]
+  Rendered pastries/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBakery Create (0.6ms)[0m  [1m[32mINSERT INTO "bakeries" ("name", "open_on_weekends", "hours_open", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "The Hawk Spot Bakery"], ["open_on_weekends", true], ["hours_open", 6], ["created_at", "2021-05-13 04:50:15.066252"], ["updated_at", "2021-05-13 04:50:15.066252"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPastry Create (0.7ms)[0m  [1m[32mINSERT INTO "pastries" ("name", "savory_pastry", "calories", "created_at", "updated_at", "bakery_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Paw Print Cookies"], ["savory_pastry", false], ["calories", 278], ["created_at", "2021-05-13 04:50:15.091939"], ["updated_at", "2021-05-13 04:50:15.091939"], ["bakery_id", 66]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPastry Create (0.3ms)[0m  [1m[32mINSERT INTO "pastries" ("name", "savory_pastry", "calories", "created_at", "updated_at", "bakery_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Resting Dogs hotdog buns"], ["savory_pastry", true], ["calories", 200], ["created_at", "2021-05-13 04:50:15.094621"], ["updated_at", "2021-05-13 04:50:15.094621"], ["bakery_id", 66]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/pastries/33" for 127.0.0.1 at 2021-05-12 21:50:15 -0700
+Processing by PastriesController#show as HTML
+  Parameters: {"id"=>"33"}
+  [1m[36mPastry Load (0.5ms)[0m  [1m[34mSELECT  "pastries".* FROM "pastries" WHERE "pastries"."id" = $1 LIMIT $2[0m  [["id", 33], ["LIMIT", 1]]
+  Rendering pastries/show.html.erb within layouts/application
+  [1m[36mBakery Load (0.2ms)[0m  [1m[34mSELECT  "bakeries".* FROM "bakeries" WHERE "bakeries"."id" = $1 LIMIT $2[0m  [["id", 66], ["LIMIT", 1]]
+  Rendered pastries/show.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 118ms (Views: 111.9ms | ActiveRecord: 0.9ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBakery Create (0.3ms)[0m  [1m[32mINSERT INTO "bakeries" ("name", "open_on_weekends", "hours_open", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "The Hawk Spot Bakery"], ["open_on_weekends", true], ["hours_open", 6], ["created_at", "2021-05-13 04:50:15.303590"], ["updated_at", "2021-05-13 04:50:15.303590"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPastry Create (0.5ms)[0m  [1m[32mINSERT INTO "pastries" ("name", "savory_pastry", "calories", "created_at", "updated_at", "bakery_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Paw Print Cookies"], ["savory_pastry", false], ["calories", 278], ["created_at", "2021-05-13 04:50:15.306685"], ["updated_at", "2021-05-13 04:50:15.306685"], ["bakery_id", 67]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPastry Create (0.3ms)[0m  [1m[32mINSERT INTO "pastries" ("name", "savory_pastry", "calories", "created_at", "updated_at", "bakery_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Resting Dogs hotdog buns"], ["savory_pastry", true], ["calories", 200], ["created_at", "2021-05-13 04:50:15.309457"], ["updated_at", "2021-05-13 04:50:15.309457"], ["bakery_id", 67]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/pastries/35" for 127.0.0.1 at 2021-05-12 21:50:15 -0700
+Processing by PastriesController#show as HTML
+  Parameters: {"id"=>"35"}
+  [1m[36mPastry Load (0.2ms)[0m  [1m[34mSELECT  "pastries".* FROM "pastries" WHERE "pastries"."id" = $1 LIMIT $2[0m  [["id", 35], ["LIMIT", 1]]
+  Rendering pastries/show.html.erb within layouts/application
+  [1m[36mBakery Load (0.1ms)[0m  [1m[34mSELECT  "bakeries".* FROM "bakeries" WHERE "bakeries"."id" = $1 LIMIT $2[0m  [["id", 67], ["LIMIT", 1]]
+  Rendered pastries/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBakery Create (0.8ms)[0m  [1m[32mINSERT INTO "bakeries" ("name", "open_on_weekends", "hours_open", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "The Hawk Spot Bakery"], ["open_on_weekends", true], ["hours_open", 6], ["created_at", "2021-05-13 04:50:28.273002"], ["updated_at", "2021-05-13 04:50:28.273002"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPastry Create (0.9ms)[0m  [1m[32mINSERT INTO "pastries" ("name", "savory_pastry", "calories", "created_at", "updated_at", "bakery_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Paw Print Cookies"], ["savory_pastry", false], ["calories", 278], ["created_at", "2021-05-13 04:50:28.295938"], ["updated_at", "2021-05-13 04:50:28.295938"], ["bakery_id", 68]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPastry Create (0.3ms)[0m  [1m[32mINSERT INTO "pastries" ("name", "savory_pastry", "calories", "created_at", "updated_at", "bakery_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Resting Dogs hotdog buns"], ["savory_pastry", true], ["calories", 200], ["created_at", "2021-05-13 04:50:28.298407"], ["updated_at", "2021-05-13 04:50:28.298407"], ["bakery_id", 68]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/pastries/37" for 127.0.0.1 at 2021-05-12 21:50:28 -0700
+Processing by PastriesController#show as HTML
+  Parameters: {"id"=>"37"}
+  [1m[36mPastry Load (0.8ms)[0m  [1m[34mSELECT  "pastries".* FROM "pastries" WHERE "pastries"."id" = $1 LIMIT $2[0m  [["id", 37], ["LIMIT", 1]]
+  Rendering pastries/show.html.erb within layouts/application
+  [1m[36mBakery Load (0.2ms)[0m  [1m[34mSELECT  "bakeries".* FROM "bakeries" WHERE "bakeries"."id" = $1 LIMIT $2[0m  [["id", 68], ["LIMIT", 1]]
+  Rendered pastries/show.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 109ms (Views: 104.4ms | ActiveRecord: 1.1ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBakery Create (0.3ms)[0m  [1m[32mINSERT INTO "bakeries" ("name", "open_on_weekends", "hours_open", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "The Hawk Spot Bakery"], ["open_on_weekends", true], ["hours_open", 6], ["created_at", "2021-05-13 04:50:28.482918"], ["updated_at", "2021-05-13 04:50:28.482918"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPastry Create (0.3ms)[0m  [1m[32mINSERT INTO "pastries" ("name", "savory_pastry", "calories", "created_at", "updated_at", "bakery_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Paw Print Cookies"], ["savory_pastry", false], ["calories", 278], ["created_at", "2021-05-13 04:50:28.484850"], ["updated_at", "2021-05-13 04:50:28.484850"], ["bakery_id", 69]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPastry Create (0.2ms)[0m  [1m[32mINSERT INTO "pastries" ("name", "savory_pastry", "calories", "created_at", "updated_at", "bakery_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Resting Dogs hotdog buns"], ["savory_pastry", true], ["calories", 200], ["created_at", "2021-05-13 04:50:28.486387"], ["updated_at", "2021-05-13 04:50:28.486387"], ["bakery_id", 69]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/pastries/39" for 127.0.0.1 at 2021-05-12 21:50:28 -0700
+Processing by PastriesController#show as HTML
+  Parameters: {"id"=>"39"}
+  [1m[36mPastry Load (0.3ms)[0m  [1m[34mSELECT  "pastries".* FROM "pastries" WHERE "pastries"."id" = $1 LIMIT $2[0m  [["id", 39], ["LIMIT", 1]]
+  Rendering pastries/show.html.erb within layouts/application
+  [1m[36mBakery Load (0.2ms)[0m  [1m[34mSELECT  "bakeries".* FROM "bakeries" WHERE "bakeries"."id" = $1 LIMIT $2[0m  [["id", 69], ["LIMIT", 1]]
+  Rendered pastries/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 4ms (Views: 2.4ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBakery Create (0.7ms)[0m  [1m[32mINSERT INTO "bakeries" ("name", "open_on_weekends", "hours_open", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "The Hawk Spot Bakery"], ["open_on_weekends", true], ["hours_open", 6], ["created_at", "2021-05-13 04:50:37.395238"], ["updated_at", "2021-05-13 04:50:37.395238"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPastry Create (0.6ms)[0m  [1m[32mINSERT INTO "pastries" ("name", "savory_pastry", "calories", "created_at", "updated_at", "bakery_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Paw Print Cookies"], ["savory_pastry", false], ["calories", 278], ["created_at", "2021-05-13 04:50:37.416601"], ["updated_at", "2021-05-13 04:50:37.416601"], ["bakery_id", 70]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPastry Create (0.3ms)[0m  [1m[32mINSERT INTO "pastries" ("name", "savory_pastry", "calories", "created_at", "updated_at", "bakery_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Resting Dogs hotdog buns"], ["savory_pastry", true], ["calories", 200], ["created_at", "2021-05-13 04:50:37.418936"], ["updated_at", "2021-05-13 04:50:37.418936"], ["bakery_id", 70]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/pastries/41" for 127.0.0.1 at 2021-05-12 21:50:37 -0700
+Processing by PastriesController#show as HTML
+  Parameters: {"id"=>"41"}
+  [1m[36mPastry Load (0.4ms)[0m  [1m[34mSELECT  "pastries".* FROM "pastries" WHERE "pastries"."id" = $1 LIMIT $2[0m  [["id", 41], ["LIMIT", 1]]
+  Rendering pastries/show.html.erb within layouts/application
+  [1m[36mBakery Load (0.2ms)[0m  [1m[34mSELECT  "bakeries".* FROM "bakeries" WHERE "bakeries"."id" = $1 LIMIT $2[0m  [["id", 70], ["LIMIT", 1]]
+  Rendered pastries/show.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 108ms (Views: 103.5ms | ActiveRecord: 0.7ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBakery Create (0.3ms)[0m  [1m[32mINSERT INTO "bakeries" ("name", "open_on_weekends", "hours_open", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "The Hawk Spot Bakery"], ["open_on_weekends", true], ["hours_open", 6], ["created_at", "2021-05-13 04:50:37.596922"], ["updated_at", "2021-05-13 04:50:37.596922"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPastry Create (0.2ms)[0m  [1m[32mINSERT INTO "pastries" ("name", "savory_pastry", "calories", "created_at", "updated_at", "bakery_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Paw Print Cookies"], ["savory_pastry", false], ["calories", 278], ["created_at", "2021-05-13 04:50:37.598815"], ["updated_at", "2021-05-13 04:50:37.598815"], ["bakery_id", 71]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPastry Create (0.2ms)[0m  [1m[32mINSERT INTO "pastries" ("name", "savory_pastry", "calories", "created_at", "updated_at", "bakery_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Resting Dogs hotdog buns"], ["savory_pastry", true], ["calories", 200], ["created_at", "2021-05-13 04:50:37.600216"], ["updated_at", "2021-05-13 04:50:37.600216"], ["bakery_id", 71]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/pastries/43" for 127.0.0.1 at 2021-05-12 21:50:37 -0700
+Processing by PastriesController#show as HTML
+  Parameters: {"id"=>"43"}
+  [1m[36mPastry Load (0.3ms)[0m  [1m[34mSELECT  "pastries".* FROM "pastries" WHERE "pastries"."id" = $1 LIMIT $2[0m  [["id", 43], ["LIMIT", 1]]
+  Rendering pastries/show.html.erb within layouts/application
+  [1m[36mBakery Load (0.2ms)[0m  [1m[34mSELECT  "bakeries".* FROM "bakeries" WHERE "bakeries"."id" = $1 LIMIT $2[0m  [["id", 71], ["LIMIT", 1]]
+  Rendered pastries/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBakery Create (0.5ms)[0m  [1m[32mINSERT INTO "bakeries" ("name", "open_on_weekends", "hours_open", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "The Hawk Spot Bakery"], ["open_on_weekends", true], ["hours_open", 6], ["created_at", "2021-05-13 04:50:47.684741"], ["updated_at", "2021-05-13 04:50:47.684741"]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPastry Create (0.8ms)[0m  [1m[32mINSERT INTO "pastries" ("name", "savory_pastry", "calories", "created_at", "updated_at", "bakery_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Paw Print Cookies"], ["savory_pastry", false], ["calories", 278], ["created_at", "2021-05-13 04:50:47.707313"], ["updated_at", "2021-05-13 04:50:47.707313"], ["bakery_id", 72]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPastry Create (0.4ms)[0m  [1m[32mINSERT INTO "pastries" ("name", "savory_pastry", "calories", "created_at", "updated_at", "bakery_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Resting Dogs hotdog buns"], ["savory_pastry", true], ["calories", 200], ["created_at", "2021-05-13 04:50:47.710196"], ["updated_at", "2021-05-13 04:50:47.710196"], ["bakery_id", 72]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/pastries/45" for 127.0.0.1 at 2021-05-12 21:50:47 -0700
+Processing by PastriesController#show as HTML
+  Parameters: {"id"=>"45"}
+  [1m[36mPastry Load (0.2ms)[0m  [1m[34mSELECT  "pastries".* FROM "pastries" WHERE "pastries"."id" = $1 LIMIT $2[0m  [["id", 45], ["LIMIT", 1]]
+  Rendering pastries/show.html.erb within layouts/application
+  [1m[36mBakery Load (0.3ms)[0m  [1m[34mSELECT  "bakeries".* FROM "bakeries" WHERE "bakeries"."id" = $1 LIMIT $2[0m  [["id", 72], ["LIMIT", 1]]
+  Rendered pastries/show.html.erb within layouts/application (8.0ms)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.7ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBakery Create (0.4ms)[0m  [1m[32mINSERT INTO "bakeries" ("name", "open_on_weekends", "hours_open", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "The Hawk Spot Bakery"], ["open_on_weekends", true], ["hours_open", 6], ["created_at", "2021-05-13 04:50:47.789015"], ["updated_at", "2021-05-13 04:50:47.789015"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPastry Create (0.4ms)[0m  [1m[32mINSERT INTO "pastries" ("name", "savory_pastry", "calories", "created_at", "updated_at", "bakery_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Paw Print Cookies"], ["savory_pastry", false], ["calories", 278], ["created_at", "2021-05-13 04:50:47.792016"], ["updated_at", "2021-05-13 04:50:47.792016"], ["bakery_id", 73]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPastry Create (0.3ms)[0m  [1m[32mINSERT INTO "pastries" ("name", "savory_pastry", "calories", "created_at", "updated_at", "bakery_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Resting Dogs hotdog buns"], ["savory_pastry", true], ["calories", 200], ["created_at", "2021-05-13 04:50:47.793851"], ["updated_at", "2021-05-13 04:50:47.793851"], ["bakery_id", 73]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/pastries/47" for 127.0.0.1 at 2021-05-12 21:50:47 -0700
+Processing by PastriesController#show as HTML
+  Parameters: {"id"=>"47"}
+  [1m[36mPastry Load (0.2ms)[0m  [1m[34mSELECT  "pastries".* FROM "pastries" WHERE "pastries"."id" = $1 LIMIT $2[0m  [["id", 47], ["LIMIT", 1]]
+  Rendering pastries/show.html.erb within layouts/application
+  [1m[36mBakery Load (0.1ms)[0m  [1m[34mSELECT  "bakeries".* FROM "bakeries" WHERE "bakeries"."id" = $1 LIMIT $2[0m  [["id", 73], ["LIMIT", 1]]
+  Rendered pastries/show.html.erb within layouts/application (4.6ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.3ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBakery Create (0.7ms)[0m  [1m[32mINSERT INTO "bakeries" ("name", "open_on_weekends", "hours_open", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "The Hawk Spot Bakery"], ["open_on_weekends", true], ["hours_open", 6], ["created_at", "2021-05-13 04:50:56.707288"], ["updated_at", "2021-05-13 04:50:56.707288"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPastry Create (0.6ms)[0m  [1m[32mINSERT INTO "pastries" ("name", "savory_pastry", "calories", "created_at", "updated_at", "bakery_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Paw Print Cookies"], ["savory_pastry", false], ["calories", 278], ["created_at", "2021-05-13 04:50:56.729512"], ["updated_at", "2021-05-13 04:50:56.729512"], ["bakery_id", 74]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPastry Create (0.3ms)[0m  [1m[32mINSERT INTO "pastries" ("name", "savory_pastry", "calories", "created_at", "updated_at", "bakery_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Resting Dogs hotdog buns"], ["savory_pastry", true], ["calories", 200], ["created_at", "2021-05-13 04:50:56.731856"], ["updated_at", "2021-05-13 04:50:56.731856"], ["bakery_id", 74]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/pastries/49" for 127.0.0.1 at 2021-05-12 21:50:56 -0700
+Processing by PastriesController#show as HTML
+  Parameters: {"id"=>"49"}
+  [1m[36mPastry Load (0.2ms)[0m  [1m[34mSELECT  "pastries".* FROM "pastries" WHERE "pastries"."id" = $1 LIMIT $2[0m  [["id", 49], ["LIMIT", 1]]
+  Rendering pastries/show.html.erb within layouts/application
+  [1m[36mBakery Load (0.2ms)[0m  [1m[34mSELECT  "bakeries".* FROM "bakeries" WHERE "bakeries"."id" = $1 LIMIT $2[0m  [["id", 74], ["LIMIT", 1]]
+  Rendered pastries/show.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 114ms (Views: 110.7ms | ActiveRecord: 0.6ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBakery Create (0.2ms)[0m  [1m[32mINSERT INTO "bakeries" ("name", "open_on_weekends", "hours_open", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "The Hawk Spot Bakery"], ["open_on_weekends", true], ["hours_open", 6], ["created_at", "2021-05-13 04:50:56.932386"], ["updated_at", "2021-05-13 04:50:56.932386"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPastry Create (0.5ms)[0m  [1m[32mINSERT INTO "pastries" ("name", "savory_pastry", "calories", "created_at", "updated_at", "bakery_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Paw Print Cookies"], ["savory_pastry", false], ["calories", 278], ["created_at", "2021-05-13 04:50:56.935080"], ["updated_at", "2021-05-13 04:50:56.935080"], ["bakery_id", 75]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPastry Create (0.2ms)[0m  [1m[32mINSERT INTO "pastries" ("name", "savory_pastry", "calories", "created_at", "updated_at", "bakery_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Resting Dogs hotdog buns"], ["savory_pastry", true], ["calories", 200], ["created_at", "2021-05-13 04:50:56.937020"], ["updated_at", "2021-05-13 04:50:56.937020"], ["bakery_id", 75]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/pastries/51" for 127.0.0.1 at 2021-05-12 21:50:56 -0700
+Processing by PastriesController#show as HTML
+  Parameters: {"id"=>"51"}
+  [1m[36mPastry Load (0.2ms)[0m  [1m[34mSELECT  "pastries".* FROM "pastries" WHERE "pastries"."id" = $1 LIMIT $2[0m  [["id", 51], ["LIMIT", 1]]
+  Rendering pastries/show.html.erb within layouts/application
+  [1m[36mBakery Load (0.2ms)[0m  [1m[34mSELECT  "bakeries".* FROM "bakeries" WHERE "bakeries"."id" = $1 LIMIT $2[0m  [["id", 75], ["LIMIT", 1]]
+  Rendered pastries/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 3ms (Views: 1.8ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBakery Create (0.7ms)[0m  [1m[32mINSERT INTO "bakeries" ("name", "open_on_weekends", "hours_open", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "The Hawk Spot Bakery"], ["open_on_weekends", true], ["hours_open", 6], ["created_at", "2021-05-13 04:51:36.673563"], ["updated_at", "2021-05-13 04:51:36.673563"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPastry Create (0.8ms)[0m  [1m[32mINSERT INTO "pastries" ("name", "savory_pastry", "calories", "created_at", "updated_at", "bakery_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Paw Print Cookies"], ["savory_pastry", false], ["calories", 278], ["created_at", "2021-05-13 04:51:36.712676"], ["updated_at", "2021-05-13 04:51:36.712676"], ["bakery_id", 76]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPastry Create (0.3ms)[0m  [1m[32mINSERT INTO "pastries" ("name", "savory_pastry", "calories", "created_at", "updated_at", "bakery_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Resting Dogs hotdog buns"], ["savory_pastry", true], ["calories", 200], ["created_at", "2021-05-13 04:51:36.716046"], ["updated_at", "2021-05-13 04:51:36.716046"], ["bakery_id", 76]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/pastries/53" for 127.0.0.1 at 2021-05-12 21:51:36 -0700
+Processing by PastriesController#show as HTML
+  Parameters: {"id"=>"53"}
+  [1m[36mPastry Load (0.2ms)[0m  [1m[34mSELECT  "pastries".* FROM "pastries" WHERE "pastries"."id" = $1 LIMIT $2[0m  [["id", 53], ["LIMIT", 1]]
+  Rendering pastries/show.html.erb within layouts/application
+  [1m[36mBakery Load (0.2ms)[0m  [1m[34mSELECT  "bakeries".* FROM "bakeries" WHERE "bakeries"."id" = $1 LIMIT $2[0m  [["id", 76], ["LIMIT", 1]]
+  Rendered pastries/show.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 124ms (Views: 118.0ms | ActiveRecord: 0.6ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBakery Create (0.2ms)[0m  [1m[32mINSERT INTO "bakeries" ("name", "open_on_weekends", "hours_open", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "The Hawk Spot Bakery"], ["open_on_weekends", true], ["hours_open", 6], ["created_at", "2021-05-13 04:51:36.914724"], ["updated_at", "2021-05-13 04:51:36.914724"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPastry Create (0.3ms)[0m  [1m[32mINSERT INTO "pastries" ("name", "savory_pastry", "calories", "created_at", "updated_at", "bakery_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Paw Print Cookies"], ["savory_pastry", false], ["calories", 278], ["created_at", "2021-05-13 04:51:36.916695"], ["updated_at", "2021-05-13 04:51:36.916695"], ["bakery_id", 77]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPastry Create (0.2ms)[0m  [1m[32mINSERT INTO "pastries" ("name", "savory_pastry", "calories", "created_at", "updated_at", "bakery_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Resting Dogs hotdog buns"], ["savory_pastry", true], ["calories", 200], ["created_at", "2021-05-13 04:51:36.918763"], ["updated_at", "2021-05-13 04:51:36.918763"], ["bakery_id", 77]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/pastries/55" for 127.0.0.1 at 2021-05-12 21:51:36 -0700
+Processing by PastriesController#show as HTML
+  Parameters: {"id"=>"55"}
+  [1m[36mPastry Load (0.3ms)[0m  [1m[34mSELECT  "pastries".* FROM "pastries" WHERE "pastries"."id" = $1 LIMIT $2[0m  [["id", 55], ["LIMIT", 1]]
+  Rendering pastries/show.html.erb within layouts/application
+  [1m[36mBakery Load (0.2ms)[0m  [1m[34mSELECT  "bakeries".* FROM "bakeries" WHERE "bakeries"."id" = $1 LIMIT $2[0m  [["id", 77], ["LIMIT", 1]]
+  Rendered pastries/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 3ms (Views: 1.6ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBakery Create (0.5ms)[0m  [1m[32mINSERT INTO "bakeries" ("name", "open_on_weekends", "hours_open", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "The Hawk Spot Bakery"], ["open_on_weekends", true], ["hours_open", 6], ["created_at", "2021-05-13 04:52:44.352365"], ["updated_at", "2021-05-13 04:52:44.352365"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPastry Create (0.7ms)[0m  [1m[32mINSERT INTO "pastries" ("name", "savory_pastry", "calories", "created_at", "updated_at", "bakery_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Paw Print Cookies"], ["savory_pastry", false], ["calories", 278], ["created_at", "2021-05-13 04:52:44.374411"], ["updated_at", "2021-05-13 04:52:44.374411"], ["bakery_id", 78]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPastry Create (0.3ms)[0m  [1m[32mINSERT INTO "pastries" ("name", "savory_pastry", "calories", "created_at", "updated_at", "bakery_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Resting Dogs hotdog buns"], ["savory_pastry", true], ["calories", 200], ["created_at", "2021-05-13 04:52:44.377021"], ["updated_at", "2021-05-13 04:52:44.377021"], ["bakery_id", 78]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/pastries/57" for 127.0.0.1 at 2021-05-12 21:52:44 -0700
+Processing by PastriesController#show as HTML
+  Parameters: {"id"=>"57"}
+  [1m[36mPastry Load (0.3ms)[0m  [1m[34mSELECT  "pastries".* FROM "pastries" WHERE "pastries"."id" = $1 LIMIT $2[0m  [["id", 57], ["LIMIT", 1]]
+  Rendering pastries/show.html.erb within layouts/application
+  [1m[36mBakery Load (0.2ms)[0m  [1m[34mSELECT  "bakeries".* FROM "bakeries" WHERE "bakeries"."id" = $1 LIMIT $2[0m  [["id", 78], ["LIMIT", 1]]
+  Rendered pastries/show.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 108ms (Views: 104.6ms | ActiveRecord: 0.6ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBakery Create (0.2ms)[0m  [1m[32mINSERT INTO "bakeries" ("name", "open_on_weekends", "hours_open", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "The Hawk Spot Bakery"], ["open_on_weekends", true], ["hours_open", 6], ["created_at", "2021-05-13 04:52:44.555303"], ["updated_at", "2021-05-13 04:52:44.555303"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPastry Create (0.2ms)[0m  [1m[32mINSERT INTO "pastries" ("name", "savory_pastry", "calories", "created_at", "updated_at", "bakery_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Paw Print Cookies"], ["savory_pastry", false], ["calories", 278], ["created_at", "2021-05-13 04:52:44.557159"], ["updated_at", "2021-05-13 04:52:44.557159"], ["bakery_id", 79]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPastry Create (0.2ms)[0m  [1m[32mINSERT INTO "pastries" ("name", "savory_pastry", "calories", "created_at", "updated_at", "bakery_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Resting Dogs hotdog buns"], ["savory_pastry", true], ["calories", 200], ["created_at", "2021-05-13 04:52:44.558668"], ["updated_at", "2021-05-13 04:52:44.558668"], ["bakery_id", 79]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/pastries/59" for 127.0.0.1 at 2021-05-12 21:52:44 -0700
+Processing by PastriesController#show as HTML
+  Parameters: {"id"=>"59"}
+  [1m[36mPastry Load (0.3ms)[0m  [1m[34mSELECT  "pastries".* FROM "pastries" WHERE "pastries"."id" = $1 LIMIT $2[0m  [["id", 59], ["LIMIT", 1]]
+  Rendering pastries/show.html.erb within layouts/application
+  [1m[36mBakery Load (0.2ms)[0m  [1m[34mSELECT  "bakeries".* FROM "bakeries" WHERE "bakeries"."id" = $1 LIMIT $2[0m  [["id", 79], ["LIMIT", 1]]
+  Rendered pastries/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 3ms (Views: 1.8ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBakery Create (0.4ms)[0m  [1m[32mINSERT INTO "bakeries" ("name", "open_on_weekends", "hours_open", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "The Hawk Spot Bakery"], ["open_on_weekends", true], ["hours_open", 6], ["created_at", "2021-05-13 04:52:58.266003"], ["updated_at", "2021-05-13 04:52:58.266003"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPastry Create (0.8ms)[0m  [1m[32mINSERT INTO "pastries" ("name", "savory_pastry", "calories", "created_at", "updated_at", "bakery_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Paw Print Cookies"], ["savory_pastry", false], ["calories", 278], ["created_at", "2021-05-13 04:52:58.290054"], ["updated_at", "2021-05-13 04:52:58.290054"], ["bakery_id", 80]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPastry Create (0.3ms)[0m  [1m[32mINSERT INTO "pastries" ("name", "savory_pastry", "calories", "created_at", "updated_at", "bakery_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Resting Dogs hotdog buns"], ["savory_pastry", true], ["calories", 200], ["created_at", "2021-05-13 04:52:58.292904"], ["updated_at", "2021-05-13 04:52:58.292904"], ["bakery_id", 80]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/pastries/61" for 127.0.0.1 at 2021-05-12 21:52:58 -0700
+Processing by PastriesController#show as HTML
+  Parameters: {"id"=>"61"}
+  [1m[36mPastry Load (0.3ms)[0m  [1m[34mSELECT  "pastries".* FROM "pastries" WHERE "pastries"."id" = $1 LIMIT $2[0m  [["id", 61], ["LIMIT", 1]]
+  Rendering pastries/show.html.erb within layouts/application
+  [1m[36mBakery Load (0.2ms)[0m  [1m[34mSELECT  "bakeries".* FROM "bakeries" WHERE "bakeries"."id" = $1 LIMIT $2[0m  [["id", 80], ["LIMIT", 1]]
+  Rendered pastries/show.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 119ms (Views: 114.9ms | ActiveRecord: 0.7ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBakery Create (0.2ms)[0m  [1m[32mINSERT INTO "bakeries" ("name", "open_on_weekends", "hours_open", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "The Hawk Spot Bakery"], ["open_on_weekends", true], ["hours_open", 6], ["created_at", "2021-05-13 04:52:58.505767"], ["updated_at", "2021-05-13 04:52:58.505767"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPastry Create (0.3ms)[0m  [1m[32mINSERT INTO "pastries" ("name", "savory_pastry", "calories", "created_at", "updated_at", "bakery_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Paw Print Cookies"], ["savory_pastry", false], ["calories", 278], ["created_at", "2021-05-13 04:52:58.507661"], ["updated_at", "2021-05-13 04:52:58.507661"], ["bakery_id", 81]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPastry Create (0.3ms)[0m  [1m[32mINSERT INTO "pastries" ("name", "savory_pastry", "calories", "created_at", "updated_at", "bakery_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Resting Dogs hotdog buns"], ["savory_pastry", true], ["calories", 200], ["created_at", "2021-05-13 04:52:58.509644"], ["updated_at", "2021-05-13 04:52:58.509644"], ["bakery_id", 81]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/pastries/63" for 127.0.0.1 at 2021-05-12 21:52:58 -0700
+Processing by PastriesController#show as HTML
+  Parameters: {"id"=>"63"}
+  [1m[36mPastry Load (0.3ms)[0m  [1m[34mSELECT  "pastries".* FROM "pastries" WHERE "pastries"."id" = $1 LIMIT $2[0m  [["id", 63], ["LIMIT", 1]]
+  Rendering pastries/show.html.erb within layouts/application
+  [1m[36mBakery Load (0.2ms)[0m  [1m[34mSELECT  "bakeries".* FROM "bakeries" WHERE "bakeries"."id" = $1 LIMIT $2[0m  [["id", 81], ["LIMIT", 1]]
+  Rendered pastries/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 3ms (Views: 1.6ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBakery Create (0.5ms)[0m  [1m[32mINSERT INTO "bakeries" ("name", "open_on_weekends", "hours_open", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "The Hawk Spot Bakery"], ["open_on_weekends", true], ["hours_open", 6], ["created_at", "2021-05-13 04:54:41.051829"], ["updated_at", "2021-05-13 04:54:41.051829"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPastry Create (0.9ms)[0m  [1m[32mINSERT INTO "pastries" ("name", "savory_pastry", "calories", "created_at", "updated_at", "bakery_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Paw Print Cookies"], ["savory_pastry", false], ["calories", 278], ["created_at", "2021-05-13 04:54:41.074551"], ["updated_at", "2021-05-13 04:54:41.074551"], ["bakery_id", 82]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPastry Create (0.4ms)[0m  [1m[32mINSERT INTO "pastries" ("name", "savory_pastry", "calories", "created_at", "updated_at", "bakery_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Resting Dogs hotdog buns"], ["savory_pastry", true], ["calories", 200], ["created_at", "2021-05-13 04:54:41.077554"], ["updated_at", "2021-05-13 04:54:41.077554"], ["bakery_id", 82]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/pastries/65" for 127.0.0.1 at 2021-05-12 21:54:41 -0700
+Processing by PastriesController#show as HTML
+  Parameters: {"id"=>"65"}
+  [1m[36mPastry Load (0.4ms)[0m  [1m[34mSELECT  "pastries".* FROM "pastries" WHERE "pastries"."id" = $1 LIMIT $2[0m  [["id", 65], ["LIMIT", 1]]
+  Rendering pastries/show.html.erb within layouts/application
+  [1m[36mBakery Load (0.2ms)[0m  [1m[34mSELECT  "bakeries".* FROM "bakeries" WHERE "bakeries"."id" = $1 LIMIT $2[0m  [["id", 82], ["LIMIT", 1]]
+  Rendered pastries/show.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 108ms (Views: 104.3ms | ActiveRecord: 0.8ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBakery Create (0.3ms)[0m  [1m[32mINSERT INTO "bakeries" ("name", "open_on_weekends", "hours_open", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "The Hawk Spot Bakery"], ["open_on_weekends", true], ["hours_open", 6], ["created_at", "2021-05-13 04:54:41.255669"], ["updated_at", "2021-05-13 04:54:41.255669"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPastry Create (0.4ms)[0m  [1m[32mINSERT INTO "pastries" ("name", "savory_pastry", "calories", "created_at", "updated_at", "bakery_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Paw Print Cookies"], ["savory_pastry", false], ["calories", 278], ["created_at", "2021-05-13 04:54:41.259311"], ["updated_at", "2021-05-13 04:54:41.259311"], ["bakery_id", 83]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPastry Create (0.3ms)[0m  [1m[32mINSERT INTO "pastries" ("name", "savory_pastry", "calories", "created_at", "updated_at", "bakery_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Resting Dogs hotdog buns"], ["savory_pastry", true], ["calories", 200], ["created_at", "2021-05-13 04:54:41.261366"], ["updated_at", "2021-05-13 04:54:41.261366"], ["bakery_id", 83]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/pastries/67" for 127.0.0.1 at 2021-05-12 21:54:41 -0700
+Processing by PastriesController#show as HTML
+  Parameters: {"id"=>"67"}
+  [1m[36mPastry Load (0.3ms)[0m  [1m[34mSELECT  "pastries".* FROM "pastries" WHERE "pastries"."id" = $1 LIMIT $2[0m  [["id", 67], ["LIMIT", 1]]
+  Rendering pastries/show.html.erb within layouts/application
+  [1m[36mBakery Load (0.2ms)[0m  [1m[34mSELECT  "bakeries".* FROM "bakeries" WHERE "bakeries"."id" = $1 LIMIT $2[0m  [["id", 83], ["LIMIT", 1]]
+  Rendered pastries/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 3ms (Views: 1.8ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBakery Create (0.7ms)[0m  [1m[32mINSERT INTO "bakeries" ("name", "open_on_weekends", "hours_open", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "The Hawk Spot Bakery"], ["open_on_weekends", true], ["hours_open", 6], ["created_at", "2021-05-13 04:55:10.128885"], ["updated_at", "2021-05-13 04:55:10.128885"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPastry Create (0.6ms)[0m  [1m[32mINSERT INTO "pastries" ("name", "savory_pastry", "calories", "created_at", "updated_at", "bakery_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Paw Print Cookies"], ["savory_pastry", false], ["calories", 278], ["created_at", "2021-05-13 04:55:10.149983"], ["updated_at", "2021-05-13 04:55:10.149983"], ["bakery_id", 84]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPastry Create (0.2ms)[0m  [1m[32mINSERT INTO "pastries" ("name", "savory_pastry", "calories", "created_at", "updated_at", "bakery_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Resting Dogs hotdog buns"], ["savory_pastry", true], ["calories", 200], ["created_at", "2021-05-13 04:55:10.152179"], ["updated_at", "2021-05-13 04:55:10.152179"], ["bakery_id", 84]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/pastries/69" for 127.0.0.1 at 2021-05-12 21:55:10 -0700
+Processing by PastriesController#show as HTML
+  Parameters: {"id"=>"69"}
+  [1m[36mPastry Load (0.3ms)[0m  [1m[34mSELECT  "pastries".* FROM "pastries" WHERE "pastries"."id" = $1 LIMIT $2[0m  [["id", 69], ["LIMIT", 1]]
+  Rendering pastries/show.html.erb within layouts/application
+  [1m[36mBakery Load (0.2ms)[0m  [1m[34mSELECT  "bakeries".* FROM "bakeries" WHERE "bakeries"."id" = $1 LIMIT $2[0m  [["id", 84], ["LIMIT", 1]]
+  Rendered pastries/show.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 107ms (Views: 103.0ms | ActiveRecord: 0.6ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBakery Create (0.3ms)[0m  [1m[32mINSERT INTO "bakeries" ("name", "open_on_weekends", "hours_open", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "The Hawk Spot Bakery"], ["open_on_weekends", true], ["hours_open", 6], ["created_at", "2021-05-13 04:55:10.342500"], ["updated_at", "2021-05-13 04:55:10.342500"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPastry Create (0.6ms)[0m  [1m[32mINSERT INTO "pastries" ("name", "savory_pastry", "calories", "created_at", "updated_at", "bakery_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Paw Print Cookies"], ["savory_pastry", false], ["calories", 278], ["created_at", "2021-05-13 04:55:10.344630"], ["updated_at", "2021-05-13 04:55:10.344630"], ["bakery_id", 85]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPastry Create (0.3ms)[0m  [1m[32mINSERT INTO "pastries" ("name", "savory_pastry", "calories", "created_at", "updated_at", "bakery_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Resting Dogs hotdog buns"], ["savory_pastry", true], ["calories", 200], ["created_at", "2021-05-13 04:55:10.347334"], ["updated_at", "2021-05-13 04:55:10.347334"], ["bakery_id", 85]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/pastries/71" for 127.0.0.1 at 2021-05-12 21:55:10 -0700
+Processing by PastriesController#show as HTML
+  Parameters: {"id"=>"71"}
+  [1m[36mPastry Load (0.2ms)[0m  [1m[34mSELECT  "pastries".* FROM "pastries" WHERE "pastries"."id" = $1 LIMIT $2[0m  [["id", 71], ["LIMIT", 1]]
+  Rendering pastries/show.html.erb within layouts/application
+  [1m[36mBakery Load (0.1ms)[0m  [1m[34mSELECT  "bakeries".* FROM "bakeries" WHERE "bakeries"."id" = $1 LIMIT $2[0m  [["id", 85], ["LIMIT", 1]]
+  Rendered pastries/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBakery Create (0.4ms)[0m  [1m[32mINSERT INTO "bakeries" ("name", "open_on_weekends", "hours_open", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "The Hawk Spot Bakery"], ["open_on_weekends", true], ["hours_open", 6], ["created_at", "2021-05-13 04:55:17.988710"], ["updated_at", "2021-05-13 04:55:17.988710"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPastry Create (0.9ms)[0m  [1m[32mINSERT INTO "pastries" ("name", "savory_pastry", "calories", "created_at", "updated_at", "bakery_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Paw Print Cookies"], ["savory_pastry", false], ["calories", 278], ["created_at", "2021-05-13 04:55:18.010385"], ["updated_at", "2021-05-13 04:55:18.010385"], ["bakery_id", 86]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPastry Create (0.3ms)[0m  [1m[32mINSERT INTO "pastries" ("name", "savory_pastry", "calories", "created_at", "updated_at", "bakery_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Resting Dogs hotdog buns"], ["savory_pastry", true], ["calories", 200], ["created_at", "2021-05-13 04:55:18.013330"], ["updated_at", "2021-05-13 04:55:18.013330"], ["bakery_id", 86]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/pastries/73" for 127.0.0.1 at 2021-05-12 21:55:18 -0700
+Processing by PastriesController#show as HTML
+  Parameters: {"id"=>"73"}
+  [1m[36mPastry Load (0.5ms)[0m  [1m[34mSELECT  "pastries".* FROM "pastries" WHERE "pastries"."id" = $1 LIMIT $2[0m  [["id", 73], ["LIMIT", 1]]
+  Rendering pastries/show.html.erb within layouts/application
+  [1m[36mBakery Load (0.2ms)[0m  [1m[34mSELECT  "bakeries".* FROM "bakeries" WHERE "bakeries"."id" = $1 LIMIT $2[0m  [["id", 86], ["LIMIT", 1]]
+  Rendered pastries/show.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 109ms (Views: 105.3ms | ActiveRecord: 0.8ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBakery Create (0.3ms)[0m  [1m[32mINSERT INTO "bakeries" ("name", "open_on_weekends", "hours_open", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "The Hawk Spot Bakery"], ["open_on_weekends", true], ["hours_open", 6], ["created_at", "2021-05-13 04:55:18.193860"], ["updated_at", "2021-05-13 04:55:18.193860"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPastry Create (0.3ms)[0m  [1m[32mINSERT INTO "pastries" ("name", "savory_pastry", "calories", "created_at", "updated_at", "bakery_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Paw Print Cookies"], ["savory_pastry", false], ["calories", 278], ["created_at", "2021-05-13 04:55:18.195961"], ["updated_at", "2021-05-13 04:55:18.195961"], ["bakery_id", 87]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPastry Create (0.3ms)[0m  [1m[32mINSERT INTO "pastries" ("name", "savory_pastry", "calories", "created_at", "updated_at", "bakery_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Resting Dogs hotdog buns"], ["savory_pastry", true], ["calories", 200], ["created_at", "2021-05-13 04:55:18.197452"], ["updated_at", "2021-05-13 04:55:18.197452"], ["bakery_id", 87]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/pastries/75" for 127.0.0.1 at 2021-05-12 21:55:18 -0700
+Processing by PastriesController#show as HTML
+  Parameters: {"id"=>"75"}
+  [1m[36mPastry Load (0.2ms)[0m  [1m[34mSELECT  "pastries".* FROM "pastries" WHERE "pastries"."id" = $1 LIMIT $2[0m  [["id", 75], ["LIMIT", 1]]
+  Rendering pastries/show.html.erb within layouts/application
+  [1m[36mBakery Load (0.1ms)[0m  [1m[34mSELECT  "bakeries".* FROM "bakeries" WHERE "bakeries"."id" = $1 LIMIT $2[0m  [["id", 87], ["LIMIT", 1]]
+  Rendered pastries/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBakery Create (0.5ms)[0m  [1m[32mINSERT INTO "bakeries" ("name", "open_on_weekends", "hours_open", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "The Hawk Spot Bakery"], ["open_on_weekends", true], ["hours_open", 6], ["created_at", "2021-05-13 04:57:04.122797"], ["updated_at", "2021-05-13 04:57:04.122797"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPastry Create (0.8ms)[0m  [1m[32mINSERT INTO "pastries" ("name", "savory_pastry", "calories", "created_at", "updated_at", "bakery_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Paw Print Cookies"], ["savory_pastry", false], ["calories", 278], ["created_at", "2021-05-13 04:57:04.157760"], ["updated_at", "2021-05-13 04:57:04.157760"], ["bakery_id", 88]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPastry Create (0.2ms)[0m  [1m[32mINSERT INTO "pastries" ("name", "savory_pastry", "calories", "created_at", "updated_at", "bakery_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Resting Dogs hotdog buns"], ["savory_pastry", true], ["calories", 200], ["created_at", "2021-05-13 04:57:04.160933"], ["updated_at", "2021-05-13 04:57:04.160933"], ["bakery_id", 88]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/pastries/77" for 127.0.0.1 at 2021-05-12 21:57:04 -0700
+Processing by PastriesController#show as HTML
+  Parameters: {"id"=>"77"}
+  [1m[36mPastry Load (0.2ms)[0m  [1m[34mSELECT  "pastries".* FROM "pastries" WHERE "pastries"."id" = $1 LIMIT $2[0m  [["id", 77], ["LIMIT", 1]]
+  Rendering pastries/show.html.erb within layouts/application
+  [1m[36mBakery Load (0.2ms)[0m  [1m[34mSELECT  "bakeries".* FROM "bakeries" WHERE "bakeries"."id" = $1 LIMIT $2[0m  [["id", 88], ["LIMIT", 1]]
+  Rendered pastries/show.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 121ms (Views: 115.0ms | ActiveRecord: 0.6ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBakery Create (0.3ms)[0m  [1m[32mINSERT INTO "bakeries" ("name", "open_on_weekends", "hours_open", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "The Hawk Spot Bakery"], ["open_on_weekends", true], ["hours_open", 6], ["created_at", "2021-05-13 04:57:04.353186"], ["updated_at", "2021-05-13 04:57:04.353186"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPastry Create (0.2ms)[0m  [1m[32mINSERT INTO "pastries" ("name", "savory_pastry", "calories", "created_at", "updated_at", "bakery_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Paw Print Cookies"], ["savory_pastry", false], ["calories", 278], ["created_at", "2021-05-13 04:57:04.355055"], ["updated_at", "2021-05-13 04:57:04.355055"], ["bakery_id", 89]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPastry Create (0.2ms)[0m  [1m[32mINSERT INTO "pastries" ("name", "savory_pastry", "calories", "created_at", "updated_at", "bakery_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Resting Dogs hotdog buns"], ["savory_pastry", true], ["calories", 200], ["created_at", "2021-05-13 04:57:04.356371"], ["updated_at", "2021-05-13 04:57:04.356371"], ["bakery_id", 89]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/pastries/79" for 127.0.0.1 at 2021-05-12 21:57:04 -0700
+Processing by PastriesController#show as HTML
+  Parameters: {"id"=>"79"}
+  [1m[36mPastry Load (0.2ms)[0m  [1m[34mSELECT  "pastries".* FROM "pastries" WHERE "pastries"."id" = $1 LIMIT $2[0m  [["id", 79], ["LIMIT", 1]]
+  Rendering pastries/show.html.erb within layouts/application
+  [1m[36mBakery Load (0.2ms)[0m  [1m[34mSELECT  "bakeries".* FROM "bakeries" WHERE "bakeries"."id" = $1 LIMIT $2[0m  [["id", 89], ["LIMIT", 1]]
+  Rendered pastries/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 3ms (Views: 1.7ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBakery Create (0.5ms)[0m  [1m[32mINSERT INTO "bakeries" ("name", "open_on_weekends", "hours_open", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "The Hawk Spot Bakery"], ["open_on_weekends", true], ["hours_open", 6], ["created_at", "2021-05-13 04:57:42.957198"], ["updated_at", "2021-05-13 04:57:42.957198"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPastry Create (0.6ms)[0m  [1m[32mINSERT INTO "pastries" ("name", "savory_pastry", "calories", "created_at", "updated_at", "bakery_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Paw Print Cookies"], ["savory_pastry", false], ["calories", 278], ["created_at", "2021-05-13 04:57:42.977300"], ["updated_at", "2021-05-13 04:57:42.977300"], ["bakery_id", 90]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPastry Create (0.3ms)[0m  [1m[32mINSERT INTO "pastries" ("name", "savory_pastry", "calories", "created_at", "updated_at", "bakery_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Resting Dogs hotdog buns"], ["savory_pastry", true], ["calories", 200], ["created_at", "2021-05-13 04:57:42.979319"], ["updated_at", "2021-05-13 04:57:42.979319"], ["bakery_id", 90]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/pastries/81" for 127.0.0.1 at 2021-05-12 21:57:42 -0700
+Processing by PastriesController#show as HTML
+  Parameters: {"id"=>"81"}
+  [1m[36mPastry Load (0.2ms)[0m  [1m[34mSELECT  "pastries".* FROM "pastries" WHERE "pastries"."id" = $1 LIMIT $2[0m  [["id", 81], ["LIMIT", 1]]
+  Rendering pastries/show.html.erb within layouts/application
+  [1m[36mBakery Load (0.2ms)[0m  [1m[34mSELECT  "bakeries".* FROM "bakeries" WHERE "bakeries"."id" = $1 LIMIT $2[0m  [["id", 90], ["LIMIT", 1]]
+  Rendered pastries/show.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 99ms (Views: 96.2ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBakery Create (0.2ms)[0m  [1m[32mINSERT INTO "bakeries" ("name", "open_on_weekends", "hours_open", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "The Hawk Spot Bakery"], ["open_on_weekends", true], ["hours_open", 6], ["created_at", "2021-05-13 04:57:43.144826"], ["updated_at", "2021-05-13 04:57:43.144826"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPastry Create (0.2ms)[0m  [1m[32mINSERT INTO "pastries" ("name", "savory_pastry", "calories", "created_at", "updated_at", "bakery_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Paw Print Cookies"], ["savory_pastry", false], ["calories", 278], ["created_at", "2021-05-13 04:57:43.146729"], ["updated_at", "2021-05-13 04:57:43.146729"], ["bakery_id", 91]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPastry Create (0.3ms)[0m  [1m[32mINSERT INTO "pastries" ("name", "savory_pastry", "calories", "created_at", "updated_at", "bakery_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Resting Dogs hotdog buns"], ["savory_pastry", true], ["calories", 200], ["created_at", "2021-05-13 04:57:43.148149"], ["updated_at", "2021-05-13 04:57:43.148149"], ["bakery_id", 91]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/pastries/83" for 127.0.0.1 at 2021-05-12 21:57:43 -0700
+Processing by PastriesController#show as HTML
+  Parameters: {"id"=>"83"}
+  [1m[36mPastry Load (0.3ms)[0m  [1m[34mSELECT  "pastries".* FROM "pastries" WHERE "pastries"."id" = $1 LIMIT $2[0m  [["id", 83], ["LIMIT", 1]]
+  Rendering pastries/show.html.erb within layouts/application
+  [1m[36mBakery Load (0.2ms)[0m  [1m[34mSELECT  "bakeries".* FROM "bakeries" WHERE "bakeries"."id" = $1 LIMIT $2[0m  [["id", 91], ["LIMIT", 1]]
+  Rendered pastries/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 3ms (Views: 1.6ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBakery Create (0.2ms)[0m  [1m[32mINSERT INTO "bakeries" ("name", "open_on_weekends", "hours_open", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "The Hawk Spot Bakery"], ["open_on_weekends", true], ["hours_open", 6], ["created_at", "2021-05-13 04:57:43.157976"], ["updated_at", "2021-05-13 04:57:43.157976"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPastry Create (0.2ms)[0m  [1m[32mINSERT INTO "pastries" ("name", "savory_pastry", "calories", "created_at", "updated_at", "bakery_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Paw Print Cookies"], ["savory_pastry", false], ["calories", 278], ["created_at", "2021-05-13 04:57:43.159785"], ["updated_at", "2021-05-13 04:57:43.159785"], ["bakery_id", 92]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPastry Create (0.2ms)[0m  [1m[32mINSERT INTO "pastries" ("name", "savory_pastry", "calories", "created_at", "updated_at", "bakery_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Resting Dogs hotdog buns"], ["savory_pastry", true], ["calories", 200], ["created_at", "2021-05-13 04:57:43.161199"], ["updated_at", "2021-05-13 04:57:43.161199"], ["bakery_id", 92]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/pastries/85" for 127.0.0.1 at 2021-05-12 21:57:43 -0700
+Processing by PastriesController#show as HTML
+  Parameters: {"id"=>"85"}
+  [1m[36mPastry Load (0.2ms)[0m  [1m[34mSELECT  "pastries".* FROM "pastries" WHERE "pastries"."id" = $1 LIMIT $2[0m  [["id", 85], ["LIMIT", 1]]
+  Rendering pastries/show.html.erb within layouts/application
+  [1m[36mBakery Load (0.2ms)[0m  [1m[34mSELECT  "bakeries".* FROM "bakeries" WHERE "bakeries"."id" = $1 LIMIT $2[0m  [["id", 92], ["LIMIT", 1]]
+  Rendered pastries/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 3ms (Views: 1.7ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
