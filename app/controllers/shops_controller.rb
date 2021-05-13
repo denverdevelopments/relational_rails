@@ -1,10 +1,16 @@
 class ShopsController < ApplicationController
   def index
-    @shops = Shop.all
+    @shops = Shop.all.newest_first
   end
 
   def show
     @shop = Shop.find(params[:id])
+    @count_candy = @shop.candies.count
+  end
+
+  def candies
+    @shop = Shop.find(params[:shop_id])
+    @candies = @shop.candies
   end
 end
 

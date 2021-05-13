@@ -1,5 +1,11 @@
+<section id="links">
+  <h3><%= render partial: 'partials/header_links' %></h3>
+</section><br/>
+
 <h2 align="left"><%= @shop.name %></h2>
 
 <p>&emsp;Shop ID#: <%= @shop.id %></p>
-<p>&emsp;Sells drinks?: <%= @shop.sells_drinks %></p>
-<p>&emsp;How many candy varieties?: <%= @shop.varieties %></p>
+<p>&emsp;Sell drinks?: <%= @shop.sells_drinks %></p>
+<p>&emsp;How many candy varieties?: <%= @shop.varieties %></p><br/>
+
+<p>&emsp;=> <%= link_to "#{@count_candy}  candy(s) available", "/shops/#{@shop.id}/candies" %></p>
