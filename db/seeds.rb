@@ -30,6 +30,11 @@ Candy.destroy_all
 @candy_1 = @shop_1.candies.create!(brand: 'Honey Stick', all_natural: true, calories: 65)
 @candy_2 = @shop_1.candies.create!(brand: 'Jelly Belly', all_natural: false, calories: 120)
 
-@shop_3 = Shop.create!(name: 'Suga Suga', sells_drinks: true, varieties: 205)
-@candy_6 = @shop_3.candies.create!(name: 'Pop Rocks', all_natural: true, calories: 85)
-@candy_7 = @shop_3.candies.create!(name: 'Milk Duds', all_natural: false, calories: 310)
+@shop_2 = Shop.create!(name: 'Candy Corral', sells_drinks: true, varieties: 45)
+@candy_3 = @shop_2.candies.create!(brand: 'Lollipops', all_natural: true, calories: 48)
+@candy_4 = @shop_2.candies.create!(brand: 'Hershey Bar', all_natural: false, calories: 230)
+@candy_5 = @shop_2.candies.create!(brand: 'Jolly Rancher', all_natural: false, calories: 40)
+
+@shop_3 = Shop.create!(name: 'Gimme Some Suga', sells_drinks: false, varieties: 205)
+@candy_6 = @shop_3.candies.create!(brand: 'Pop Rocks', all_natural: false, calories: 85)
+@candy_7 = @shop_3.candies.create!(brand: 'Milk Duds', all_natural: true, calories: 310)
