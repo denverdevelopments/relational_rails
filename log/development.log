@@ -2010,3 +2010,75 @@ Processing by ShopsController#index as HTML
 Completed 200 OK in 15ms (Views: 13.7ms | ActiveRecord: 0.4ms)
 
 
+Started GET "/candies" for ::1 at 2021-05-13 01:33:34 -0600
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/kevinn/.rbenv/versions/2.7.2/lib/ruby/gems/2.7.0/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by CandiesController#index as HTML
+  Rendering candies/index.html.erb within layouts/application
+  Rendered partials/_header_links.html.erb (0.3ms)
+  [1m[36mCandy Load (1.1ms)[0m  [1m[34mSELECT "candies".* FROM "candies"[0m
+  ↳ app/views/candies/index.html.erb:7
+  Rendered candies/index.html.erb within layouts/application (13.7ms)
+Completed 200 OK in 163ms (Views: 153.0ms | ActiveRecord: 6.1ms)
+
+
+Started GET "/candies" for ::1 at 2021-05-13 01:34:28 -0600
+Processing by CandiesController#index as HTML
+  Rendering candies/index.html.erb within layouts/application
+  Rendered partials/_header_links.html.erb (0.3ms)
+  [1m[36mCandy Load (0.3ms)[0m  [1m[34mSELECT "candies".* FROM "candies"[0m
+  ↳ app/views/candies/index.html.erb:7
+  Rendered candies/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 11ms (Views: 9.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/candies" for ::1 at 2021-05-13 01:34:44 -0600
+Processing by CandiesController#index as HTML
+  Rendering candies/index.html.erb within layouts/application
+  Rendered partials/_header_links.html.erb (0.4ms)
+  [1m[36mCandy Load (0.3ms)[0m  [1m[34mSELECT "candies".* FROM "candies"[0m
+  ↳ app/views/candies/index.html.erb:7
+  Rendered candies/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 14ms (Views: 13.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/candies" for ::1 at 2021-05-13 01:34:47 -0600
+Processing by CandiesController#index as HTML
+  Rendering candies/index.html.erb within layouts/application
+  Rendered partials/_header_links.html.erb (0.3ms)
+  [1m[36mCandy Load (0.3ms)[0m  [1m[34mSELECT "candies".* FROM "candies"[0m
+  ↳ app/views/candies/index.html.erb:7
+  Rendered candies/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 13ms (Views: 11.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/candies" for ::1 at 2021-05-13 01:35:18 -0600
+Processing by CandiesController#index as HTML
+  Rendering candies/index.html.erb within layouts/application
+  Rendered partials/_header_links.html.erb (0.3ms)
+  [1m[36mCandy Load (0.3ms)[0m  [1m[34mSELECT "candies".* FROM "candies"[0m
+  ↳ app/views/candies/index.html.erb:7
+  Rendered candies/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 13ms (Views: 12.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/candies" for ::1 at 2021-05-13 01:35:45 -0600
+Processing by CandiesController#index as HTML
+  Rendering candies/index.html.erb within layouts/application
+  Rendered partials/_header_links.html.erb (0.3ms)
+  [1m[36mCandy Load (0.3ms)[0m  [1m[34mSELECT "candies".* FROM "candies"[0m
+  ↳ app/views/candies/index.html.erb:7
+  Rendered candies/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 13ms (Views: 11.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/candies" for ::1 at 2021-05-13 01:40:18 -0600
+Processing by CandiesController#index as HTML
+  Rendering candies/index.html.erb within layouts/application
+  Rendered partials/_header_links.html.erb (0.3ms)
+  [1m[36mCandy Load (0.5ms)[0m  [1m[34mSELECT "candies".* FROM "candies"[0m
+  ↳ app/views/candies/index.html.erb:7
+  Rendered candies/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 13ms (Views: 11.7ms | ActiveRecord: 0.5ms)
+
+

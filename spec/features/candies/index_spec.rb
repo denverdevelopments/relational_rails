@@ -3,8 +3,8 @@ require 'rails_helper'
 RSpec.describe 'the candies index', type: :feature do
   before(:each) do
     @shop_1 = Shop.create!(name: 'Stickys Sweets', sells_drinks: true, varieties: 110)
-    @candy_1 = @shop_1.candies.create!(name: 'Honey Stick', all_natural: true, calories: 65)
-    @candy_2 = @shop_1.candies.create!(name: 'Jelly Belly', all_natural: false, calories: 120)
+    @candy_1 = @shop_1.candies.create!(brand: 'Honey Stick', all_natural: true, calories: 65)
+    @candy_2 = @shop_1.candies.create!(brand: 'Jelly Belly', all_natural: false, calories: 120)
   end
 
   it 'has a link to bakeries index' do
@@ -41,22 +41,26 @@ RSpec.describe 'the candies index', type: :feature do
     within("#candy-index") do
 
       within("#candy-#{@candy_1.id}") do
-        expect(page).to have_content(@candy_1.type)
+        expect(page).to have_content(@candy_1.brand)
         expect(page).to have_content(@candy_1.calories)
-        expect(page).to have_content(@candy_1.all_natural)
-        # expect(page).to have_link(@candy_1.percent)
+        # expect(page).to have_content("All_natural") if @candy_1.all_natural == true
+        # expect(page).to have_content("Artificial ingredients") if @candy_1.all_natural == false
       end
 
       within("#candy-#{@candy_2.id}") do
-        expect(page).to have_content(@candy_2.type)
+        expect(page).to have_content(@candy_2.brand)
         expect(page).to have_content(@candy_2.calories)
-        expect(page).to have_content(@candy_2.all_natural)
       end
 
-      # click_link(@tv_1.percent)
-      # expect(current_path).to eq("/merchants/#{@merchant_1.id}/discounts/#{@tv_1.id}")
     end
-  end     #shop index - us#1
+  end     #candy index - us#3
+
+
+
+
+  # expect(page).to have_link(@candy_1.percent)
+  # click_link(@tv_1.percent)
+  # expect(current_path).to eq("/merchants/#{@merchant_1.id}/discounts/#{@tv_1.id}")
 
   # it 'has Enable button by Disabled items' do
   #   visit "/merchants/#{@jerde.id}/items"
