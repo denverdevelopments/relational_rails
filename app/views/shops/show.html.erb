@@ -6,4 +6,6 @@
 
 <p>&emsp;Shop ID#: <%= @shop.id %></p>
 <p>&emsp;Sell drinks?: <%= @shop.sells_drinks %></p>
-<p>&emsp;How many candy varieties?: <%= @shop.varieties %></p>
+<p>&emsp;How many candy varieties?: <%= @shop.varieties %></p><br/>
+
+<p>&emsp;=> <%= link_to "#{@count_candy}  candy(s) available", "/shops/#{@shop.id}/candies" %></p>

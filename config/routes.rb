@@ -13,6 +13,7 @@ Rails.application.routes.draw do
   ## Kevin's space
   get '/shops', to: 'shops#index'
   get '/shops/:id', to: 'shops#show'
+  get '/shops/:shop_id/candies', to: 'shops#candies'
 
   get '/candies', to: 'candies#index'
   get '/candies/:id', to: 'candies#show'

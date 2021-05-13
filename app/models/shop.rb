@@ -4,4 +4,8 @@ class Shop < ApplicationRecord
   validates :varieties, presence: true, numericality: true
 
   has_many :candies
+
+  def self.newest_first
+    Shop.order(created_at: :desc)
+  end
 end

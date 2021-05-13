@@ -1,0 +1,12 @@
+<section id="links">
+  <h3><%= render partial: 'partials/header_links' %></h3>
+</section><br/>
+
+<h2 align="left"><%= @shop.name %></h2>
+
+<section id="candies-index">
+  <% @candies.each do |candy| %>
+    <section id="candies-<%= candy.id %>">
+      <h4>&emsp;~  <%= candy.brand %></h4>
+  <% end %><br/>
+</section>

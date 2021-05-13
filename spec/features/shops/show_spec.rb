@@ -38,13 +38,13 @@ RSpec.describe 'the shop show page', type: :feature do
     visit "/shops/#{@shop_1.id}"
 
     expect(page).to have_content(@shop_1.name)
+    expect(page).to_not have_content(@shop_2.name)
     expect(page).to have_content("Shop ID#: #{@shop_1.id}")
     expect(page).to have_content("Sell drinks?: #{@shop_1.sells_drinks}")
     expect(page).to have_content("How many candy varieties?: #{@shop_1.varieties}")
-    expect(page).to_not have_content(@shop_2.name)
-
-    # expect(page).to have_link("Edit Discount")
-    #   click_link "Edit Discount"
-    # expect(current_path).to eq("/merchants/#{merchant_1.id}/discounts/#{discount_1.id}/edit")
+    expect(page).to have_content("#{@shop_1.candies.count} candy(s) available")
+    expect(page).to have_link("#{@shop_1.candies.count} candy(s) available")
+      click_link "#{@shop_1.candies.count} candy(s) available"
+    expect(current_path).to eq("/shops/#{@shop_1.id}/candies")
   end
 end
