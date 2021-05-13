@@ -1677,3 +1677,843 @@ Processing by PastriesController#index as HTML
 Completed 200 OK in 21ms (Views: 16.0ms | ActiveRecord: 2.6ms)
 
 
+Started GET "/pastries" for ::1 at 2021-05-12 18:43:17 -0700
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/lcpulzone/.rbenv/versions/2.7.2/lib/ruby/gems/2.7.0/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by PastriesController#index as HTML
+  Rendering pastries/index.html.erb within layouts/application
+  [1m[36mPastry Load (1.0ms)[0m  [1m[34mSELECT "pastries".* FROM "pastries"[0m
+  ↳ app/views/pastries/index.html.erb:3
+  Rendered pastries/index.html.erb within layouts/application (10.9ms)
+Completed 200 OK in 153ms (Views: 144.4ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/bakeries/1" for ::1 at 2021-05-12 18:43:34 -0700
+Processing by BakeriesController#show as HTML
+  Parameters: {"id"=>"1"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `find' for nil:NilClass):
+  
+app/controllers/bakeries_controller.rb:8:in `show'
+Started GET "/bakeries/1" for ::1 at 2021-05-12 18:48:59 -0700
+Processing by BakeriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBakery Load (1.3ms)[0m  [1m[34mSELECT  "bakeries".* FROM "bakeries" WHERE "bakeries"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/bakeries_controller.rb:7
+  Rendering bakeries/show.html.erb within layouts/application
+  Rendered bakeries/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 33ms (Views: 16.3ms | ActiveRecord: 4.2ms)
+
+
+Started GET "/bakeries/1" for ::1 at 2021-05-12 18:49:25 -0700
+Processing by BakeriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBakery Load (0.3ms)[0m  [1m[34mSELECT  "bakeries".* FROM "bakeries" WHERE "bakeries"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/bakeries_controller.rb:7
+  Rendering bakeries/show.html.erb within layouts/application
+  Rendered bakeries/show.html.erb within layouts/application (2.0ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `upcase' for false:FalseClass
+Did you mean?  case):
+    1: <h1><%= @bakery.name %></h1>
+    2: 
+    3: <p>Open Weekends? <%= @bakery.open_on_weekends.upcase %></p>
+    4: <br/>
+    5: <p>Amount of hours open per day: <%= @bakery.hours_open %></p>
+  
+app/views/bakeries/show.html.erb:3:in `_app_views_bakeries_show_html_erb__3364505040624631540_15020'
+Started GET "/bakeries/1" for ::1 at 2021-05-12 18:49:35 -0700
+Processing by BakeriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBakery Load (0.3ms)[0m  [1m[34mSELECT  "bakeries".* FROM "bakeries" WHERE "bakeries"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/bakeries_controller.rb:7
+  Rendering bakeries/show.html.erb within layouts/application
+  Rendered bakeries/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 13ms (Views: 11.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/bakeries/1" for ::1 at 2021-05-12 18:49:50 -0700
+Processing by BakeriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBakery Load (0.3ms)[0m  [1m[34mSELECT  "bakeries".* FROM "bakeries" WHERE "bakeries"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/bakeries_controller.rb:7
+  Rendering bakeries/show.html.erb within layouts/application
+  Rendered bakeries/show.html.erb within layouts/application (1.8ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `upcase' for false:FalseClass
+Did you mean?  case):
+    1: <h1><%= @bakery.name %></h1>
+    2: 
+    3: <p>Open Weekends? <%= (@bakery.open_on_weekends).upcase %></p>
+    4: <br/>
+    5: <p>Amount of hours open per day: <%= @bakery.hours_open %></p>
+  
+app/views/bakeries/show.html.erb:3:in `_app_views_bakeries_show_html_erb__3364505040624631540_15700'
+Started GET "/bakeries/1" for ::1 at 2021-05-12 18:50:06 -0700
+Processing by BakeriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBakery Load (0.2ms)[0m  [1m[34mSELECT  "bakeries".* FROM "bakeries" WHERE "bakeries"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/bakeries_controller.rb:7
+  Rendering bakeries/show.html.erb within layouts/application
+  Rendered bakeries/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 13ms (Views: 11.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/bakeries/1" for ::1 at 2021-05-12 18:50:13 -0700
+Processing by BakeriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBakery Load (0.4ms)[0m  [1m[34mSELECT  "bakeries".* FROM "bakeries" WHERE "bakeries"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/bakeries_controller.rb:7
+  Rendering bakeries/show.html.erb within layouts/application
+  Rendered bakeries/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 13ms (Views: 10.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/bakeries/1" for ::1 at 2021-05-12 18:50:18 -0700
+Processing by BakeriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBakery Load (0.2ms)[0m  [1m[34mSELECT  "bakeries".* FROM "bakeries" WHERE "bakeries"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/bakeries_controller.rb:7
+  Rendering bakeries/show.html.erb within layouts/application
+  Rendered bakeries/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 12ms (Views: 10.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pastries/1" for ::1 at 2021-05-12 18:50:28 -0700
+Processing by PastriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPastry Load (0.2ms)[0m  [1m[34mSELECT  "pastries".* FROM "pastries" WHERE "pastries"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/pastries_controller.rb:7
+  Rendering pastries/show.html.erb within layouts/application
+  Rendered pastries/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 20ms (Views: 10.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/bakeries/1" for ::1 at 2021-05-12 18:51:37 -0700
+Processing by BakeriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBakery Load (0.2ms)[0m  [1m[34mSELECT  "bakeries".* FROM "bakeries" WHERE "bakeries"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/bakeries_controller.rb:7
+  Rendering bakeries/show.html.erb within layouts/application
+  Rendered bakeries/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 12ms (Views: 10.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/bakeries/2" for ::1 at 2021-05-12 18:51:42 -0700
+Processing by BakeriesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mBakery Load (0.2ms)[0m  [1m[34mSELECT  "bakeries".* FROM "bakeries" WHERE "bakeries"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/bakeries_controller.rb:7
+  Rendering bakeries/show.html.erb within layouts/application
+  Rendered bakeries/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 12ms (Views: 10.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/bakeries/3" for ::1 at 2021-05-12 18:52:00 -0700
+Processing by BakeriesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mBakery Load (0.2ms)[0m  [1m[34mSELECT  "bakeries".* FROM "bakeries" WHERE "bakeries"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/bakeries_controller.rb:7
+  Rendering bakeries/show.html.erb within layouts/application
+  Rendered bakeries/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 11ms (Views: 9.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pastries/3" for ::1 at 2021-05-12 18:52:38 -0700
+Processing by PastriesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPastry Load (0.3ms)[0m  [1m[34mSELECT  "pastries".* FROM "pastries" WHERE "pastries"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/pastries_controller.rb:7
+  Rendering pastries/show.html.erb within layouts/application
+  Rendered pastries/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 14ms (Views: 12.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/pastries/3" for ::1 at 2021-05-12 18:52:51 -0700
+Processing by PastriesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPastry Load (0.2ms)[0m  [1m[34mSELECT  "pastries".* FROM "pastries" WHERE "pastries"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/pastries_controller.rb:7
+  Rendering pastries/show.html.erb within layouts/application
+  Rendered pastries/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 11ms (Views: 9.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pastries/3" for ::1 at 2021-05-12 18:53:54 -0700
+Processing by PastriesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPastry Load (0.3ms)[0m  [1m[34mSELECT  "pastries".* FROM "pastries" WHERE "pastries"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/pastries_controller.rb:7
+  Rendering pastries/show.html.erb within layouts/application
+  Rendered pastries/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 12ms (Views: 9.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/pastries/3" for ::1 at 2021-05-12 18:54:01 -0700
+Processing by PastriesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPastry Load (0.3ms)[0m  [1m[34mSELECT  "pastries".* FROM "pastries" WHERE "pastries"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/pastries_controller.rb:7
+  Rendering pastries/show.html.erb within layouts/application
+  Rendered pastries/show.html.erb within layouts/application (2.1ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `name' for 2:Integer):
+    1: <h1><%= @pastry.name %></h1>
+    2: <h3><%= @pastry.bakery_id.name %></h3>
+    3: 
+    4: <p>Is this a Savory Pastry? <%= @pastry.savory_pastry? %></p>
+    5: <p>Calorie Amount: <%= @pastry.calories %></p>
+  
+app/views/pastries/show.html.erb:2:in `_app_views_pastries_show_html_erb___1499515035722624369_17040'
+Started GET "/pastries/3" for ::1 at 2021-05-12 18:54:09 -0700
+Processing by PastriesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPastry Load (0.4ms)[0m  [1m[34mSELECT  "pastries".* FROM "pastries" WHERE "pastries"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/pastries_controller.rb:7
+  Rendering pastries/show.html.erb within layouts/application
+  Rendered pastries/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 17ms (Views: 15.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2021-05-12 18:55:52 -0700
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 13ms (Views: 11.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pastries" for ::1 at 2021-05-12 18:55:55 -0700
+Processing by PastriesController#index as HTML
+  Rendering pastries/index.html.erb within layouts/application
+  [1m[36mPastry Load (0.2ms)[0m  [1m[34mSELECT "pastries".* FROM "pastries"[0m
+  ↳ app/views/pastries/index.html.erb:3
+  Rendered pastries/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 10ms (Views: 9.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pastries" for ::1 at 2021-05-12 18:56:55 -0700
+Processing by PastriesController#index as HTML
+  Rendering pastries/index.html.erb within layouts/application
+  [1m[36mPastry Load (0.3ms)[0m  [1m[34mSELECT "pastries".* FROM "pastries"[0m
+  ↳ app/views/pastries/index.html.erb:3
+  Rendered pastries/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 12ms (Views: 10.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/pastries" for ::1 at 2021-05-12 18:57:06 -0700
+Processing by PastriesController#index as HTML
+  Rendering pastries/index.html.erb within layouts/application
+  [1m[36mPastry Load (0.2ms)[0m  [1m[34mSELECT "pastries".* FROM "pastries"[0m
+  ↳ app/views/pastries/index.html.erb:3
+  Rendered pastries/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 14ms (Views: 13.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pastries" for ::1 at 2021-05-12 18:57:17 -0700
+Processing by PastriesController#index as HTML
+  Rendering pastries/index.html.erb within layouts/application
+  [1m[36mPastry Load (0.2ms)[0m  [1m[34mSELECT "pastries".* FROM "pastries"[0m
+  ↳ app/views/pastries/index.html.erb:3
+  Rendered pastries/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 12ms (Views: 10.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pastries" for ::1 at 2021-05-12 18:58:21 -0700
+Processing by PastriesController#index as HTML
+  Rendering pastries/index.html.erb within layouts/application
+  [1m[36mPastry Load (0.2ms)[0m  [1m[34mSELECT "pastries".* FROM "pastries"[0m
+  ↳ app/views/pastries/index.html.erb:3
+  Rendered pastries/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 12ms (Views: 10.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pastries" for ::1 at 2021-05-12 19:00:07 -0700
+Processing by PastriesController#index as HTML
+  Rendering pastries/index.html.erb within layouts/application
+  [1m[36mPastry Load (0.2ms)[0m  [1m[34mSELECT "pastries".* FROM "pastries"[0m
+  ↳ app/views/pastries/index.html.erb:3
+  Rendered pastries/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 15ms (Views: 13.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pastries" for ::1 at 2021-05-12 19:00:18 -0700
+Processing by PastriesController#index as HTML
+  Rendering pastries/index.html.erb within layouts/application
+  [1m[36mPastry Load (0.3ms)[0m  [1m[34mSELECT "pastries".* FROM "pastries"[0m
+  ↳ app/views/pastries/index.html.erb:3
+  Rendered pastries/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 14ms (Views: 12.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/pastries" for ::1 at 2021-05-12 19:00:51 -0700
+Processing by PastriesController#index as HTML
+  Rendering pastries/index.html.erb within layouts/application
+  [1m[36mPastry Load (0.2ms)[0m  [1m[34mSELECT "pastries".* FROM "pastries"[0m
+  ↳ app/views/pastries/index.html.erb:3
+  Rendered pastries/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 16ms (Views: 14.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pastries" for ::1 at 2021-05-12 19:01:13 -0700
+Processing by PastriesController#index as HTML
+  Rendering pastries/index.html.erb within layouts/application
+  [1m[36mPastry Load (0.2ms)[0m  [1m[34mSELECT "pastries".* FROM "pastries"[0m
+  ↳ app/views/pastries/index.html.erb:3
+  Rendered pastries/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 16ms (Views: 14.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pastries" for ::1 at 2021-05-12 19:01:28 -0700
+Processing by PastriesController#index as HTML
+  Rendering pastries/index.html.erb within layouts/application
+  [1m[36mPastry Load (0.2ms)[0m  [1m[34mSELECT "pastries".* FROM "pastries"[0m
+  ↳ app/views/pastries/index.html.erb:3
+  Rendered pastries/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 15ms (Views: 14.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pastries" for ::1 at 2021-05-12 19:03:04 -0700
+Processing by PastriesController#index as HTML
+  Rendering pastries/index.html.erb within layouts/application
+  [1m[36mPastry Load (0.3ms)[0m  [1m[34mSELECT "pastries".* FROM "pastries"[0m
+  ↳ app/views/pastries/index.html.erb:3
+  Rendered pastries/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 17ms (Views: 16.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/pastries" for ::1 at 2021-05-12 19:03:21 -0700
+Processing by PastriesController#index as HTML
+  Rendering pastries/index.html.erb within layouts/application
+  [1m[36mPastry Load (0.3ms)[0m  [1m[34mSELECT "pastries".* FROM "pastries"[0m
+  ↳ app/views/pastries/index.html.erb:3
+  Rendered pastries/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 14ms (Views: 12.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/pastries" for ::1 at 2021-05-12 19:03:27 -0700
+Processing by PastriesController#index as HTML
+  Rendering pastries/index.html.erb within layouts/application
+  [1m[36mPastry Load (0.2ms)[0m  [1m[34mSELECT "pastries".* FROM "pastries"[0m
+  ↳ app/views/pastries/index.html.erb:3
+  Rendered pastries/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 12ms (Views: 10.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pastries" for ::1 at 2021-05-12 19:04:49 -0700
+Processing by PastriesController#index as HTML
+  Rendering pastries/index.html.erb within layouts/application
+  [1m[36mPastry Load (0.4ms)[0m  [1m[34mSELECT "pastries".* FROM "pastries"[0m
+  ↳ app/views/pastries/index.html.erb:3
+  Rendered pastries/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 15ms (Views: 13.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/pastries" for ::1 at 2021-05-12 19:05:04 -0700
+Processing by PastriesController#index as HTML
+  Rendering pastries/index.html.erb within layouts/application
+  [1m[36mPastry Load (0.3ms)[0m  [1m[34mSELECT "pastries".* FROM "pastries"[0m
+  ↳ app/views/pastries/index.html.erb:3
+  Rendered pastries/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 14ms (Views: 12.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/bakeries" for ::1 at 2021-05-12 19:05:45 -0700
+Processing by BakeriesController#index as HTML
+  Rendering bakeries/index.html.erb within layouts/application
+  [1m[36mBakery Load (0.3ms)[0m  [1m[34mSELECT "bakeries".* FROM "bakeries"[0m
+  ↳ app/views/bakeries/index.html.erb:3
+  Rendered bakeries/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 20ms (Views: 18.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/pastries" for ::1 at 2021-05-12 19:05:49 -0700
+Processing by PastriesController#index as HTML
+  Rendering pastries/index.html.erb within layouts/application
+  [1m[36mPastry Load (0.2ms)[0m  [1m[34mSELECT "pastries".* FROM "pastries"[0m
+  ↳ app/views/pastries/index.html.erb:3
+  Rendered pastries/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 11ms (Views: 10.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/bakeries" for ::1 at 2021-05-12 19:05:52 -0700
+Processing by BakeriesController#index as HTML
+  Rendering bakeries/index.html.erb within layouts/application
+  [1m[36mBakery Load (0.8ms)[0m  [1m[34mSELECT "bakeries".* FROM "bakeries"[0m
+  ↳ app/views/bakeries/index.html.erb:3
+  Rendered bakeries/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 37ms (Views: 24.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/bakeries" for ::1 at 2021-05-12 19:06:27 -0700
+Processing by BakeriesController#index as HTML
+  Rendering bakeries/index.html.erb within layouts/application
+  [1m[36mBakery Load (0.2ms)[0m  [1m[34mSELECT "bakeries".* FROM "bakeries"[0m
+  ↳ app/views/bakeries/index.html.erb:3
+  Rendered bakeries/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 15ms (Views: 13.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/bakeries" for ::1 at 2021-05-12 19:06:37 -0700
+Processing by BakeriesController#index as HTML
+  Rendering bakeries/index.html.erb within layouts/application
+  [1m[36mBakery Load (0.2ms)[0m  [1m[34mSELECT "bakeries".* FROM "bakeries"[0m
+  ↳ app/views/bakeries/index.html.erb:3
+  Rendered bakeries/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 11ms (Views: 10.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/bakeries" for ::1 at 2021-05-12 19:06:44 -0700
+Processing by BakeriesController#index as HTML
+  Rendering bakeries/index.html.erb within layouts/application
+  [1m[36mBakery Load (0.2ms)[0m  [1m[34mSELECT "bakeries".* FROM "bakeries"[0m
+  ↳ app/views/bakeries/index.html.erb:3
+  Rendered bakeries/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 13ms (Views: 11.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/bakeries" for ::1 at 2021-05-12 19:08:17 -0700
+Processing by BakeriesController#index as HTML
+  Rendering bakeries/index.html.erb within layouts/application
+  [1m[36mBakery Load (0.3ms)[0m  [1m[34mSELECT "bakeries".* FROM "bakeries"[0m
+  ↳ app/views/bakeries/index.html.erb:3
+  Rendered bakeries/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 17ms (Views: 15.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/bakeries" for ::1 at 2021-05-12 19:08:31 -0700
+Processing by BakeriesController#index as HTML
+  Rendering bakeries/index.html.erb within layouts/application
+  [1m[36mBakery Load (0.3ms)[0m  [1m[34mSELECT "bakeries".* FROM "bakeries"[0m
+  ↳ app/views/bakeries/index.html.erb:3
+  Rendered bakeries/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 11ms (Views: 10.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/bakeries" for ::1 at 2021-05-12 19:08:39 -0700
+Processing by BakeriesController#index as HTML
+  Rendering bakeries/index.html.erb within layouts/application
+  [1m[36mBakery Load (0.2ms)[0m  [1m[34mSELECT "bakeries".* FROM "bakeries"[0m
+  ↳ app/views/bakeries/index.html.erb:3
+  Rendered bakeries/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 13ms (Views: 12.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/bakeries" for ::1 at 2021-05-12 19:09:15 -0700
+Processing by BakeriesController#index as HTML
+  Rendering bakeries/index.html.erb within layouts/application
+  [1m[36mBakery Load (0.2ms)[0m  [1m[34mSELECT "bakeries".* FROM "bakeries"[0m
+  ↳ app/views/bakeries/index.html.erb:3
+  Rendered bakeries/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 12ms (Views: 11.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/bakeries" for ::1 at 2021-05-12 19:09:45 -0700
+Processing by BakeriesController#index as HTML
+  Rendering bakeries/index.html.erb within layouts/application
+  [1m[36mBakery Load (0.3ms)[0m  [1m[34mSELECT "bakeries".* FROM "bakeries"[0m
+  ↳ app/views/bakeries/index.html.erb:3
+  Rendered bakeries/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 12ms (Views: 10.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/bakeries" for ::1 at 2021-05-12 19:09:58 -0700
+Processing by BakeriesController#index as HTML
+  Rendering bakeries/index.html.erb within layouts/application
+  [1m[36mBakery Load (0.2ms)[0m  [1m[34mSELECT "bakeries".* FROM "bakeries"[0m
+  ↳ app/views/bakeries/index.html.erb:3
+  Rendered bakeries/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 12ms (Views: 10.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/bakeries" for ::1 at 2021-05-12 19:10:12 -0700
+Processing by BakeriesController#index as HTML
+  Rendering bakeries/index.html.erb within layouts/application
+  [1m[36mBakery Load (0.3ms)[0m  [1m[34mSELECT "bakeries".* FROM "bakeries"[0m
+  ↳ app/views/bakeries/index.html.erb:3
+  Rendered bakeries/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 11ms (Views: 10.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/bakeries" for ::1 at 2021-05-12 19:10:43 -0700
+Processing by BakeriesController#index as HTML
+  Rendering bakeries/index.html.erb within layouts/application
+  [1m[36mBakery Load (0.2ms)[0m  [1m[34mSELECT "bakeries".* FROM "bakeries"[0m
+  ↳ app/views/bakeries/index.html.erb:3
+  Rendered bakeries/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 12ms (Views: 10.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/bakeries" for ::1 at 2021-05-12 19:10:51 -0700
+Processing by BakeriesController#index as HTML
+  Rendering bakeries/index.html.erb within layouts/application
+  [1m[36mBakery Load (0.2ms)[0m  [1m[34mSELECT "bakeries".* FROM "bakeries"[0m
+  ↳ app/views/bakeries/index.html.erb:3
+  Rendered bakeries/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 12ms (Views: 10.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pastries" for ::1 at 2021-05-12 19:12:49 -0700
+Processing by PastriesController#index as HTML
+  Rendering pastries/index.html.erb within layouts/application
+  [1m[36mPastry Load (0.3ms)[0m  [1m[34mSELECT "pastries".* FROM "pastries"[0m
+  ↳ app/views/pastries/index.html.erb:3
+  Rendered pastries/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 37ms (Views: 35.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/pastries" for ::1 at 2021-05-12 19:13:14 -0700
+Processing by PastriesController#index as HTML
+  Rendering pastries/index.html.erb within layouts/application
+  [1m[36mPastry Load (0.2ms)[0m  [1m[34mSELECT "pastries".* FROM "pastries"[0m
+  ↳ app/views/pastries/index.html.erb:3
+  Rendered pastries/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 13ms (Views: 11.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pastries" for ::1 at 2021-05-12 19:13:25 -0700
+Processing by PastriesController#index as HTML
+  Rendering pastries/index.html.erb within layouts/application
+  [1m[36mPastry Load (0.2ms)[0m  [1m[34mSELECT "pastries".* FROM "pastries"[0m
+  ↳ app/views/pastries/index.html.erb:3
+  Rendered pastries/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 12ms (Views: 11.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pastries" for ::1 at 2021-05-12 19:13:50 -0700
+Processing by PastriesController#index as HTML
+  Rendering pastries/index.html.erb within layouts/application
+  [1m[36mPastry Load (0.3ms)[0m  [1m[34mSELECT "pastries".* FROM "pastries"[0m
+  ↳ app/views/pastries/index.html.erb:3
+  Rendered pastries/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 13ms (Views: 12.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/pastries" for ::1 at 2021-05-12 19:14:04 -0700
+Processing by PastriesController#index as HTML
+  Rendering pastries/index.html.erb within layouts/application
+  [1m[36mPastry Load (0.3ms)[0m  [1m[34mSELECT "pastries".* FROM "pastries"[0m
+  ↳ app/views/pastries/index.html.erb:3
+  Rendered pastries/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 11ms (Views: 10.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/pastries" for ::1 at 2021-05-12 19:14:27 -0700
+Processing by PastriesController#index as HTML
+  Rendering pastries/index.html.erb within layouts/application
+  [1m[36mPastry Load (0.3ms)[0m  [1m[34mSELECT "pastries".* FROM "pastries"[0m
+  ↳ app/views/pastries/index.html.erb:3
+  Rendered pastries/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 12ms (Views: 10.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/pastries" for ::1 at 2021-05-12 19:16:49 -0700
+Processing by PastriesController#index as HTML
+  Rendering pastries/index.html.erb within layouts/application
+  [1m[36mPastry Load (0.2ms)[0m  [1m[34mSELECT "pastries".* FROM "pastries"[0m
+  ↳ app/views/pastries/index.html.erb:3
+  Rendered pastries/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 14ms (Views: 12.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pastries/1" for ::1 at 2021-05-12 19:17:07 -0700
+Processing by PastriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPastry Load (0.3ms)[0m  [1m[34mSELECT  "pastries".* FROM "pastries" WHERE "pastries"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/pastries_controller.rb:7
+  Rendering pastries/show.html.erb within layouts/application
+  Rendered pastries/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 13ms (Views: 11.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/pastries/1" for ::1 at 2021-05-12 19:17:32 -0700
+Processing by PastriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPastry Load (0.4ms)[0m  [1m[34mSELECT  "pastries".* FROM "pastries" WHERE "pastries"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/pastries_controller.rb:7
+  Rendering pastries/show.html.erb within layouts/application
+  Rendered pastries/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 12ms (Views: 10.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/pastries/1" for ::1 at 2021-05-12 19:18:47 -0700
+Processing by PastriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPastry Load (0.2ms)[0m  [1m[34mSELECT  "pastries".* FROM "pastries" WHERE "pastries"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/pastries_controller.rb:7
+  Rendering pastries/show.html.erb within layouts/application
+  Rendered pastries/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 11ms (Views: 9.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pastries/1" for ::1 at 2021-05-12 19:19:05 -0700
+Processing by PastriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPastry Load (0.3ms)[0m  [1m[34mSELECT  "pastries".* FROM "pastries" WHERE "pastries"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/pastries_controller.rb:7
+  Rendering pastries/show.html.erb within layouts/application
+  Rendered pastries/show.html.erb within layouts/application (1.5ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `-@' for true:TrueClass):
+    3: 
+    4: <d1>
+    5:   <dt>Is this a Savory Pastry?</dt>
+    6:     <dd><%= -@pastry.savory_pastry? %></dd>
+    7:   <p>Calorie Amount: <%= @pastry.calories %></p>
+    8: </d1>
+  
+app/views/pastries/show.html.erb:6:in `_app_views_pastries_show_html_erb___1499515035722624369_20920'
+Started GET "/pastries/1" for ::1 at 2021-05-12 19:19:27 -0700
+Processing by PastriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPastry Load (0.3ms)[0m  [1m[34mSELECT  "pastries".* FROM "pastries" WHERE "pastries"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/pastries_controller.rb:7
+  Rendering pastries/show.html.erb within layouts/application
+  Rendered pastries/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 12ms (Views: 10.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/pastries/1" for ::1 at 2021-05-12 19:19:54 -0700
+Processing by PastriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPastry Load (0.5ms)[0m  [1m[34mSELECT  "pastries".* FROM "pastries" WHERE "pastries"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/pastries_controller.rb:7
+  Rendering pastries/show.html.erb within layouts/application
+  Rendered pastries/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 13ms (Views: 10.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/pastries/1" for ::1 at 2021-05-12 19:20:06 -0700
+Processing by PastriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPastry Load (0.2ms)[0m  [1m[34mSELECT  "pastries".* FROM "pastries" WHERE "pastries"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/pastries_controller.rb:7
+  Rendering pastries/show.html.erb within layouts/application
+  Rendered pastries/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 12ms (Views: 10.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pastries/1" for ::1 at 2021-05-12 19:21:00 -0700
+Processing by PastriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPastry Load (0.2ms)[0m  [1m[34mSELECT  "pastries".* FROM "pastries" WHERE "pastries"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/pastries_controller.rb:7
+  Rendering pastries/show.html.erb within layouts/application
+  Rendered pastries/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 12ms (Views: 10.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pastries/1" for ::1 at 2021-05-12 19:21:18 -0700
+Processing by PastriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPastry Load (0.5ms)[0m  [1m[34mSELECT  "pastries".* FROM "pastries" WHERE "pastries"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/pastries_controller.rb:7
+  Rendering pastries/show.html.erb within layouts/application
+  Rendered pastries/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 13ms (Views: 10.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/pastries/1" for ::1 at 2021-05-12 19:22:00 -0700
+Processing by PastriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPastry Load (0.2ms)[0m  [1m[34mSELECT  "pastries".* FROM "pastries" WHERE "pastries"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/pastries_controller.rb:7
+  Rendering pastries/show.html.erb within layouts/application
+  Rendered pastries/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 12ms (Views: 10.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pastries/1" for ::1 at 2021-05-12 19:22:08 -0700
+Processing by PastriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPastry Load (0.2ms)[0m  [1m[34mSELECT  "pastries".* FROM "pastries" WHERE "pastries"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/pastries_controller.rb:7
+  Rendering pastries/show.html.erb within layouts/application
+  Rendered pastries/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 12ms (Views: 10.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pastries/1" for ::1 at 2021-05-12 19:22:28 -0700
+Processing by PastriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPastry Load (0.3ms)[0m  [1m[34mSELECT  "pastries".* FROM "pastries" WHERE "pastries"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/pastries_controller.rb:7
+  Rendering pastries/show.html.erb within layouts/application
+  Rendered pastries/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 13ms (Views: 11.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/pastries/1" for ::1 at 2021-05-12 19:23:21 -0700
+Processing by PastriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPastry Load (0.2ms)[0m  [1m[34mSELECT  "pastries".* FROM "pastries" WHERE "pastries"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/pastries_controller.rb:7
+  Rendering pastries/show.html.erb within layouts/application
+  Rendered pastries/show.html.erb within layouts/application (1.5ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `id' for nil:NilClass):
+    1: <h1 style="color:mediumseagreen;"><%= @pastry.name %></h1>
+    2: <h3><%= @bakery.id == @pastry.bakery_id %></h3>
+    3: 
+    4: <d1>
+    5:   <dt style="color:dodgerblue;">Is this a Savory Pastry?</dt>
+  
+app/views/pastries/show.html.erb:2:in `_app_views_pastries_show_html_erb___1499515035722624369_22080'
+Started GET "/pastries/1" for ::1 at 2021-05-12 19:23:28 -0700
+Processing by PastriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPastry Load (0.2ms)[0m  [1m[34mSELECT  "pastries".* FROM "pastries" WHERE "pastries"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/pastries_controller.rb:7
+  Rendering pastries/show.html.erb within layouts/application
+  Rendered pastries/show.html.erb within layouts/application (2.2ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+    1: <h1 style="color:mediumseagreen;"><%= @pastry.name %></h1>
+    2: <h3><%= @bakery.name == @pastry.bakery_id %></h3>
+    3: 
+    4: <d1>
+    5:   <dt style="color:dodgerblue;">Is this a Savory Pastry?</dt>
+  
+app/views/pastries/show.html.erb:2:in `_app_views_pastries_show_html_erb___1499515035722624369_22600'
+Started GET "/pastries/1" for ::1 at 2021-05-12 19:23:36 -0700
+Processing by PastriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPastry Load (0.3ms)[0m  [1m[34mSELECT  "pastries".* FROM "pastries" WHERE "pastries"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/pastries_controller.rb:7
+  Rendering pastries/show.html.erb within layouts/application
+  Rendered pastries/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 13ms (Views: 11.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/bakeries" for ::1 at 2021-05-12 19:26:24 -0700
+Processing by BakeriesController#index as HTML
+  Rendering bakeries/index.html.erb within layouts/application
+  [1m[36mBakery Load (0.2ms)[0m  [1m[34mSELECT "bakeries".* FROM "bakeries"[0m
+  ↳ app/views/bakeries/index.html.erb:3
+  Rendered bakeries/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 15ms (Views: 13.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/bakeries/1" for ::1 at 2021-05-12 19:26:31 -0700
+Processing by BakeriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBakery Load (0.2ms)[0m  [1m[34mSELECT  "bakeries".* FROM "bakeries" WHERE "bakeries"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/bakeries_controller.rb:7
+  Rendering bakeries/show.html.erb within layouts/application
+  Rendered bakeries/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 10ms (Views: 8.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/bakeries/1" for ::1 at 2021-05-12 19:26:54 -0700
+Processing by BakeriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBakery Load (0.2ms)[0m  [1m[34mSELECT  "bakeries".* FROM "bakeries" WHERE "bakeries"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/bakeries_controller.rb:7
+  Rendering bakeries/show.html.erb within layouts/application
+  Rendered bakeries/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 19ms (Views: 16.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/bakeries" for ::1 at 2021-05-12 19:27:14 -0700
+Processing by BakeriesController#index as HTML
+  Rendering bakeries/index.html.erb within layouts/application
+  [1m[36mBakery Load (0.2ms)[0m  [1m[34mSELECT "bakeries".* FROM "bakeries"[0m
+  ↳ app/views/bakeries/index.html.erb:3
+  Rendered bakeries/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 11ms (Views: 10.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pastries" for ::1 at 2021-05-12 19:27:17 -0700
+Processing by PastriesController#index as HTML
+  Rendering pastries/index.html.erb within layouts/application
+  [1m[36mPastry Load (0.2ms)[0m  [1m[34mSELECT "pastries".* FROM "pastries"[0m
+  ↳ app/views/pastries/index.html.erb:3
+  Rendered pastries/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 12ms (Views: 11.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pastries/1" for ::1 at 2021-05-12 19:27:43 -0700
+Processing by PastriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPastry Load (0.2ms)[0m  [1m[34mSELECT  "pastries".* FROM "pastries" WHERE "pastries"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/pastries_controller.rb:7
+  Rendering pastries/show.html.erb within layouts/application
+  Rendered pastries/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 14ms (Views: 11.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pastries/1" for ::1 at 2021-05-12 19:28:23 -0700
+Processing by PastriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPastry Load (0.7ms)[0m  [1m[34mSELECT  "pastries".* FROM "pastries" WHERE "pastries"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/pastries_controller.rb:7
+  Rendering pastries/show.html.erb within layouts/application
+  [1m[36mBakery Load (0.2ms)[0m  [1m[34mSELECT  "bakeries".* FROM "bakeries" WHERE "bakeries"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/pastries/show.html.erb:2
+  Rendered pastries/show.html.erb within layouts/application (15.8ms)
+Completed 200 OK in 33ms (Views: 29.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/pastries/1" for ::1 at 2021-05-12 19:29:22 -0700
+Processing by PastriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPastry Load (0.2ms)[0m  [1m[34mSELECT  "pastries".* FROM "pastries" WHERE "pastries"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/pastries_controller.rb:7
+  Rendering pastries/show.html.erb within layouts/application
+  [1m[36mBakery Load (0.1ms)[0m  [1m[34mSELECT  "bakeries".* FROM "bakeries" WHERE "bakeries"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/pastries/show.html.erb:2
+  Rendered pastries/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 18ms (Views: 16.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/pastries/1" for ::1 at 2021-05-12 19:29:28 -0700
+Processing by PastriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPastry Load (0.2ms)[0m  [1m[34mSELECT  "pastries".* FROM "pastries" WHERE "pastries"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/pastries_controller.rb:7
+  Rendering pastries/show.html.erb within layouts/application
+  [1m[36mBakery Load (0.2ms)[0m  [1m[34mSELECT  "bakeries".* FROM "bakeries" WHERE "bakeries"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/pastries/show.html.erb:2
+  Rendered pastries/show.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 13ms (Views: 11.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/bakeries" for ::1 at 2021-05-12 19:33:38 -0700
+Processing by BakeriesController#index as HTML
+  Rendering bakeries/index.html.erb within layouts/application
+  [1m[36mBakery Load (0.2ms)[0m  [1m[34mSELECT "bakeries".* FROM "bakeries"[0m
+  ↳ app/views/bakeries/index.html.erb:3
+  Rendered bakeries/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 19ms (Views: 17.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/bakeries/1" for ::1 at 2021-05-12 19:34:13 -0700
+Processing by BakeriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBakery Load (0.2ms)[0m  [1m[34mSELECT  "bakeries".* FROM "bakeries" WHERE "bakeries"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/bakeries_controller.rb:7
+  Rendering bakeries/show.html.erb within layouts/application
+  Rendered bakeries/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 14ms (Views: 13.0ms | ActiveRecord: 0.2ms)
+
+
