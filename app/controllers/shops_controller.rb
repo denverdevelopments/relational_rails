@@ -12,7 +12,14 @@ class ShopsController < ApplicationController
     @shop = Shop.find(params[:shop_id])
     @candies = @shop.candies
   end
+
+  def destroy
+    Shop.destroy(params[:id])
+    redirect_to '/shops'
+  end
 end
+
+
 
 #link_to "Edit Discount", "/merchants/#{@merchant.id}/discounts/#{@discount.id}/edit"
 # class TasksController < ApplicationController

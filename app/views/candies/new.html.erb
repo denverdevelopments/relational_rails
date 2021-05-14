@@ -1,4 +1,6 @@
-<h3 align="right"><%= render partial: 'partials/merch_header' %>&emsp;</h3>
+<section id="links">
+  <h3><%= render partial: 'partials/header_links' %></h3>
+</section><br/>
 
 <h3>New Discount</h3><br/>
 <%= form_with url:"/merchants/#{@merchant.id}/discounts", method: :post, local: true do |form| %>

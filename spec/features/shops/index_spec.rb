@@ -76,7 +76,7 @@ RSpec.describe 'the shops index', type: :feature do
           expect(current_path).to eq("/shops/#{@shop_2.id}/edit")
       end
     end
-  end     #shop edit link - us#?
+  end     #shop edit link - us#12
 
   it 'has links to Delete' do
     visit "/shops"
@@ -102,6 +102,13 @@ RSpec.describe 'the shops index', type: :feature do
       end
     end
   end     #shop delete link - us#?
+
+  it 'has a link to create New Shop' do
+      visit "/shops"
+    expect(page).to have_link("Create New Shop")
+    click_link("Create New Shop")
+    expect(current_path).to eq("/shops/new")
+  end
 
 
   # expect(page).to have_link(@shop_1.percent)

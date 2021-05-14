@@ -43,13 +43,13 @@ RSpec.describe 'the candies index', type: :feature do
       within("#candy-#{@candy_1.id}") do
         expect(page).to have_content(@candy_1.brand)
         expect(page).to have_content(@candy_1.calories)
-        # expect(page).to have_content("All_natural") if @candy_1.all_natural == true
-        # expect(page).to have_content("Artificial ingredients") if @candy_1.all_natural == false
+        expect(page).to have_content("All_natural")
       end
 
       within("#candy-#{@candy_2.id}") do
         expect(page).to have_content(@candy_2.brand)
         expect(page).to have_content(@candy_2.calories)
+        expect(page).to have_content("Artificial ingredients")
       end
 
     end
