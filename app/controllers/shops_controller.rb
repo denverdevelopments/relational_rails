@@ -13,6 +13,20 @@ class ShopsController < ApplicationController
     @candies = @shop.candies
   end
 
+  def new
+  end
+
+  def create
+    shop = Shop.new({
+      name: params[:name],
+      sells_drinks: params[:sells_drinks],
+      varieties: params[:varieties]
+      })
+    shop.save
+    redirect_to '/shops'
+  end
+
+
   def destroy
     Shop.destroy(params[:id])
     redirect_to '/shops'

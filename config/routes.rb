@@ -12,10 +12,13 @@ Rails.application.routes.draw do
 
   ## Kevin's Sweet space
   get '/shops', to: 'shops#index'
+  get '/shops/new', to: 'shops#new'
+  post '/shops/', to: 'shops#create'
   get '/shops/:id', to: 'shops#show'
   get '/shops/:shop_id/candies', to: 'shops#candies'
-  get '/shops/:id/new', to: 'shops#new'
-  post '/shops/:id', to: 'shops#create'
+
+  # get '/shops/:id/new', to: 'shops#new'
+  # post '/shops/:id', to: 'shops#create'
   get '/shops/:id/edit', to: 'shops#edit'
   patch '/shops/:id', to: 'shops#update'
   delete '/shops/:id', to: 'shops#destroy'
