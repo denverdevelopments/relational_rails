@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   ## Leigh's Space
   get '/bakeries', to: 'bakeries#index'
   get '/bakeries/:id', to: 'bakeries#show'
+  get '/bakeries/:id/pastries', to: 'bakeries#pastries'
 
   get '/pastries', to: 'pastries#index'
   get '/pastries/:id', to: 'pastries#show'
@@ -16,7 +17,7 @@ Rails.application.routes.draw do
   post '/shops/', to: 'shops#create'
   get '/shops/:id', to: 'shops#show'
   get '/shops/:id/candies', to: 'shops#candies'
-  
+
   get '/shops/:id/edit', to: 'shops#edit'
   patch '/shops/:id', to: 'shops#update'
   delete '/shops/:id', to: 'shops#destroy'
