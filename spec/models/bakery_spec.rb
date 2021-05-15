@@ -14,7 +14,13 @@ RSpec.describe Bakery, type: :model do
 
   context 'created at' do
     it 'can list the bakeries in order of creation' do
-      expect()
+      Pastry.destroy_all
+      Bakery.destroy_all
+      bakery_1 = Bakery.create!(name: "Black Dalia Flour Bakery", hours_open: 6, created_at: 1.seconds.ago)
+      bakery_2 = Bakery.create!(name: "The Hawk Spot Bakery", hours_open: 8, created_at: 10.seconds.ago)
+      bakery_3 = Bakery.create!(name: "Rollin' in the Dough Bakery", hours_open: 5, created_at: 5.seconds.ago)
+
+      expect(Bakery.order_by_creation_time.to_a).to eq([bakery_2, bakery_3, bakery_1])
     end
   end
 end
