@@ -11,4 +11,6 @@ RSpec.describe 'the bakery index show page' do
 
     expect(page).to have_content(@bakery_1.name)
   end
+
+  
 end
