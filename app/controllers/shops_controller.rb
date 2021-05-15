@@ -22,8 +22,12 @@ class ShopsController < ApplicationController
       sells_drinks: params[:sells_drinks],
       varieties: params[:varieties]
       })
-    shop.save
-    redirect_to '/shops'
+    if shop.save
+      redirect_to '/shops'
+    else
+      flash[:notice] = "Candy shop not created: Required information missing"
+      render :new
+    end
   end
 
   def edit
@@ -32,19 +36,27 @@ class ShopsController < ApplicationController
 
   def update
     shop = Shop.find(params[:id])
-    shop.update({
-      name: params[:name],
-      sells_drinks: params[:sells_drinks],
-      varieties: params[:varieties]
-      })
-    shop.save
-    redirect_to '/shops'
+    shop.update(shop_params)
+    if shop.save
+      redirect_to "/shops/#{shop.id}"
+    else
+      flash[:notice] = "Error: Required information missing"
+    end
   end
 
   def destroy
     Shop.destroy(params[:id])
     redirect_to '/shops'
   end
+
+  ...
+
+  private
+
+  def shop_params
+    params.permit(:name, :sells_drinks, :varieties)
+  end
+
 end
 
 
