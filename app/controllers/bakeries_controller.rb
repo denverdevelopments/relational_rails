@@ -10,6 +10,5 @@ class BakeriesController < ApplicationController
   def pastries
     @bakery = Bakery.find(params[:id])
     @pastries = @bakery.pastries
-    require "pry";binding.pry
   end
 end
