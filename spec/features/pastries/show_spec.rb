@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe 'the pastry show page', type: :feature do
-  before(:each) do
+  before :each do
     @bakery_1 = Bakery.create!(name: "The Hawk Spot Bakery", open_on_weekends: true, hours_open: 6)
     @pastry_1 = @bakery_1.pastries.create!(name: "Paw Print Cookies", savory_pastry: false, calories: 278)
     @pastry_2 = @bakery_1.pastries.create!(name: "Resting Dogs hotdog buns", savory_pastry:true, calories: 200)
@@ -24,7 +24,7 @@ RSpec.describe 'the pastry show page', type: :feature do
 
   it 'does not show any other pastry' do
     visit "/pastries/#{@pastry_1.id}"
-    
+
     expect(page).to_not have_content(@pastry_2.name)
   end
 end
