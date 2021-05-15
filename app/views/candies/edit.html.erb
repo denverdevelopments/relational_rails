@@ -2,14 +2,16 @@
   <h3><%= render partial: 'partials/header_links' %></h3>
 </section><br/>
 
-<h3>Edit Discount</h3><br/>
-<%= form_with url: "/merchants/#{@merchant.id}/discounts/#{@discount.id}", method: :patch, local: true do |f| %>
+<h3>Edit Candy</h3><br/>
+<%= form_with url: "/candies/#{@candy.id}", method: :patch, local: true do |form| %>
+  <%= form.label :name %>
+  <%= form.text_field :brand, value: @candy.brand %><br/><br/>
 
-  <%= f.label :percent %>
-  <%= f.number_field :percent, value: "#{@discount.percent}" %><br/><br/>
+  <%= form.label :sells_drinks %>
+  <%= form.select :all_natural, [[true], [false]], value: @candy.all_natural %><br/><br/>
 
-  <%= f.label :quantity %>
-  <%= f.number_field :quantity, value: "#{@discount.quantity}" %><br/><br/>
+  <%= form.label "Candy varieties" %>
+  <%= form.number_field :calories, value: @candy.calories %><br/><br/>
 
-  <%= f.submit 'Submit Edit' %>
+  <%= form.submit 'Submit Candy Edit' %>
 <% end %>

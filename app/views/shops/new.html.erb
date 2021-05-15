@@ -3,12 +3,15 @@
 </section><br/>
 
 <h3>New Candy Shop</h3><br/>
-<%= form_with url:"/shops/#{@shop.id}/discounts", method: :post, local: true do |form| %>
-  <%= form.label :percent %>
-  <%= form.number_field :percent %><br/><br/>
+<%= form_with url:"/shops/", method: :post, local: true do |form| %>
+  <%= form.label :name %>
+  <%= form.text_field :name %><br/><br/>
 
-  <%= form.label :quantity %>
-  <%= form.number_field :quantity %><br/><br/>
+  <%= form.label :sells_drinks %>
+  <%= form.select :sells_drinks, [[true], [false]] %><br/><br/>
+
+  <%= form.label "Candy varieties" %>
+  <%= form.number_field :varieties %><br/><br/>
 
   <%= form.submit 'Create New Shop' %>
 <% end %>

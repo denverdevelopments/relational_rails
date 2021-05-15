@@ -63,16 +63,16 @@ RSpec.describe 'the shops index', type: :feature do
       within("#shop-#{@shop_1.id}") do
           visit "/shops"
         expect(page).to have_content(@shop_1.name)
-        expect(page).to have_link("EDIT #{@shop_1.name}")
-          click_link "EDIT #{@shop_1.name}"
+        expect(page).to have_link("UPDATE #{@shop_1.name}")
+          click_link "UPDATE #{@shop_1.name}"
         expect(current_path).to eq("/shops/#{@shop_1.id}/edit")
       end
 
       within("#shop-#{@shop_2.id}") do
           visit "/shops"
           expect(page).to have_content(@shop_2.name)
-          expect(page).to have_link("EDIT #{@shop_2.name}")
-            click_link "EDIT #{@shop_2.name}"
+          expect(page).to have_link("UPDATE #{@shop_2.name}")
+            click_link "UPDATE #{@shop_2.name}"
           expect(current_path).to eq("/shops/#{@shop_2.id}/edit")
       end
     end
