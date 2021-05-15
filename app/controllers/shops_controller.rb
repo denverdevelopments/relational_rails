@@ -9,7 +9,7 @@ class ShopsController < ApplicationController
   end
 
   def candies
-    @shop = Shop.find(params[:shop_id])
+    @shop = Shop.find(params[:id])
     @candies = @shop.candies
   end
 
@@ -26,6 +26,20 @@ class ShopsController < ApplicationController
     redirect_to '/shops'
   end
 
+  def edit
+    @shop = Shop.find(params[:id])
+  end
+
+  def update
+    shop = Shop.find(params[:id])
+    shop.update({
+      name: params[:name],
+      sells_drinks: params[:sells_drinks],
+      varieties: params[:varieties]
+      })
+    shop.save
+    redirect_to '/shops'
+  end
 
   def destroy
     Shop.destroy(params[:id])

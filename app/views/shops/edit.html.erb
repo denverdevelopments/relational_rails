@@ -3,13 +3,15 @@
 </section><br/>
 
 <h3>Edit Candy Shop</h3><br/>
-<%= form_with url: "/merchants/#{@merchant.id}/discounts/#{@discount.id}", method: :patch, local: true do |f| %>
+<%= form_with url: "/shops/#{@shop.id}", method: :patch, local: true do |form| %>
+  <%= form.label :name %>
+  <%= form.text_field :name, value: @shop.name %><br/><br/>
 
-  <%= f.label :percent %>
-  <%= f.number_field :percent, value: "#{@discount.percent}" %><br/><br/>
+  <%= form.label :sells_drinks %>
+  <%= form.select :sells_drinks, [[true], [false]], value: @shop.sells_drinks %><br/><br/>
 
-  <%= f.label :quantity %>
-  <%= f.number_field :quantity, value: "#{@discount.quantity}" %><br/><br/>
+  <%= form.label "Candy varieties" %>
+  <%= form.number_field :varieties, value: @shop.varieties %><br/><br/>
 
-  <%= f.submit 'Submit Edit' %>
+  <%= form.submit 'Submit Shop Edit' %>
 <% end %>

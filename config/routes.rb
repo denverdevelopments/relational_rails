@@ -15,14 +15,17 @@ Rails.application.routes.draw do
   get '/shops/new', to: 'shops#new'
   post '/shops/', to: 'shops#create'
   get '/shops/:id', to: 'shops#show'
-  get '/shops/:shop_id/candies', to: 'shops#candies'
-
-  # get '/shops/:id/new', to: 'shops#new'
-  # post '/shops/:id', to: 'shops#create'
+  get '/shops/:id/candies', to: 'shops#candies'
+  
   get '/shops/:id/edit', to: 'shops#edit'
   patch '/shops/:id', to: 'shops#update'
   delete '/shops/:id', to: 'shops#destroy'
 
   get '/candies', to: 'candies#index'
+  get '/candies/new', to: 'candies#new'
+  post '/candies/', to: 'candies#create'
   get '/candies/:id', to: 'candies#show'
+  get '/candies/:id/edit', to: 'candies#edit'
+  patch '/candies/:id', to: 'candies#update'
+  delete '/candies/:id', to: 'candies#destroy'
 end
