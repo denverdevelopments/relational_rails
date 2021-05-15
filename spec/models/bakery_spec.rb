@@ -11,4 +11,10 @@ RSpec.describe Bakery, type: :model do
     it { should validate_presence_of(:hours_open) }
     it { should validate_numericality_of(:hours_open) }
   end
+
+  context 'created at' do
+    it 'can list the bakeries in order of creation' do
+      expect()
+    end
+  end
 end
