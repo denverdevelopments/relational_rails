@@ -5,6 +5,6 @@ class Bakery < ApplicationRecord
   has_many :pastries
 
   def self.order_by_creation_time
-    order('created_at ASC')
+    order(created_at: :desc)
   end
 end

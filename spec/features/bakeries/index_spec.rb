@@ -12,5 +12,10 @@ RSpec.describe 'the bakery index show page' do
     expect(page).to have_content(@bakery_1.name)
   end
 
-  it 'can list by most recently created'
+  it 'can list by most recently created' do
+    visit '/bakeries'
+
+    expect(page).to have_content(@bakery_1.created_at.strftime('%D, %r'))
+    expect(page).to have_content(@bakery_2.created_at.strftime('%D, %r'))
+  end
 end
