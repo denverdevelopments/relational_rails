@@ -5,6 +5,7 @@ class BakeriesController < ApplicationController
 
   def show
     @bakery = Bakery.find(params[:id])
+    @pastry_amount = @bakery.pastries.count
   end
 
   def pastries
