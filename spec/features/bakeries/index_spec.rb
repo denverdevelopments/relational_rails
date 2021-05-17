@@ -18,4 +18,14 @@ RSpec.describe 'the bakery index show page' do
     expect(page).to have_content(@bakery_1.created_at.strftime('%D, %r'))
     expect(page).to have_content(@bakery_2.created_at.strftime('%D, %r'))
   end
+
+  it 'has a link to the pastires index' do
+    visit '/bakeries'
+
+    expect(page).to have_content("Delicious Pastries")
+
+    click_link 'Delicious Pastries'
+
+    expect(current_path).to eq('/pastries')
+  end
 end

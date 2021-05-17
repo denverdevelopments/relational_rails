@@ -45,4 +45,14 @@ RSpec.describe 'the bakery show page', type: :feature do
     expect(page).to have_content("#{@bakery_2.pastries.count}")
     expect(page).to_not have_content("#{@bakery_1.pastries.count}")
   end
+
+  it 'has a link to the pastires index' do
+    visit "/bakeries/#{@bakery_1.id}"
+
+    expect(page).to have_content("Delicious Pastries")
+
+    click_link 'Delicious Pastries'
+
+    expect(current_path).to eq('/pastries')
+  end
 end

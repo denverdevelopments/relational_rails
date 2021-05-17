@@ -26,5 +26,5 @@ RSpec.describe 'the pastry index page' do
 
     expect(page).to have_content(@pastry_1.calories)
     expect(page).to have_content(@pastry_2.calories)
-  end
+  end'
 end

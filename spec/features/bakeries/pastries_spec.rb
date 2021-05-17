@@ -23,4 +23,22 @@ RSpec.describe 'the bakery and its pastries' do
     expect(page).to have_content(@pastry_1.calories)
     expect(page).to_not have_content(@pastry_2.name)
   end
+
+  it 'has a link to the pastires index' do
+    visit "/bakeries/#{@bakery_1.id}/pastries"
+
+    expect(page).to have_content("Delicious Pastries")
+
+    click_link 'Delicious Pastries'
+
+    expect(current_path).to eq('/pastries')
+
+    visit "/bakeries/#{@bakery_2.id}/pastries"
+
+    expect(page).to have_content("Delicious Pastries")
+
+    click_link 'Delicious Pastries'
+
+    expect(current_path).to eq('/pastries')
+  end
 end
