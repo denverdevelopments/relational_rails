@@ -1,3 +1,5 @@
+<%= link_to "Radical Bakeries", bakeries_path %>
+<%= link_to "Delicious Pastries", pastries_path %>
 <h1 style="color:tomato;"><%= @bakery.name %></h1>
 
 <d1>
@@ -6,5 +8,7 @@
   <dt style="color:darkorange;">Amount of hours open per day:</dt>
     <dd style="color:gold;">-<%= @bakery.hours_open %></dd>
   <dt style="color:darkorange;">Current amount of pastry varieties:</dt>
-    <dd style="color:gold;">-<%= @bakery.pastries.count %></dd>
+    <dd style="color:gold;">-<%= @pastry_amount %></dd>
+  <dt style="color:darkorange">Click the link below for more sweet details!</dt>
+    <dd><%= link_to "#{@bakery.name} pastry deets", "/bakeries/#{@bakery.id}/pastries" %></dd>
 </d1>
