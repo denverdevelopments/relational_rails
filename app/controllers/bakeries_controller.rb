@@ -14,18 +14,18 @@ class BakeriesController < ApplicationController
   end
 
   def new
-    @bakery = Bakery.new
   end
 
   def create
-    @bakery = Bakery.new({
+    bakery = Bakery.new({
       name: params[:name],
       open_on_weekends: params[:open_on_weekends],
       hours_open: params[:hours_open]
       })
-    if @bakery.save
+    if bakery.save
       redirect_to '/bakeries'
-    else flash.now[:error] = 'Bakery not created: Missing required information'
+    else
+      flash.now[:error] = 'Bakery not created: Missing required information'
       render :new
     end
   end

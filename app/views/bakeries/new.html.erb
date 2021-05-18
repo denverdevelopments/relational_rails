@@ -4,14 +4,14 @@
 <h1 style="color:tomato">Create a new Radical Bakery</h1>
 
 <%= form_with url: "/bakeries", method: :post, local: true do |form| %>
-  <%= form.label :bakery_name %>
-  <%= form.text_field :bakery_name %>
+  <%= form.label :name %>
+  <%= form.text_field :name %>
   <br>
   <%= form.label :open_on_weekends %>
-  <%= form.text_field :open_on_weekends %>
+  <%= form.select :open_on_weekends, [[true], [false]] %>
   <br>
   <%= form.label :hours_open %>
-  <%= form.text_field :hours_open %>
+  <%= form.number_field :hours_open %>
   <br>
   <%= form.submit 'Create Bakery' %>
 <% end %>

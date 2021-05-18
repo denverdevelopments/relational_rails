@@ -28,10 +28,12 @@ RSpec.describe 'new bakery form' do
 
     expect(current_path).to eq('/bakeries/new')
 
-    # fill_in 'Bakery name', with: 'The Sweet Spot'
+    fill_in 'Name', with: 'The Sweet Spot'
+    select 'true', from: 'Open on weekends'
+    fill_in 'Hours open', with: 8
     click_on 'Create Bakery'
 
     expect(current_path).to eq('/bakeries')
-    # expect(page).to have_content('The Sweet Spot')
+    expect(page).to have_content('The Sweet Spot')
   end
 end

@@ -59,4 +59,14 @@ RSpec.describe 'the bakery and its pastries' do
 
     expect(current_path).to eq('/bakeries')
   end
+
+  it 'has a link to create a new pastry' do
+    visit "/bakeries/#{@bakery_2.id}/pastries"
+
+    expect(page).to have_link("New Pastry")
+
+    click_link 'New Pastry'
+
+    expect(current_path).to eq("/bakeries/#{@bakery_2.id}/pastries/new")
+  end
 end
