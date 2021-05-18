@@ -5,10 +5,14 @@ Rails.application.routes.draw do
 
   ## Leigh's Space
   get '/bakeries', to: 'bakeries#index'
+  get '/bakeries/new', to: 'bakeries#new'
+  post '/bakeries/', to: 'bakeries#create'
   get '/bakeries/:id', to: 'bakeries#show'
   get '/bakeries/:id/pastries', to: 'bakeries#pastries'
 
   get '/pastries', to: 'pastries#index'
+  get '/pastries/new', to: 'pastries#new'
+  post '/pastries/', to: 'pastries#create'
   get '/pastries/:id', to: 'pastries#show'
 
   ## Kevin's Sweet space
