@@ -32,11 +32,11 @@ RSpec.describe 'the create new candy form', type: :feature do
     it 'does not allow creating an incomplete candy' do
       visit "/shops/#{@shop_1.id}/candies/new"
 
-      fill_in "Brand", with: "Failed candy"
+      fill_in "Brand", with: "Failed candy brand"
         click_button "Create New Candy"
       expect(current_path).to eq("/shops/#{@shop_1.id}/candies")
       expect(page).to have_content("Candy not created: Required information missing")
-      expect(page).to_not have_content("Failed candy")
+      expect(page).to_not have_content("Failed candy brand")
     end
   end
 end

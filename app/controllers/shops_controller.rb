@@ -40,9 +40,8 @@ class ShopsController < ApplicationController
     if shop.save
       redirect_to "/shops/#{shop.id}"
     else
-      # redirect_to "/shops/#{shop.id}"
-      # @shop.id = shop.id
-      render :edit
+      # render :edit
+      redirect_to "/shops/#{shop.id}/edit"
       flash[:notice] = "Error: Required information missing"
     end
   end

@@ -8,7 +8,6 @@ RSpec.describe 'the create new candy shop form', type: :feature do
 
   it 'has form to create new shop' do
       visit "/shops/new"
-      # save_and_open_page
     expect(page).to have_content('New Candy Shop')
     expect(find('form')).to have_content('Name')
     expect(find('form')).to have_content('Sells drinks')
@@ -34,11 +33,11 @@ RSpec.describe 'the create new candy shop form', type: :feature do
     it 'does not allow creating an incomplete shop' do
       visit "/shops/new"
 
-      fill_in "Name", with: "Failed shop"
+      fill_in "Name", with: "Failed shop name"
         click_button "Create New Shop"
       expect(current_path).to eq("/shops/")
       expect(page).to have_content("Candy shop not created: Required information missing")
-      expect(page).to_not have_content("Failed shop")
+      expect(page).to_not have_content("Failed shop name")
     end
   end
 end

@@ -14,8 +14,6 @@ RSpec.describe 'the edit candy shop form', type: :feature do
     expect(page).to have_button("Submit Shop Update")
     page.find("input[value='#{@shop_1.name}']")
     page.find("input[value='#{@shop_1.varieties}']")
-    # page.find('input[value="Stickys Sweets"]')
-    # page.find('input[value=110]')
   end
 
   it 'edits the shop' do
@@ -28,7 +26,7 @@ RSpec.describe 'the edit candy shop form', type: :feature do
     select "true", from: "Sells drinks"
     fill_in "Varieties", with: 42
       click_button "Submit Shop Update"
-      expect(current_path).to eq("/shops/#{@shop_1.id}")
+    expect(current_path).to eq("/shops/#{@shop_1.id}")
     expect(page).to have_content("Test shop name")
   end
 
@@ -37,7 +35,7 @@ RSpec.describe 'the edit candy shop form', type: :feature do
         visit "/shops/#{@shop_1.id}/edit"
       fill_in "Name", with: nil
         click_button "Submit Shop Update"
-      expect(current_path).to eq("/shops/#{@shop_1.id}")
+      expect(current_path).to eq("/shops/#{@shop_1.id}/edit")
       expect(page).to have_content("Error: Required information missing")
     end
   end

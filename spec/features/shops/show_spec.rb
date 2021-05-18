@@ -6,28 +6,22 @@ RSpec.describe 'the shop show page', type: :feature do
     @shop_2 = Shop.create!(name: 'Gimme Some Suga', sells_drinks: false, varieties: 205)
   end
 
-  it 'has a link to bakeries index' do
+  it 'has a link to all four indexes' do
       visit "/shops/#{@shop_1.id}"
     expect(page).to have_link("Bakeries Index")
     click_link("Bakeries Index")
     expect(current_path).to eq("/bakeries")
-  end
 
-  it 'has a link to pastries index' do
       visit "/shops/#{@shop_1.id}"
     expect(page).to have_link("Pastries Index")
     click_link("Pastries Index")
     expect(current_path).to eq("/pastries")
-  end
 
-  it 'has a link to shops index' do
       visit "/shops/#{@shop_1.id}"
     expect(page).to have_link("Candy Shops Index")
     click_link("Candy Shops Index")
     expect(current_path).to eq("/shops")
-  end
 
-  it 'has a link to candies index' do
       visit "/shops/#{@shop_1.id}"
     expect(page).to have_link("Candies Index")
     click_link("Candies Index")
@@ -36,7 +30,6 @@ RSpec.describe 'the shop show page', type: :feature do
 
   it 'shows the shop name, attributes' do
       visit "/shops/#{@shop_1.id}"
-
     expect(page).to have_content(@shop_1.name)
     expect(page).to_not have_content(@shop_2.name)
     expect(page).to have_content("Shop ID#: #{@shop_1.id}")
@@ -60,5 +53,6 @@ RSpec.describe 'the shop show page', type: :feature do
     expect(page).to have_button("( Delete #{@shop_1.name} )")
       click_button("( Delete #{@shop_1.name} )")
     expect(current_path).to eq("/shops")
+    expect(page).to_not have_content(@shop_1.name)
   end
 end

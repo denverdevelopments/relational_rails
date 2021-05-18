@@ -36,6 +36,7 @@ class CandiesController < ApplicationController
     if candy.save
       redirect_to "/candies/#{candy.id}"
     else
+      redirect_to "/candies/#{candy.id}"
       flash[:notice] = "Error: Required information missing"
     end
   end
