@@ -8,18 +8,20 @@ class PastriesController < ApplicationController
   end
 
   def new
-    @pastry = Pastry.new
+    @bakery = Bakery.find(params[:id])
   end
 
   def create
-    @pastry = Pastry.new({
+    @bakery = Bakery.find(params[:id])
+    pastry = @bakery.pastries.new({
       name: params[:name],
       savory_pastry: params[:savory_pastry],
       calories: params[:calories]
       })
-    if @pastry.save
-      redirect_to '/pastries'
-    else flash.now[:error] = 'Pastry not created: Missing required information'
+    if pastry.save
+      redirect_to "/bakeries/#{@bakery.id}/pastries"
+    else
+      flash.now[:error] = 'Pastry not created: Missing required information'
       render :new
     end
   end

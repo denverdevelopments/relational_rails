@@ -3,8 +3,15 @@
 
 <h1 style="color:blue;">The most Delicious Pastries around!</h1>
 
-<%= form_with url: "/pastries", method: :post, local: true do |form| %>
-  <%= form.label :pastries_name %>
-  <%= form.text_field :pastries_name %>
+<%= form_with url: "/bakeries/#{@bakery.id}/pastries", method: :post, local: true do |form| %>
+  <%= form.label :name %>
+  <%= form.text_field :name %>
+  <br>
+  <%= form.label :savory_pastry %>
+  <%= form.select :savory_pastry, [[true], [false]] %>
+  <br>
+  <%= form.label :calories %>
+  <%= form.number_field :calories %>
+  <br>
   <%= form.submit 'Create Pastry' %>
 <% end %>
