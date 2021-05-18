@@ -1,0 +1,17 @@
+<%= link_to "Radical Bakeries", bakeries_path %>
+<%= link_to "Delicious Pastries", pastries_path %>
+
+<h1 style="color:tomato">Create a new Radical Bakery</h1>
+
+<%= form_with url: "/bakeries", method: :post, local: true do |form| %>
+  <%= form.label :bakery_name %>
+  <%= form.text_field :bakery_name %>
+  <br>
+  <%= form.label :open_on_weekends %>
+  <%= form.text_field :open_on_weekends %>
+  <br>
+  <%= form.label :hours_open %>
+  <%= form.text_field :hours_open %>
+  <br>
+  <%= form.submit 'Create Bakery' %>
+<% end %>

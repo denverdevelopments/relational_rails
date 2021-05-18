@@ -1,5 +1,6 @@
 <%= link_to "Radical Bakeries", bakeries_path %>
 <h1 style="color:blue;">The most Delicious Pastries around!</h1>
+<%= link_to "New Pastry", '/pastries/new' %>
 
 <% @pastries.each do |pastry| %>
   <h2 style="color:mediumseagreen;"><%= pastry.name %></h2>

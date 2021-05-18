@@ -1,0 +1,10 @@
+<%= link_to "Radical Bakeries", bakeries_path %>
+<%= link_to "Delicious Pastries", pastries_path %>
+
+<h1 style="color:blue;">The most Delicious Pastries around!</h1>
+
+<%= form_with url: "/pastries", method: :post, local: true do |form| %>
+  <%= form.label :pastries_name %>
+  <%= form.text_field :pastries_name %>
+  <%= form.submit 'Create Pastry' %>
+<% end %>
