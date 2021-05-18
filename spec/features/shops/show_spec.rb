@@ -47,4 +47,12 @@ RSpec.describe 'the shop show page', type: :feature do
       click_link "#{@shop_1.candies.count} candy(s) available"
     expect(current_path).to eq("/shops/#{@shop_1.id}/candies")
   end
+
+  it 'has a link to update shop' do
+      visit "/shops"
+    expect(page).to have_link("Update #{@shop_1.name}")
+    click_link("Update #{@shop_1.name}")
+    expect(current_path).to eq("/shops")
+  end
+
 end

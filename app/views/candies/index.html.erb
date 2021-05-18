@@ -3,17 +3,18 @@
 </section><br/>
 
 <section id="candy-index">
-  <h2>Candies Index</h2>
+  <h2>&emsp;&emsp;Candies Index</h2>
   <% @candies.each do |candy| %>
     <section id="candy-<%= candy.id %>">
-      <h4>&emsp;<%= link_to "#{candy.brand}", "/candies/#{candy.id}" %>&emsp;&emsp;<%= link_to "( Delete )", "/candies/#{candy.id}", method: :delete %></h4>
+      <h4><%= link_to "#{candy.brand}", "/candies/#{candy.id}" %></h4>
       <% if candy.all_natural == true  %>
         <p>&emsp;  All natural </p>
       <% else %>
         <p>&emsp;  Artificial ingredients </p>
       <% end %>
       <p>&emsp;  <%= candy.calories %> calories</p>
-      <br/><br/>
+      <p><%= button_to "Update #{candy.brand}", "/candies/#{candy.id}/edit", method: :get %></p>
+      <p><%= button_to "( Delete )", "/candies/#{candy.id}", method: :delete %></p><br/>
     </section>
   <% end %><br/>
 </section>

@@ -42,86 +42,66 @@ RSpec.describe 'the shops index', type: :feature do
       within("#shop-#{@shop_1.id}") do
         expect(page).to have_content(@shop_1.name)
         expect(page).to have_content(@shop_1.created_at.strftime("%A, %B %d, %Y"))
+        expect(page).to have_button("Update #{@shop_1.name}")
+        expect(page).to have_button("( Delete #{@shop_1.name} )")
       end
 
       within("#shop-#{@shop_2.id}") do
+        # visit "/shops"
         expect(page).to have_content(@shop_2.name)
         expect(page).to have_content(@shop_2.created_at.strftime("%A, %B %d, %Y"))
+        expect(page).to have_button("Update #{@shop_2.name}")
+        expect(page).to have_button("( Delete #{@shop_2.name} )")
       end
-
-      # expect(page).to have_link(@shop_1.percent)
-      # click_link(@tv_1.percent)
-      # expect(current_path).to eq("/merchants/#{@merchant_1.id}/discounts/#{@tv_1.id}")
     end
   end     #shop index - us#1
-
-  it 'has links to Edit' do
-    visit "/shops"
-
-    within("#shop-index") do
-
-      within("#shop-#{@shop_1.id}") do
-          visit "/shops"
-        expect(page).to have_content(@shop_1.name)
-        expect(page).to have_link("UPDATE #{@shop_1.name}")
-          click_link "UPDATE #{@shop_1.name}"
-          # save_and_open_page
-        expect(current_path).to eq("/shops/#{@shop_1.id}/edit")
-      end
-
-      within("#shop-#{@shop_2.id}") do
-          visit "/shops"
-          sleep 5
-          expect(page).to have_content(@shop_2.name)
-          expect(page).to have_link("UPDATE #{@shop_2.name}")
-            click_link "UPDATE #{@shop_2.name}"
-          save_and_open_page
-          expect(current_path).to eq("/shops/#{@shop_2.id}/edit")
-      end
-    end
-  end     #shop edit link - us#12
-
-  describe 'has links to Delete' do
-    visit "/shops"
-
-    within("#shop-index") do
-
-      within("#shop-#{@shop_1.id}") do
-        it 'has link to Delete' do
-            # visit "/shops"
-          expect(page).to have_content(@shop_1.name)
-          expect(page).to have_link("( Delete )")
-        # end
-        #
-        # it 'deletes' do
-          #   click_link "( Delete )"
-          # expect(current_path).to eq("/shops")
-          # expect(page).to_not have_content(@shop_1.name)
-        end
-      end
-
-      # within("#shop-#{@shop_2.id}") do
-      #     visit "/shops"
-      #     expect(page).to have_content(@shop_2.name)
-      #     expect(page).to have_link("( Delete )")
-      #       click_link "( Delete )"
-      #     expect(current_path).to eq("/shops")
-      #     expect(page).to_not have_content(@shop_2.name)
-      # end
-    end
-  end     #shop delete link - us#?
 
   it 'has a link to create New Shop' do
       visit "/shops"
     expect(page).to have_link("Create New Shop")
     click_link("Create New Shop")
     expect(current_path).to eq("/shops/new")
-  end
+  end     #shop create link - us#11
+
+  # context 'links to Update' do
+  # describe 'links to Update' do
+  it 'has links to Update' do
+    visit "/shops"
+  #
+    within("#shop-index") do
+
+      within("#shop-#{@shop_1.id}") do
+          visit "/shops"
+      expect(page).to have_content(@shop_1.name)
+      expect(page).to have_button("Update #{@shop_1.name}")
+        click_button "Update #{@shop_1.name}"
+      expect(current_path).to eq("/shops/#{@shop_1.id}/edit")
+      end
+    end
+  end     #shop edit link - us#12
+
+  it 'has links to delete' do
+      visit "/shops"
+
+    within("#shop-index") do
+
+      within("#shop-#{@shop_1.id}") do
+            visit "/shops"
+          expect(page).to have_content(@shop_1.name)
+          expect(page).to have_button("( Delete #{@shop_1.name} )")
+            click_button "( Delete #{@shop_1.name} )"
+          expect(current_path).to eq("/shops")
+          # sleep 2
+          # expect(page).to_not have_content(@shop_1.name)
+      end
+    end
+  end     #shop delete link - us#19
+
+end
 
 
-  # expect(page).to have_link(@shop_1.percent)
-  # click_link(@tv_1.percent)
-  # expect(current_path).to eq("/merchants/#{@merchant_1.id}/discounts/#{@tv_1.id}")
+
+
   # it 'has Enable button by Disabled items' do
   #   visit "/merchants/#{@jerde.id}/items"
   #
@@ -171,5 +151,3 @@ RSpec.describe 'the shops index', type: :feature do
   #   # end
   #
   # end
-
-end

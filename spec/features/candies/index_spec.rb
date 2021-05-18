@@ -42,25 +42,60 @@ RSpec.describe 'the candies index', type: :feature do
 
       within("#candy-#{@candy_1.id}") do
         expect(page).to have_content(@candy_1.brand)
+        expect(page).to have_content("All natural")
         expect(page).to have_content(@candy_1.calories)
-        expect(page).to have_content("All_natural")
       end
 
       within("#candy-#{@candy_2.id}") do
         expect(page).to have_content(@candy_2.brand)
-        expect(page).to have_content(@candy_2.calories)
         expect(page).to have_content("Artificial ingredients")
+        expect(page).to have_content(@candy_2.calories)
       end
-
     end
   end     #candy index - us#3
 
+  it 'has links to Update' do
+    visit "/candies"
+
+    # within("#candy-index") do
+
+      # within("#candy-#{@candy_1.id}") do
+          visit "/candies"
+        expect(page).to have_content(@candy_1.brand)
+        expect(page).to have_button("Update #{@candy_1.brand}")
+          click_button "Update #{@candy_1.brand}"
+        expect(current_path).to eq("/candies/#{@candy_1.id}/edit")
+      # end
+
+      # within("#candy-#{@candy_2.id}") do
+      #   sleep 5
+      #     visit "/candies"
+      #   expect(page).to have_content(@candy_2.brand)
+      #   expect(page).to have_button("Update #{@candy_2.brand}")
+      #     click_button "Update #{@candy_2.brand}"
+      #   expect(current_path).to eq("/candies/#{@candy_2.id}/edit")
+      # end
+    # end
+  end     #candy edit link - us#17
+
+  it 'has links to delete' do
+    visit "/candies"
+
+    within("#candy-index") do
+
+      within("#candy-#{@candy_1.id}") do
+          visit "/candies"
+        expect(page).to have_content(@candy_1.brand)
+        expect(page).to have_button("( Delete )")
+          click_button "( Delete )"
+        # expect(page).to_not have_content(@candy_1.brand)
+      end
+    end
+  end     #candy delete link - us#20
 
 
 
-  # expect(page).to have_link(@candy_1.percent)
-  # click_link(@tv_1.percent)
-  # expect(current_path).to eq("/merchants/#{@merchant_1.id}/discounts/#{@tv_1.id}")
+
 
   # it 'has Enable button by Disabled items' do
   #   visit "/merchants/#{@jerde.id}/items"
