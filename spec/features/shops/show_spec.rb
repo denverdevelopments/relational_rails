@@ -47,4 +47,18 @@ RSpec.describe 'the shop show page', type: :feature do
       click_link "#{@shop_1.candies.count} candy(s) available"
     expect(current_path).to eq("/shops/#{@shop_1.id}/candies")
   end
+
+  it 'has a button to update the shop' do
+      visit "/shops/#{@shop_1.id}"
+    expect(page).to have_button("Update #{@shop_1.name}")
+      click_button("Update #{@shop_1.name}")
+    expect(current_path).to eq("/shops/#{@shop_1.id}/edit")
+  end
+
+  it 'has a button to delete the shop' do
+      visit "/shops/#{@shop_1.id}"
+    expect(page).to have_button("( Delete #{@shop_1.name} )")
+      click_button("( Delete #{@shop_1.name} )")
+    expect(current_path).to eq("/shops")
+  end
 end

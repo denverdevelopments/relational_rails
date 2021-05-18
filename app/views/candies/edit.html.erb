@@ -2,7 +2,7 @@
   <h3><%= render partial: 'partials/header_links' %></h3>
 </section><br/>
 
-<h3>Edit Candy</h3><br/>
+<h3>Update Candy</h3><br/>
 <%= form_with url: "/candies/#{@candy.id}", method: :patch, local: true do |form| %>
   <%= form.label :brand %>
   <%= form.text_field :brand, value: @candy.brand %><br/><br/>
@@ -10,8 +10,8 @@
   <%= form.label :all_natural %>
   <%= form.select :all_natural, [[true], [false]], value: @candy.all_natural %><br/><br/>
 
-  <%= form.label "Candy varieties" %>
+  <%= form.label :calories %>
   <%= form.number_field :calories, value: @candy.calories %><br/><br/>
 
-  <%= form.submit 'Submit Candy Edit' %>
+  <%= form.submit 'Submit Candy Update' %>
 <% end %>

@@ -6,4 +6,8 @@
 
 <p>&emsp;Candy ID#: <%= @candy.id %></p>
 <p>&emsp;All natural?: <%= @candy.all_natural %></p>
-<p>&emsp;How many calories?: <%= @candy.calories %></p>
+<p>&emsp;<%= @candy.calories %> calories</p>
+
+<p><%= button_to "Update #{@candy.brand}", "/candies/#{@candy.id}/edit", method: :get %></p>
+<p><%= button_to "( Delete #{@candy.brand} )", "/candies/#{@candy.id}", method: :delete %></p>
+<br/>
