@@ -49,8 +49,6 @@ class ShopsController < ApplicationController
     redirect_to '/shops'
   end
 
-  ...
-
   private
 
   def shop_params

@@ -4,10 +4,10 @@
 
 <h3>Edit Candy</h3><br/>
 <%= form_with url: "/candies/#{@candy.id}", method: :patch, local: true do |form| %>
-  <%= form.label :name %>
+  <%= form.label :brand %>
   <%= form.text_field :brand, value: @candy.brand %><br/><br/>
 
-  <%= form.label :sells_drinks %>
+  <%= form.label :all_natural %>
   <%= form.select :all_natural, [[true], [false]], value: @candy.all_natural %><br/><br/>
 
   <%= form.label "Candy varieties" %>

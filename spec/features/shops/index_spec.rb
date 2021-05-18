@@ -65,41 +65,49 @@ RSpec.describe 'the shops index', type: :feature do
         expect(page).to have_content(@shop_1.name)
         expect(page).to have_link("UPDATE #{@shop_1.name}")
           click_link "UPDATE #{@shop_1.name}"
+          # save_and_open_page
         expect(current_path).to eq("/shops/#{@shop_1.id}/edit")
       end
 
       within("#shop-#{@shop_2.id}") do
           visit "/shops"
+          sleep 5
           expect(page).to have_content(@shop_2.name)
           expect(page).to have_link("UPDATE #{@shop_2.name}")
             click_link "UPDATE #{@shop_2.name}"
+          save_and_open_page
           expect(current_path).to eq("/shops/#{@shop_2.id}/edit")
       end
     end
   end     #shop edit link - us#12
 
-  it 'has links to Delete' do
+  describe 'has links to Delete' do
     visit "/shops"
 
     within("#shop-index") do
 
       within("#shop-#{@shop_1.id}") do
-          visit "/shops"
-        expect(page).to have_content(@shop_1.name)
-        expect(page).to have_link("( Delete )")
-          click_link "( Delete )"
-        expect(current_path).to eq("/shops")
-        expect(page).to_not have_content(@shop_1.name)
+        it 'has link to Delete' do
+            # visit "/shops"
+          expect(page).to have_content(@shop_1.name)
+          expect(page).to have_link("( Delete )")
+        # end
+        #
+        # it 'deletes' do
+          #   click_link "( Delete )"
+          # expect(current_path).to eq("/shops")
+          # expect(page).to_not have_content(@shop_1.name)
+        end
       end
 
-      within("#shop-#{@shop_2.id}") do
-          visit "/shops"
-          expect(page).to have_content(@shop_2.name)
-          expect(page).to have_link("( Delete )")
-            click_link "( Delete )"
-          expect(current_path).to eq("/shops")
-          expect(page).to_not have_content(@shop_2.name)
-      end
+      # within("#shop-#{@shop_2.id}") do
+      #     visit "/shops"
+      #     expect(page).to have_content(@shop_2.name)
+      #     expect(page).to have_link("( Delete )")
+      #       click_link "( Delete )"
+      #     expect(current_path).to eq("/shops")
+      #     expect(page).to_not have_content(@shop_2.name)
+      # end
     end
   end     #shop delete link - us#?
 

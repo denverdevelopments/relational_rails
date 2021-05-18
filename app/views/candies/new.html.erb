@@ -2,13 +2,16 @@
   <h3><%= render partial: 'partials/header_links' %></h3>
 </section><br/>
 
-<h3>New Discount</h3><br/>
-<%= form_with url:"/merchants/#{@merchant.id}/discounts", method: :post, local: true do |form| %>
-  <%= form.label :percent %>
-  <%= form.number_field :percent %><br/><br/>
+<h3>New Candy</h3><br/>
+<%= form_with url:"/shops/", method: :post, local: true do |form| %>
+  <%= form.label :brand %>
+  <%= form.text_field :brand %><br/><br/>
 
-  <%= form.label :quantity %>
-  <%= form.number_field :quantity %><br/><br/>
+  <%= form.label :all_natural %>
+  <%= form.select :all_natural, [[true], [false]] %><br/><br/>
 
-  <%= form.submit 'Create New Discount' %>
+  <%= form.label :calories %>
+  <%= form.number_field :calories %><br/><br/>
+
+  <%= form.submit 'Create New Candy' %>
 <% end %>

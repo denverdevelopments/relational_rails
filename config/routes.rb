@@ -16,6 +16,8 @@ Rails.application.routes.draw do
   get '/shops/new', to: 'shops#new'
   post '/shops/', to: 'shops#create'
   get '/shops/:id', to: 'shops#show'
+  get '/shops/:id/candies/new', to: 'candies#new'
+  post '/shops/:id/candies/', to: 'candies#create'
   get '/shops/:id/candies', to: 'shops#candies'
 
   get '/shops/:id/edit', to: 'shops#edit'

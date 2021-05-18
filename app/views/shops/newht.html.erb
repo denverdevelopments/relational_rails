@@ -1,0 +1,17 @@
+<section id="links">
+  <h3><%= render partial: 'partials/header_links' %></h3>
+</section><br/>
+
+<form action="/shops" method="post">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <p>New Candy Shop</p>
+  <label for="name">Name</label>
+  <input type='text' name='shop[name]'/><br/>
+
+  <label for="sells_drinks">Sells drinks?</label>
+  <input type='text' name='shop[sells_drinks]' value=false /><br/>
+
+  <label for="varieties">How many candy varieties?</label>
+  <input type='number' name='shop[varieties]'/><br/>
+  <input type='submit'/>
+</form>
