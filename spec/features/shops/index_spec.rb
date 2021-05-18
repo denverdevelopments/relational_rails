@@ -92,7 +92,7 @@ RSpec.describe 'the shops index', type: :feature do
             click_button "( Delete #{@shop_1.name} )"
           expect(current_path).to eq("/shops")
           # sleep 2
-          # expect(page).to_not have_content(@shop_1.name)
+          expect(page).to_not have_content(@shop_1.name)
       end
     end
   end     #shop delete link - us#19
