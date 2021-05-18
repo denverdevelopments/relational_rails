@@ -3,10 +3,12 @@
 </section><br/>
 
 <h2 align="left"><%= @shop.name %></h2>
-<p>&emsp;&emsp;&emsp;&emsp;*<%= link_to "Update #{@shop.name}", "/shops/#{@shop.id}/edit" %>*</p>
 
 <p>&emsp;Shop ID#: <%= @shop.id %></p>
 <p>&emsp;Sell drinks?: <%= @shop.sells_drinks %></p>
-<p>&emsp;How many candy varieties?: <%= @shop.varieties %></p><br/>
+<p>&emsp;How many candy varieties?: <%= @shop.varieties %></p>
+
+<p><%= button_to "Update #{@shop.name}", "/shops/#{@shop.id}/edit", method: :get %></p>
+<p><%= button_to "( Delete #{@shop.name} )", "/shops/#{@shop.id}", method: :delete %></p><br/>
 
 <p>&emsp;=> <%= link_to "#{@count_candy}  candy(s) available", "/shops/#{@shop.id}/candies" %></p>

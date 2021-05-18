@@ -45,14 +45,17 @@ RSpec.describe 'the shop candies index', type: :feature do
 
       within("#candies-#{@candy_1.id}") do
         expect(page).to have_content(@candy_1.brand)
+        expect(page).to have_link("Edit #{@candy_1.brand}")
       end
 
       within("#candies-#{@candy_2.id}") do
         expect(page).to have_content(@candy_2.brand)
+        expect(page).to have_link("Edit #{@candy_2.brand}")
+
       end
 
-      expect(page).to_not have_content(@candy_3.brand)
+      # expect(page).to_not have_content(@candy_3.brand)
     end
   end     #Parent Children Index - us#5
-  
+
 end

@@ -9,6 +9,6 @@
 <section id="candies-index">
   <% @candies.each do |candy| %>
     <section id="candies-<%= candy.id %>">
-      <h4>&emsp;~  <%= candy.brand %></h4>
+      <h4>&emsp;~  <%= candy.brand %>&emsp;&emsp;&emsp;<%= link_to "Edit #{candy.brand}", "/candies/#{candy.id}/edit" %></h4>
   <% end %><br/>
 </section>

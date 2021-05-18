@@ -48,11 +48,17 @@ RSpec.describe 'the shop show page', type: :feature do
     expect(current_path).to eq("/shops/#{@shop_1.id}/candies")
   end
 
-  it 'has a link to update shop' do
-      visit "/shops"
-    expect(page).to have_link("Update #{@shop_1.name}")
-    click_link("Update #{@shop_1.name}")
-    expect(current_path).to eq("/shops")
+  it 'has a button to update the shop' do
+      visit "/shops/#{@shop_1.id}"
+    expect(page).to have_button("Update #{@shop_1.name}")
+      click_button("Update #{@shop_1.name}")
+    expect(current_path).to eq("/shops/#{@shop_1.id}/edit")
   end
 
+  it 'has a button to delete the shop' do
+      visit "/shops/#{@shop_1.id}"
+    expect(page).to have_button("( Delete #{@shop_1.name} )")
+      click_button("( Delete #{@shop_1.name} )")
+    expect(current_path).to eq("/shops")
+  end
 end
