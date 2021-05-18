@@ -25,4 +25,30 @@ class CandiesController < ApplicationController
       render :new
     end
   end
+
+  def edit
+    @candy = Candy.find(params[:id])
+  end
+
+  def update
+    candy = Candy.find(params[:id])
+    candy.update(candy_params)
+    if candy.save
+      redirect_to "/candies/#{candy.id}"
+    else
+      flash[:notice] = "Error: Required information missing"
+    end
+  end
+
+  def destroy
+    Candy.destroy(params[:id])
+    redirect_to '/candies'
+  end
+
+  private
+
+  def candy_params
+    params.permit(:brand, :all_natural, :calories)
+  end
+
 end

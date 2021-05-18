@@ -4,6 +4,8 @@
 
 <h2 align="left"><%= @shop.name %></h2>
 
+<p>&emsp;&emsp;&emsp;&emsp;*<%= link_to "Add New Candy", "/shops/#{@shop.id}/candies/new" %>*</p>
+
 <section id="candies-index">
   <% @candies.each do |candy| %>
     <section id="candies-<%= candy.id %>">

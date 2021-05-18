@@ -3,7 +3,7 @@
 </section><br/>
 
 <h3>New Candy</h3><br/>
-<%= form_with url:"/shops/", method: :post, local: true do |form| %>
+<%= form_with url:"/shops/#{@shop.id}/candies", method: :post, local: true do |form| %>
   <%= form.label :brand %>
   <%= form.text_field :brand %><br/><br/>
 

@@ -4,6 +4,8 @@
 
 <h2 align="left"><%= @candy.brand %></h2>
 
+<p>&emsp;&emsp;&emsp;*<%= link_to "Update Candy", "/candies/#{@candy.id}/edit" %>*</p>
+
 <p>&emsp;Candy ID#: <%= @candy.id %></p>
 <p>&emsp;All natural?: <%= @candy.all_natural %></p>
 <p>&emsp;How many calories?: <%= @candy.calories %></p>

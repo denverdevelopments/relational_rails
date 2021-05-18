@@ -6,7 +6,7 @@ RSpec.describe 'the create new candy form', type: :feature do
   end
 
   it 'has form to create new candy' do
-      visit "/shops/#{@shop_1}/candies/new"
+      visit "/shops/#{@shop_1.id}/candies/new"
     expect(page).to have_content('New Candy')
     expect(find('form')).to have_content('Brand')
     expect(find('form')).to have_content('All natural')
@@ -15,26 +15,26 @@ RSpec.describe 'the create new candy form', type: :feature do
       click_on "Create New Candy"
   end
 
-  it "creates a new shop" do
-      visit "/shops/#{@shop_1}/candies"
-    expect(page).to have_link("Create New Candy")
-      click_link "Create New Candy"
-    expect(current_path).to eq("/shops/#{@shop_1}/candies/new")
+  it "creates a new shop candy" do
+      visit "/shops/#{@shop_1.id}/candies"
+    expect(page).to have_link("Add New Candy")
+      click_link "Add New Candy"
+    expect(current_path).to eq("/shops/#{@shop_1.id}/candies/new")
     fill_in "Brand", with: "Test candy"
     select "true", from: "All natural"
     fill_in "Calories", with: 42
-      click_button "Create New Shop"
-    expect(current_path).to eq("/shops/#{@shop_1}/candies")
+      click_button "Create New Candy"
+    expect(current_path).to eq("/shops/#{@shop_1.id}/candies")
     expect(page).to have_content("Test candy")
   end
 
   describe 'sad path' do
-    it 'does not allow creating an incomplete shop' do
-      visit "/shops/#{@shop_1}/candies/new"
+    it 'does not allow creating an incomplete candy' do
+      visit "/shops/#{@shop_1.id}/candies/new"
 
       fill_in "Brand", with: "Failed candy"
         click_button "Create New Candy"
-      expect(current_path).to eq("/shops/#{@shop_1}/candies")
+      expect(current_path).to eq("/shops/#{@shop_1.id}/candies")
       expect(page).to have_content("Candy not created: Required information missing")
       expect(page).to_not have_content("Failed candy")
     end
