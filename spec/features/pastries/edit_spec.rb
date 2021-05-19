@@ -35,4 +35,19 @@ RSpec.describe 'the pastry edit page', type: :feature do
       expect(current_path).to eq('/pastries')
     end
   end
+
+  context 'update' do
+    it 'has a form to update the pastry' do
+      visit "/pastries/#{@pastry_1.id}/edit"
+
+      expect(page).to have_content("Fill out the fields below to update your Delicious Pastry")
+
+      fill_in 'Name', with: 'The Betty Bread Roll'
+      select 'true', from: 'Savory pastry'
+      fill_in 'Calories', with: 350
+      click_on 'Update Pastry'
+
+      expect(current_path).to eq("/pastries/#{@pastry_1.id}")
+    end
+  end
 end

@@ -19,7 +19,7 @@ Rails.application.routes.draw do
   get '/pastries', to: 'pastries#index'
   get '/pastries/:id', to: 'pastries#show'
   get '/pastries/:id/edit', to: 'pastries#edit'
-  patch '/pastries/:id', to: 'pastries#udpate'
+  patch '/pastries/:id', to: 'pastries#update'
 
   ## Kevin's Sweet space
   get '/shops', to: 'shops#index'
