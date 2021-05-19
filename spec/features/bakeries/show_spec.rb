@@ -83,4 +83,14 @@ RSpec.describe 'the bakery show page', type: :feature do
 
     expect(current_path).to eq("/bakeries/#{@bakery_3.id}/pastries")
   end
+
+    it 'can update bakery attributes' do
+      visit "/bakeries/#{@bakery_3.id}"
+
+      expect(page).to have_content('Update Bakery')
+
+      click_link 'Update Bakery'
+
+      expect(current_path).to eq("/bakeries/#{@bakery_3.id}/edit")
+    end
 end

@@ -28,5 +28,10 @@ class BakeriesController < ApplicationController
       flash.now[:error] = 'Bakery not created: Missing required information'
       render :new
     end
+
+    def edit
+      @bakery = Bakery.find(params[:id])  
+    end
+
   end
 end
