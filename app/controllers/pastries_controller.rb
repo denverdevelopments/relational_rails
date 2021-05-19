@@ -25,4 +25,24 @@ class PastriesController < ApplicationController
       render :new
     end
   end
+
+  def edit
+    @pastry = Pastry.find(params[:id])
+  end
+
+  def update
+    pastry = Pastry.find(params[:id])
+    pastry.update(pastry_params)
+    if pastry.save
+      redirect_to "/pastries/#{@pastry.id}"
+    else
+      flash.now[:error] = 'Pastry not updated: Missing required information'
+      render :new
+    end
+  end
+  
+  private
+    def pastry_params
+      params.permit(:name, :savory_pastry, :calories)
+    end
 end
