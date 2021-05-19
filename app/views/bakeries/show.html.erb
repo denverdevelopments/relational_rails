@@ -11,4 +11,6 @@
     <dd style="color:gold;">-<%= @pastry_amount %></dd>
   <dt style="color:darkorange">Click the link below for more sweet details!</dt>
     <dd><%= link_to "#{@bakery.name} pastry deets", "/bakeries/#{@bakery.id}/pastries" %></dd>
+  <dt style="color:darkorange">Click the link below to update this bakery.</dt>
+    <dd><%= link_to "Update Bakery", "/bakeries/#{@bakery.id}/edit" %></dd>
 </d1>

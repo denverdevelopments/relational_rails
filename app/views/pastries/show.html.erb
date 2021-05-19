@@ -8,4 +8,6 @@
     <dd style="color:teal;">-<%= @pastry.savory_pastry %></dd>
   <dt style="color:dodgerblue;">Calorie Amount:</dt>
     <dd style="color:teal;">-<%= @pastry.calories %></dd>
+  <dt style="color:dodgerblue;">Click the link below to update this pastry.</dt>
+    <dd><%= link_to "Update Pastry", "/pastries/#{@pastry.id}/edit" %></dd>
 </d1>

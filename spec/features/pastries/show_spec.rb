@@ -7,44 +7,60 @@ RSpec.describe 'the pastry show page', type: :feature do
     @pastry_2 = @bakery_1.pastries.create!(name: "Resting Dogs hotdog buns", savory_pastry:true, calories: 200)
   end
 
-  it 'shows the pastry name' do
-    visit "/pastries/#{@pastry_1.id}"
+  context 'index links' do
+    it 'has a link to the pastires index' do
+      visit "/pastries/#{@pastry_1.id}"
 
-    expect(page).to have_content(@pastry_1.name)
+      expect(page).to have_content("Delicious Pastries")
+
+      click_link 'Delicious Pastries'
+
+      expect(current_path).to eq('/pastries')
+    end
+
+    it 'has a link to the bakeries index' do
+      visit "/pastries/#{@pastry_1.id}"
+
+      expect(page).to have_content("Radical Bakeries")
+
+      click_link 'Radical Bakeries'
+
+      expect(current_path).to eq('/bakeries')
+    end
   end
 
-  it 'show the attributes of the pastry' do
-    visit "/pastries/#{@pastry_1.id}"
+  context 'pastry details' do
+    it 'shows the pastry name' do
+      visit "/pastries/#{@pastry_1.id}"
 
-    expect(page).to have_content("Is this a Savory Pastry?")
-    expect(page).to have_content(@pastry_1.savory_pastry)
-    expect(page).to have_content("Calorie Amount:")
-    expect(page).to have_content(@pastry_1.calories)
+      expect(page).to have_content(@pastry_1.name)
+    end
+
+    it 'show the attributes of the pastry' do
+      visit "/pastries/#{@pastry_1.id}"
+
+      expect(page).to have_content("Is this a Savory Pastry?")
+      expect(page).to have_content(@pastry_1.savory_pastry)
+      expect(page).to have_content("Calorie Amount:")
+      expect(page).to have_content(@pastry_1.calories)
+    end
+
+    it 'does not show any other pastry' do
+      visit "/pastries/#{@pastry_1.id}"
+
+      expect(page).to_not have_content(@pastry_2.name)
+    end
   end
 
-  it 'does not show any other pastry' do
-    visit "/pastries/#{@pastry_1.id}"
+  context 'update pastry' do
+    it 'has a link to update a pastry' do
+      visit "/pastries/#{@pastry_1.id}"
 
-    expect(page).to_not have_content(@pastry_2.name)
-  end
+      expect(page).to have_content('Update Pastry')
 
-  it 'has a link to the pastires index' do
-    visit "/pastries/#{@pastry_1.id}"
+      click_link 'Update Pastry'
 
-    expect(page).to have_content("Delicious Pastries")
-
-    click_link 'Delicious Pastries'
-
-    expect(current_path).to eq('/pastries')
-  end
-
-  it 'has a link to the bakeries index' do
-    visit "/pastries/#{@pastry_1.id}"
-
-    expect(page).to have_content("Radical Bakeries")
-
-    click_link 'Radical Bakeries'
-
-    expect(current_path).to eq('/bakeries')
+      expect(current_path).to eq("/pastries/#{@pastry_1.id}/edit")
+    end
   end
 end

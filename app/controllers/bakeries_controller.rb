@@ -29,4 +29,24 @@ class BakeriesController < ApplicationController
       render :new
     end
   end
+
+    def edit
+      @bakery = Bakery.find(params[:id])
+    end
+
+    def update
+      bakery = Bakery.find(params[:id])
+      bakery.update(bakery_params)
+      if bakery.save
+        redirect_to "/bakeries/#{bakery.id}"
+      else
+        flash.now[:error] = 'Bakery not updated: Missing required information'
+        render :new
+      end
+    end
+
+  private
+    def bakery_params
+      params.permit(:name, :open_on_weekends, :hours_open)
+    end
 end
