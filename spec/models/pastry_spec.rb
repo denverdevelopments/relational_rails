@@ -13,6 +13,9 @@ RSpec.describe Pastry, type: :model do
   end
 
   context 'column conditions' do
+    Pastry.destroy_all
+    Bakery.destroy_all
+
     it 'only shows true boolean value pastries' do
       @bakery_1 = Bakery.create!(name: "Black Dalia Flour Bakery", open_on_weekends: false, hours_open: 8)
       @pastry_1 = @bakery_1.pastries.create!(name: "I'd kill for those buns", savory_pastry: true, calories: 355)
