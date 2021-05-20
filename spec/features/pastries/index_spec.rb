@@ -41,4 +41,18 @@ RSpec.describe 'the pastry index page' do
       expect(page).to have_content(@pastry_2.calories)
     end
   end
+
+  context 'update each pastry' do
+    it 'has a link to update each pastry' do
+      visit '/pastries'
+
+      within("#pastry-#{@pastry_2.id}") do
+        expect(page).to have_link("Update #{@pastry_2.name}")
+
+        first(:link, "Update #{@pastry_2.name}").click
+
+        expect(current_path).to eq("/pastries/#{@pastry_2.id}/edit")
+      end
+    end
+  end
 end

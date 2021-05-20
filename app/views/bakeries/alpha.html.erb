@@ -10,6 +10,7 @@
     <h3 style="color:darkblue;">The deets:</h3>
     <p style="color:lightblue;">- Savory Pastry: <%= pastry.savory_pastry? %></p>
     <p style="color:lightblue;">- Calorie Amount (don't look): <%= pastry.calories %></p>
+    <%= link_to "Update #{pastry.name}", "/pastries/#{pastry.id}/edit" %>
   </section>
   <% end %>
 </section>

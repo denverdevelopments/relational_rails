@@ -86,4 +86,18 @@ RSpec.describe 'the bakery and its pastries' do
       end
     end
   end
+
+  context 'update each pastry' do
+    it 'has a link to update each pastry' do
+      visit "/bakeries/#{@bakery_1.id}/pastries/alpha"
+
+      within("#pastry-#{@pastry_2.id}") do
+        expect(page).to have_link("Update #{@pastry_2.name}")
+
+        first(:link, "Update #{@pastry_2.name}").click
+
+        expect(current_path).to eq("/pastries/#{@pastry_2.id}/edit")
+      end
+    end
+  end
 end

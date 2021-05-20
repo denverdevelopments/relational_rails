@@ -56,7 +56,7 @@ RSpec.describe 'the bakery index page' do
       end
     end
 
-      it 'still has a link' do
+      it 'still has a link next to each bakery' do
         visit '/bakeries'
 
         within("#bakery-#{@bakery_2.id}") do

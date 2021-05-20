@@ -4,10 +4,13 @@
 <%= link_to "New Pastry", "/bakeries/#{@bakery.id}/pastries/new" %>
 
 <% @pastries.each do |pastry| %>
-  <h2 style="color:mediumseagreen;"><%= pastry.name %></h2>
-  <h3 style="color:darkblue;">The deets:</h3>
-  <p style="color:lightblue;">- Savory Pastry: <%= pastry.savory_pastry? %></p>
-  <p style="color:lightblue;">- Calorie Amount (don't look): <%= pastry.calories %></p>
-<% end %>
+  <section id="pastry-<%= pastry.id %>">
+    <h2 style="color:mediumseagreen;"><%= pastry.name %></h2>
+    <h3 style="color:darkblue;">The deets:</h3>
+    <p style="color:lightblue;">- Savory Pastry: <%= pastry.savory_pastry? %></p>
+    <p style="color:lightblue;">- Calorie Amount (don't look): <%= pastry.calories %></p>
+    <%= link_to "Update #{pastry.name}", "/pastries/#{pastry.id}/edit" %>
+    <% end %>
+  </section>
 
 <%= link_to "Alphabetical Order", "/bakeries/#{@bakery.id}/pastries/alpha"  %>
