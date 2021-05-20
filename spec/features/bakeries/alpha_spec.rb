@@ -81,7 +81,7 @@ RSpec.describe 'the bakery and its pastries' do
         end
 
         within("#pastry-#{@pastry_3.id}") do
-          expect(page).to have_content("Lay me to rest maple bar")
+          expect(page).to have_content(@pastry_3.name)
         end
       end
     end
