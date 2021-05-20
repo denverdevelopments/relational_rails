@@ -1,6 +1,6 @@
 class CandiesController < ApplicationController
   def index
-    @candies = Candy.all
+    @candies = Candy.all.only_true
   end
 
   def show

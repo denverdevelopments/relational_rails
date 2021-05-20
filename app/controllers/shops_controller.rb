@@ -10,7 +10,7 @@ class ShopsController < ApplicationController
 
   def candies
     @shop = Shop.find(params[:id])
-    @candies = @shop.candies
+    @candies = @shop.candies.alphabetical
   end
 
   def new

@@ -5,6 +5,7 @@ RSpec.describe 'the candies index', type: :feature do
     @shop_1 = Shop.create!(name: 'Stickys Sweets', sells_drinks: true, varieties: 110)
     @candy_1 = @shop_1.candies.create!(brand: 'Honey Stick', all_natural: true, calories: 65)
     @candy_2 = @shop_1.candies.create!(brand: 'Jelly Belly', all_natural: false, calories: 120)
+    @candy_3 = @shop_1.candies.create!(brand: 'Astro-pops', all_natural: true, calories: 48)
   end
 
   it 'has a link to bakeries index' do
@@ -35,7 +36,7 @@ RSpec.describe 'the candies index', type: :feature do
     expect(current_path).to eq("/candies")
   end
 
-  it 'lists of all candies & attributes' do
+  it 'lists of all candies & attributes, for true all_natural' do
     visit "/candies"
 
     within("#candy-index") do
@@ -46,15 +47,19 @@ RSpec.describe 'the candies index', type: :feature do
         expect(page).to have_content(@candy_1.calories)
       end
 
-      within("#candy-#{@candy_2.id}") do
-        expect(page).to have_content(@candy_2.brand)
-        expect(page).to have_content("Artificial ingredients")
-        expect(page).to have_content(@candy_2.calories)
+      within("#candy-#{@candy_3.id}") do
+        expect(page).to have_content(@candy_3.brand)
+        expect(page).to have_content("All natural")
+        expect(page).to have_content(@candy_3.calories)
       end
     end
+
+    expect(page).to_not have_content(@candy_2.brand)
+    expect(page).to_not have_content("Artificial ingredients")
+    expect(page).to_not have_content(@candy_2.calories)
   end     #candy index - us#3
 
-  it 'has links to Update' do
+  it 'has links to Update, for true all_natural' do
       visit "/candies"
     expect(page).to have_content(@candy_1.brand)
     expect(page).to have_button("Update #{@candy_1.brand}")
@@ -62,13 +67,13 @@ RSpec.describe 'the candies index', type: :feature do
     expect(current_path).to eq("/candies/#{@candy_1.id}/edit")
 
       visit "/candies"
-    expect(page).to have_content(@candy_2.brand)
-    expect(page).to have_button("Update #{@candy_2.brand}")
-      click_button "Update #{@candy_2.brand}"
-    expect(current_path).to eq("/candies/#{@candy_2.id}/edit")
+    expect(page).to have_content(@candy_3.brand)
+    expect(page).to have_button("Update #{@candy_3.brand}")
+      click_button "Update #{@candy_3.brand}"
+    expect(current_path).to eq("/candies/#{@candy_3.id}/edit")
   end     #candy edit link - us#17
 
-  it 'has links to delete' do
+  it 'has links to Delete, for true all_natural' do
     visit "/candies"
 
     within("#candy-#{@candy_1.id}") do
@@ -76,8 +81,18 @@ RSpec.describe 'the candies index', type: :feature do
       expect(page).to have_button("( Delete )")
         click_button "( Delete )"
     end
-    
+
+    expect(current_path).to eq("/candies")
     expect(page).to_not have_content(@candy_1.brand)
+
+    within("#candy-#{@candy_3.id}") do
+      expect(page).to have_content(@candy_3.brand)
+      expect(page).to have_button("( Delete )")
+        click_button "( Delete )"
+    end
+
+    expect(current_path).to eq("/candies")
+    expect(page).to_not have_content(@candy_3.brand)
   end     #candy delete link - us#20
 
 end

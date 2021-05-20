@@ -39,14 +39,14 @@ RSpec.describe 'the candy show page', type: :feature do
     expect(page).to_not have_content(@candy_2.brand)
   end
 
-  it 'has a button to update the candy' do
+  it 'has a button to Update the candy' do
       visit "/candies/#{@candy_1.id}"
     expect(page).to have_button("Update #{@candy_1.brand}")
       click_button("Update #{@candy_1.brand}")
     expect(current_path).to eq("/candies/#{@candy_1.id}/edit")
   end
 
-  it 'has a button to delete the candy' do
+  it 'has a button to Delete the candy' do
       visit "/candies/#{@candy_1.id}"
     expect(page).to have_button("( Delete #{@candy_1.brand} )")
       click_button("( Delete #{@candy_1.brand} )")

@@ -68,7 +68,7 @@ RSpec.describe 'the shops index', type: :feature do
     expect(page).to have_button("Update #{@shop_1.name}")
       click_button "Update #{@shop_1.name}"
     expect(current_path).to eq("/shops/#{@shop_1.id}/edit")
-    
+
       visit "/shops"
     expect(page).to have_content(@shop_2.name)
     expect(page).to have_button("Update #{@shop_2.name}")
@@ -78,9 +78,13 @@ RSpec.describe 'the shops index', type: :feature do
 
   it 'has links to delete' do
       visit "/shops"
-    expect(page).to have_content(@shop_1.name)
-    expect(page).to have_button("( Delete #{@shop_1.name} )")
-      click_button "( Delete #{@shop_1.name} )"
+
+    within("#shop-#{@shop_1.id}") do
+      expect(page).to have_content(@shop_1.name)
+      expect(page).to have_button("( Delete )")
+        click_button "( Delete )"
+    end
+
     expect(current_path).to eq("/shops")
     expect(page).to_not have_content(@shop_1.name)
   end     #shop delete link - us#19
