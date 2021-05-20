@@ -72,7 +72,7 @@ RSpec.describe 'the bakery and its pastries' do
       visit "/bakeries/#{@bakery_1.id}/pastries/alpha"
 
       within("#pastry-info") do
-        within("#pastry-#{@pastry_2}") do
+        within("#pastry-#{@pastry_2.id}") do
           expect(page).to have_content(@pastry_2.name)
         end
         # expect(page.all('.name')[1]).to have_content("I'd kill for those buns")
