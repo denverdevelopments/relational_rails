@@ -72,11 +72,31 @@ RSpec.describe 'the bakery and its pastries' do
       visit "/bakeries/#{@bakery_1.id}/pastries/alpha"
 
       within("#pastry-info") do
-        within("#pastry-#{@pastry_2}") do
+        within("#pastry-#{@pastry_2.id}") do
           expect(page).to have_content(@pastry_2.name)
         end
-        # expect(page.all('.name')[1]).to have_content("I'd kill for those buns")
-        # expect(page.all('.name')[2]).to have_content("Lay me to rest maple bar")
+
+        within("#pastry-#{@pastry_1.id}") do
+          expect(page).to have_content(@pastry_1.name)
+        end
+
+        within("#pastry-#{@pastry_3.id}") do
+          expect(page).to have_content(@pastry_3.name)
+        end
+      end
+    end
+  end
+
+  context 'update each pastry' do
+    it 'has a link to update each pastry' do
+      visit "/bakeries/#{@bakery_1.id}/pastries/alpha"
+
+      within("#pastry-#{@pastry_2.id}") do
+        expect(page).to have_link("Update #{@pastry_2.name}")
+
+        first(:link, "Update #{@pastry_2.name}").click
+
+        expect(current_path).to eq("/pastries/#{@pastry_2.id}/edit")
       end
     end
   end
