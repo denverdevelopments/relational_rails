@@ -1,6 +1,7 @@
 class PastriesController < ApplicationController
   def index
     @pastries = Pastry.all
+    @true_pastries = @pastries.truly_savory
   end
 
   def show

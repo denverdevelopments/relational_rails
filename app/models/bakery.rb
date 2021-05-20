@@ -7,4 +7,8 @@ class Bakery < ApplicationRecord
   def self.order_by_creation_time
     order(created_at: :desc)
   end
+
+  def alphabetical_pastries
+    pastries.order(name: :asc)
+  end
 end

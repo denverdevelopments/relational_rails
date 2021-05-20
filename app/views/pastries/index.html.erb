@@ -1,7 +1,7 @@
 <%= link_to "Radical Bakeries", bakeries_path %>
 <h1 style="color:blue;">The most Delicious Pastries around!</h1>
 
-<% @pastries.each do |pastry| %>
+<% @true_pastries.each do |pastry| %>
   <h2 style="color:mediumseagreen;"><%= pastry.name %></h2>
   <h3 style="color:darkblue;">The deets:</h3>
   <p style="color:lightblue;">Savory Pastry: <%= pastry.savory_pastry? %></p>

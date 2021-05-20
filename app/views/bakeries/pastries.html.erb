@@ -9,3 +9,5 @@
   <p style="color:lightblue;">- Savory Pastry: <%= pastry.savory_pastry? %></p>
   <p style="color:lightblue;">- Calorie Amount (don't look): <%= pastry.calories %></p>
 <% end %>
+
+<%= link_to "Alphabetical Order", "/bakeries/#{@bakery.id}/pastries/alpha"  %>

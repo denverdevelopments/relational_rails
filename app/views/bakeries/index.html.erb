@@ -5,4 +5,5 @@
 <% @bakeries.each do |bakery| %>
   <h3 style="color:darkorange;"><%= bakery.name %></h3>
   <h5 style="color:red">Created At: <%= bakery.created_at.strftime('%D, %r') %></h5>
+  <%= link_to "Update #{bakery.name}", "/bakeries/#{bakery.id}/edit" %>
 <% end %>
