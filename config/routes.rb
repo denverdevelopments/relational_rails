@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   get '/bakeries/:id/pastries/new', to: 'pastries#new'
   post '/bakeries/:id/pastries/', to: 'pastries#create'
   get '/bakeries/:id/pastries', to: 'bakeries#pastries'
+  get '/bakeries/:id/pastries/alpha', to: 'bakeries#alpha'
 
   get '/bakeries/:id/edit', to: 'bakeries#edit'
   patch '/bakeries/:id', to: 'bakeries#update'

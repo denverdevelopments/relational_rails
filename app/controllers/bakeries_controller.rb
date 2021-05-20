@@ -13,6 +13,11 @@ class BakeriesController < ApplicationController
     @pastries = @bakery.pastries
   end
 
+  def alpha
+    @bakery = Bakery.find(params[:id])
+    @pastries = @bakery.alphabetical_pastries
+  end
+
   def new
   end
 
