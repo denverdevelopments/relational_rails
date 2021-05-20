@@ -4,4 +4,12 @@ class Candy < ApplicationRecord
   validates :calories, presence: true, numericality: true
 
   belongs_to :shop
+
+  def self.only_true
+    where(all_natural: true)
+  end
+
+  def self.alphabetical
+    order(brand: :asc)
+  end
 end

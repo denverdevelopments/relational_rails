@@ -16,15 +16,13 @@ RSpec.describe 'the edit candy form', type: :feature do
     expect(page).to have_button("Submit Candy Update")
     page.find("input[value='#{@candy_1.brand}']")
     page.find("input[value='#{@candy_1.calories}']")
-    # page.find('input[value="Stickys Sweets"]')
-    # page.find('input[value=110]')
   end
 
   it 'edits the candy' do
       visit "/candies/#{@candy_1.id}"
     expect(page).to have_content(@candy_1.brand)
-    expect(page).to have_link("Update Candy")
-      click_link "Update Candy"
+    expect(page).to have_button("Update #{@candy_1.brand}")
+      click_button "Update #{@candy_1.brand}"
     expect(current_path).to eq("/candies/#{@candy_1.id}/edit")
     fill_in "Brand", with: "Test candy brand"
     select "true", from: "All natural"
@@ -41,7 +39,7 @@ RSpec.describe 'the edit candy form', type: :feature do
       fill_in "Brand", with: nil
         click_button "Submit Candy Update"
       expect(current_path).to eq("/candies/#{@candy_1.id}")
-      # expect(page).to have_content("Error: Required information missing")
+      expect(page).to have_content("Error: Required information missing")
     end
   end
 end

@@ -5,13 +5,13 @@
 <section id="shop-index">
   <h2>Candy Shops Index</h2>
   <p>&emsp;&emsp;&emsp;&emsp;*<%= link_to "Create New Shop", "/shops/new" %>*</p>
-  
+
   <% @shops.each do |shop| %>
     <section id="shop-<%= shop.id %>">
       <h4>&emsp;<%= link_to "#{shop.name}", "/shops/#{shop.id}" %>&emsp;&emsp;created _  <%= shop.created_at.strftime("%A, %B %d, %Y") %></h4>
 
       <p><%= button_to "Update #{shop.name}", "/shops/#{shop.id}/edit", method: :get %></p>
-      <p><%= button_to "( Delete #{shop.name} )", "/shops/#{shop.id}", method: :delete %></p>
+      <p><%= button_to "( Delete )", "/shops/#{shop.id}", method: :delete %></p>
       <br/><br/>
     </section>
   <% end %><br/>

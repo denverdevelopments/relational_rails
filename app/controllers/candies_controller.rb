@@ -1,6 +1,6 @@
 class CandiesController < ApplicationController
   def index
-    @candies = Candy.all
+    @candies = Candy.all.only_true
   end
 
   def show
@@ -36,6 +36,7 @@ class CandiesController < ApplicationController
     if candy.save
       redirect_to "/candies/#{candy.id}"
     else
+      redirect_to "/candies/#{candy.id}"
       flash[:notice] = "Error: Required information missing"
     end
   end
