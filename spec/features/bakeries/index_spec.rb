@@ -47,8 +47,33 @@ RSpec.describe 'the bakery index page' do
     it 'has a link next to every bakery to update it' do
       visit '/bakeries'
 
-      expect(page).to have_link("Update #{@bakery_1.name}")
+      within("#bakery-#{@bakery_1.id}") do
+        expect(page).to have_link("Update #{@bakery_1.name}")
 
+        first(:link, "Update #{@bakery_1.name}").click
+
+        expect(current_path).to eq("/bakeries/#{@bakery_1.id}/edit")
+      end
+    end
+
+      it 'still has a link' do
+        visit '/bakeries'
+
+        within("#bakery-#{@bakery_2.id}") do
+          expect(page).to have_link("Update #{@bakery_2.name}")
+
+          first(:link, "Update #{@bakery_2.name}").click
+
+          expect(current_path).to eq("/bakeries/#{@bakery_2.id}/edit")
+        end
+      end
+
+    xit 'has a link next to every bakery to update it' do
+      visit '/bakeries'
+
+      expect(page).to have_link("Update #{@bakery_1.name}")
+# save_and_open_page
+      # click_link "Update #{@bakery_1.name}"
       first(:link, "Update #{@bakery_1.name}").click
 
       expect(current_path).to eq("/bakeries/#{@bakery_1.id}/edit")
